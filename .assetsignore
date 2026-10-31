@@ -1,0 +1,7 @@
+# Keep backend and repository metadata private from the static-asset server
+worker.js
+wrangler.jsonc
+README.md
+.assetsignore
+.gitignore
+.git/**
