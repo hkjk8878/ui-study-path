@@ -11,5 +11,11 @@
       "/api/*",
       "/health"
     ]
-  }
+  },
+  "kv_namespaces": [
+    {
+      "binding": "STUDY_KV",
+      "id": "f6b4ed2ad2784c46b1832e492361a799"
+    }
+  ]
 }
