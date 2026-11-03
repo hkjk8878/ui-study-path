@@ -1012,7 +1012,7 @@
       "blocks": [
         {
           "id": "w01d2b0",
-          "label": "강의·UX 개념과 관찰",
+          "label": "Figma 입문 4-1~4-6 · 프레임과 Constraints",
           "original": "UX 1강 노트에서 UI와 UX 차이 확인 [연습]",
           "time": "08:00–09:00",
           "minutes": 60,
@@ -1034,7 +1034,7 @@
             "clean_f",
             "sections_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30974070391191-FD4B-Create-a-frame-using-frame-presets\">FD4B: Create a frame using frame presets (4분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30975051911703-FD4B-Create-the-section-heading-paragraph-text-and-quote-block\">FD4B: Create the section heading, paragraph text, and quote block (4분 4초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30979234412567-FD4B-Create-the-image-and-the-hero\">FD4B: Create the image and the hero (4분 0초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31591549789975-FD4B-Constraints-fundamentals\">FD4B: Constraints fundamentals (2분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30979556779159-FD4B-Clean-up-your-layers\">FD4B: Clean up your layers (4분 28초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31593861050775-FD4B-Advocate-sidebar-The-differences-between-sections-groups-and-frames\">FD4B: Advocate sidebar: The differences between sections, groups, and frames (4분 23초)</a></p><p>4장 Frame presets and constraints의 아래 여섯 영상을 순서대로 본다. 프레임 프리셋→제목·본문·인용문→이미지·히어로→Constraints→레이어 정리→섹션·그룹·프레임 순서다.</p><p>영상 합계 23분 47초. 나머지 36분 13초 동안 같은 예제의 프레임을 만들고 너비를 바꿔 Constraints 반응을 확인한다. 그룹·섹션·프레임을 직접 구분해 배치한다.</p><p>결과물 · 4장 예제와 너비 변경·레이어 정리 결과.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30974070391191-FD4B-Create-a-frame-using-frame-presets\">Figma 입문 4-1 · Create a frame using frame presets (4분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30975051911703-FD4B-Create-the-section-heading-paragraph-text-and-quote-block\">Figma 입문 4-2 · Create the section heading, paragraph text, and quote block (4분 4초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30979234412567-FD4B-Create-the-image-and-the-hero\">Figma 입문 4-3 · Create the image and the hero (4분 0초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31591549789975-FD4B-Constraints-fundamentals\">Figma 입문 4-4 · Constraints fundamentals (2분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30979556779159-FD4B-Clean-up-your-layers\">Figma 입문 4-5 · Clean up your layers (4분 28초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31593861050775-FD4B-Advocate-sidebar-The-differences-between-sections-groups-and-frames\">Figma 입문 4-6 · Advocate sidebar: The differences between sections, groups, and frames (4분 23초)</a></p><p>4과의 4-1~4-6 영상을 순서대로 본다. 프레임 프리셋→제목·본문·인용문→이미지·히어로→Constraints→레이어 정리→섹션·그룹·프레임 순서다.</p><p>영상 합계 23분 47초. 나머지 36분 13초 동안 같은 예제의 프레임을 만들고 너비를 바꿔 Constraints 반응을 확인한다. 그룹·섹션·프레임을 직접 구분해 배치한다.</p><p>결과물 · 4장 예제와 너비 변경·레이어 정리 결과.</p>",
           "saveAs": "W01/2026-11-04_w01d2b0",
           "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1045,7 +1045,7 @@
         },
         {
           "id": "w01d2b1",
-          "label": "실습·제작·검증",
+          "label": "Figma 입문 5-1~5-3 · Auto layout과 컴포넌트",
           "original": "개인 앱에서 일정 하나를 추가하며 화면·행동·결과 기록 [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1054,7 +1054,7 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "Auto layout fundamentals→Create the button→FD4B Components fundamentals 순서로 본다. 위 4장 예제에 이어 버튼 원본과 인스턴스를 만든다.",
+            "Auto layout fundamentals→Create the button→5-3 Components fundamentals 순서로 본다. 위 4장 예제에 이어 버튼 원본과 인스턴스를 만든다.",
             "영상 합계 14분 38초 + 따라 제작·문구 길이 변경 95분 22초 + 휴식 10분.",
             "버튼 문구를 짧게·두 줄·길게 바꾸고 패딩·Hug 설정을 확인한다. 원본 패딩을 바꿨을 때 인스턴스에 반영되는지 확인한다.",
             "결과물 · Auto layout 버튼·원본·인스턴스와 세 문구 조건."
@@ -1065,7 +1065,7 @@
             "button_f",
             "fd_components"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31351261703063-FD4B-Auto-layout-fundamentals\">FD4B: Auto layout fundamentals (5분 5초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30981948843927-FD4B-Create-the-button\">FD4B: Create the button (5분 17초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30984647753751-FD4B-Components-fundamentals\">FD4B: Components fundamentals (4분 16초)</a></p><p>Auto layout fundamentals→Create the button→FD4B Components fundamentals 순서로 본다. 위 4장 예제에 이어 버튼 원본과 인스턴스를 만든다.</p><p>영상 합계 14분 38초 + 따라 제작·문구 길이 변경 95분 22초 + 휴식 10분.</p><p>버튼 문구를 짧게·두 줄·길게 바꾸고 패딩·Hug 설정을 확인한다. 원본 패딩을 바꿨을 때 인스턴스에 반영되는지 확인한다.</p><p>결과물 · Auto layout 버튼·원본·인스턴스와 세 문구 조건.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31351261703063-FD4B-Auto-layout-fundamentals\">Figma 입문 5-1 · Auto layout fundamentals (5분 5초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30981948843927-FD4B-Create-the-button\">Figma 입문 5-2 · Create the button (5분 17초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30984647753751-FD4B-Components-fundamentals\">Figma 입문 5-3 · Components fundamentals (4분 16초)</a></p><p>5과의 5-1 Auto layout fundamentals → 5-2 Create the button → 5-3 Components fundamentals 순서로 본다. 앞 시간에 만든 4과 예제 파일에서 계속 작업하며 버튼 원본과 인스턴스를 만든다.</p><p>영상 합계 14분 38초 + 따라 제작·문구 길이 변경 95분 22초 + 휴식 10분.</p><p>버튼 문구를 짧게·두 줄·길게 바꾸고 패딩·Hug 설정을 확인한다. 원본 패딩을 바꿨을 때 인스턴스에 반영되는지 확인한다.</p><p>결과물 · Auto layout 버튼·원본·인스턴스와 세 문구 조건.</p>",
           "saveAs": "W01/2026-11-04_w01d2b1",
           "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1131,7 +1131,7 @@
             "tips_f",
             "nav_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30987538800023-FD4B-Create-the-card-and-container-system\">FD4B: Create the card and container system (18분 11초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31717821174167-FD4B-Advocate-sidebar-Auto-layout-tips-and-tricks\">FD4B: Advocate sidebar: Auto layout tips and tricks (8분 30초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31002534003991-FD4B-Create-the-navigation-bar-and-footer\">FD4B: Create the navigation bar and footer (13분 34초)</a></p><p>Create the card and container system→Auto layout tips and tricks→Create the navigation bar and footer 순서로 보며 같은 예제를 만든다.</p><p>영상 합계 40분 15초 + 따라 제작 69분 45초 + 휴식 10분.</p><p>기존 버튼 인스턴스로 카드·컨테이너를 만들고 내비게이션·푸터를 조립한다. 긴 제목과 프레임 너비 변화에서 배치가 유지되는지 확인한다.</p><p>결과물 · 카드·컨테이너·내비게이션·푸터 예제.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30987538800023-FD4B-Create-the-card-and-container-system\">Figma 입문 5-4 · Create the card and container system (18분 11초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31717821174167-FD4B-Advocate-sidebar-Auto-layout-tips-and-tricks\">Figma 입문 5-5 · Advocate sidebar: Auto layout tips and tricks (8분 30초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31002534003991-FD4B-Create-the-navigation-bar-and-footer\">Figma 입문 6-1 · Create the navigation bar and footer (13분 34초)</a></p><p>Create the card and container system→Auto layout tips and tricks→Create the navigation bar and footer 순서로 보며 같은 예제를 만든다.</p><p>영상 합계 40분 15초 + 따라 제작 69분 45초 + 휴식 10분.</p><p>기존 버튼 인스턴스로 카드·컨테이너를 만들고 내비게이션·푸터를 조립한다. 긴 제목과 프레임 너비 변화에서 배치가 유지되는지 확인한다.</p><p>결과물 · 카드·컨테이너·내비게이션·푸터 예제.</p>",
           "saveAs": "W01/2026-11-05_w01d3b1",
           "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1227,7 +1227,7 @@
             "wrap_f",
             "next_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010075634967-FD4B-Assemble-your-portfolio-pages\">FD4B: Assemble your portfolio pages (12분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals\">FD4B: Prototyping fundamentals (5분 27초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31011968186007-FD4B-Add-prototype-connections\">FD4B: Add prototype connections (6분 22초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31012379669783-FD4B-Set-page-scrolling-behavior-and-customize-animations\">FD4B: Set page scrolling behavior and customize animations (12분 19초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31140325345559-FD4B-Course-wrap-up\">FD4B: Course wrap up (1분 15초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30959048057879-FD4B-Advocate-sidebar-What-s-next\">FD4B: Advocate sidebar: What&#x27;s next? (2분 11초)</a></p><p>Assemble your portfolio pages→Prototyping fundamentals→Add prototype connections→Set page scrolling behavior and customize animations→Course wrap up→What’s next? 순서로 본다.</p><p>영상 합계 39분 52초 + 화면 조립·연결·스크롤 실습 70분 8초 + 휴식 10분.</p><p>이미 만든 요소로 예제 화면을 조립한다. 시작→다음 화면→뒤로 가기와 스크롤을 실행하고 이동하지 않는 연결을 수정한다.</p><p>결과물 · 화면 조립·정상 연결·뒤로 가기·스크롤이 실행되는 입문 예제.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010075634967-FD4B-Assemble-your-portfolio-pages\">Figma 입문 8-1 · Assemble your portfolio pages (12분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals\">Figma 입문 9-1 · Prototyping fundamentals (5분 27초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31011968186007-FD4B-Add-prototype-connections\">Figma 입문 9-2 · Add prototype connections (6분 22초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31012379669783-FD4B-Set-page-scrolling-behavior-and-customize-animations\">Figma 입문 9-3 · Set page scrolling behavior and customize animations (12분 19초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31140325345559-FD4B-Course-wrap-up\">Figma 입문 10-1 · Course wrap up (1분 15초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30959048057879-FD4B-Advocate-sidebar-What-s-next\">Figma 입문 10-2 · Advocate sidebar: What&#x27;s next? (2분 11초)</a></p><p>Assemble your portfolio pages→Prototyping fundamentals→Add prototype connections→Set page scrolling behavior and customize animations→Course wrap up→What’s next? 순서로 본다.</p><p>영상 합계 39분 52초 + 화면 조립·연결·스크롤 실습 70분 8초 + 휴식 10분.</p><p>이미 만든 요소로 예제 화면을 조립한다. 시작→다음 화면→뒤로 가기와 스크롤을 실행하고 이동하지 않는 연결을 수정한다.</p><p>결과물 · 화면 조립·정상 연결·뒤로 가기·스크롤이 실행되는 입문 예제.</p>",
           "saveAs": "W01/2026-11-06_w01d4b1",
           "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1409,7 +1409,7 @@
           "resourceKeys": [
             "auto_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31351261703063-FD4B-Auto-layout-fundamentals\">FD4B: Auto layout fundamentals (5분 5초)</a></p><p>버튼·카드·목록의 부모와 자식 프레임을 종이에 그리기. Auto layout 영상 예제를 따라 Hug·Fill·Fixed가 적용된 버튼과 카드 각각 1개를 만들고 설정값을 기록하기.</p><p>결과물 · 구조 그림·예제. 확인: 왜 그 크기 설정을 썼는지 설명한다.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31351261703063-FD4B-Auto-layout-fundamentals\">Figma 입문 5-1 · Auto layout fundamentals (5분 5초)</a></p><p>버튼·카드·목록의 부모와 자식 프레임을 종이에 그리기. Auto layout 영상 예제를 따라 Hug·Fill·Fixed가 적용된 버튼과 카드 각각 1개를 만들고 설정값을 기록하기.</p><p>결과물 · 구조 그림·예제. 확인: 왜 그 크기 설정을 썼는지 설명한다.</p>",
           "saveAs": "W02/2026-11-09_w02d0b1",
           "acceptance": "세 너비와 긴 콘텐츠 조건에서 목록·폼이 유지된다. 설정을 보지 않고 Auto layout의 크기 결정 방식을 설명한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1471,7 +1471,7 @@
           "resourceKeys": [
             "card_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30987538800023-FD4B-Create-the-card-and-container-system\">FD4B: Create the card and container system (18분 11초)</a></p><p>확인할 내용 · 설정이 막힌 구간만 재시청</p><p>어제 예제를 보지 않고 카드와 목록을 만들기. 제목을 짧은 문장·두 줄·긴 문장으로 바꾸고 항목을 1개에서 6개로 늘려라.</p><p>결과물 · 세 텍스트 조건과 목록. 확인: 겹침·잘림이 발생한 위치와 수정한 속성을 기록한다.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30987538800023-FD4B-Create-the-card-and-container-system\">Figma 입문 5-4 · Create the card and container system (18분 11초)</a></p><p>확인할 내용 · 설정이 막힌 구간만 재시청</p><p>어제 예제를 보지 않고 카드와 목록을 만들기. 제목을 짧은 문장·두 줄·긴 문장으로 바꾸고 항목을 1개에서 6개로 늘려라.</p><p>결과물 · 세 텍스트 조건과 목록. 확인: 겹침·잘림이 발생한 위치와 수정한 속성을 기록한다.</p>",
           "saveAs": "W02/2026-11-10_w02d1b1",
           "acceptance": "세 너비와 긴 콘텐츠 조건에서 목록·폼이 유지된다. 설정을 보지 않고 Auto layout의 크기 결정 방식을 설명한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -5254,7 +5254,7 @@
           "resourceKeys": [
             "proto_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals\">FD4B: Prototyping fundamentals (5분 27초)</a></p><p>참고 자료에서 시작 화면·상호작용·연결 부분을 확인한다. 이미 읽은 부분은 다시 정독하지 않고 오늘 적용할 항목만 찾는다.</p><p>완성한 UI의 시작 화면과 목표를 적는다. 프로토타입 기초 영상을 확인하고 화면 이동·뒤로·닫기·취소 연결 순서를 작성한다.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals\">Figma 입문 9-1 · Prototyping fundamentals (5분 27초)</a></p><p>참고 자료에서 시작 화면·상호작용·연결 부분을 확인한다. 이미 읽은 부분은 다시 정독하지 않고 오늘 적용할 항목만 찾는다.</p><p>완성한 UI의 시작 화면과 목표를 적는다. 프로토타입 기초 영상을 확인하고 화면 이동·뒤로·닫기·취소 연결 순서를 작성한다.</p>",
           "saveAs": "W10/2027-01-04_w10d0b0",
           "acceptance": "동작하는 시안, 파일럿 기록, 실제 참가자 일정과 첫 세션이 있다. 참가자가 부족하면 모집 시간을 확보한다.",
           "portfolioPosition": "CASE01 ⑥ 최종 UI·구조·예외 상태",
@@ -12661,48 +12661,53 @@
     },
     {
       "key": "auto_f",
-      "title": "FD4B: Auto layout fundamentals (5분 5초)",
+      "title": "Figma 입문 5-1 · Auto layout fundamentals (5분 5초)",
       "url": "https://help.figma.com/hc/en-us/articles/31351261703063-FD4B-Auto-layout-fundamentals",
       "kind": "영상",
       "verifiedVideoSeconds": 305,
       "videoId": "Aik8tMRdI90",
-      "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "5-1"
     },
     {
       "key": "card_f",
-      "title": "FD4B: Create the card and container system (18분 11초)",
+      "title": "Figma 입문 5-4 · Create the card and container system (18분 11초)",
       "url": "https://help.figma.com/hc/en-us/articles/30987538800023-FD4B-Create-the-card-and-container-system",
       "kind": "영상",
       "verifiedVideoSeconds": 1091,
       "videoId": "gLB8PRm5HI4",
-      "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "5-4"
     },
     {
       "key": "nav_f",
-      "title": "FD4B: Create the navigation bar and footer (13분 34초)",
+      "title": "Figma 입문 6-1 · Create the navigation bar and footer (13분 34초)",
       "url": "https://help.figma.com/hc/en-us/articles/31002534003991-FD4B-Create-the-navigation-bar-and-footer",
       "kind": "영상",
       "verifiedVideoSeconds": 814,
       "videoId": "ObgYJ74C_uE",
-      "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "6-1"
     },
     {
       "key": "assemble_f",
-      "title": "FD4B: Assemble your portfolio pages (12분 18초)",
+      "title": "Figma 입문 8-1 · Assemble your portfolio pages (12분 18초)",
       "url": "https://help.figma.com/hc/en-us/articles/31010075634967-FD4B-Assemble-your-portfolio-pages",
       "kind": "영상",
       "verifiedVideoSeconds": 738,
       "videoId": "2mDhasIHLCw",
-      "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "8-1"
     },
     {
       "key": "proto_f",
-      "title": "FD4B: Prototyping fundamentals (5분 27초)",
+      "title": "Figma 입문 9-1 · Prototyping fundamentals (5분 27초)",
       "url": "https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals",
       "kind": "영상",
       "verifiedVideoSeconds": 327,
       "videoId": "eKVPXk2BnB8",
-      "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "9-1"
     },
     {
       "key": "component_f",
@@ -12856,120 +12861,133 @@
     },
     {
       "key": "frame_f",
-      "title": "FD4B: Create a frame using frame presets (4분 34초)",
+      "title": "Figma 입문 4-1 · Create a frame using frame presets (4분 34초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/30974070391191-FD4B-Create-a-frame-using-frame-presets",
       "verifiedVideoSeconds": 274,
       "videoId": "g9JF_s1FYnI",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "4-1"
     },
     {
       "key": "heading_f",
-      "title": "FD4B: Create the section heading, paragraph text, and quote block (4분 4초)",
+      "title": "Figma 입문 4-2 · Create the section heading, paragraph text, and quote block (4분 4초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/30975051911703-FD4B-Create-the-section-heading-paragraph-text-and-quote-block",
       "verifiedVideoSeconds": 244,
       "videoId": "4tPnQ7MXTJI",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "4-2"
     },
     {
       "key": "hero_f",
-      "title": "FD4B: Create the image and the hero (4분 0초)",
+      "title": "Figma 입문 4-3 · Create the image and the hero (4분 0초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/30979234412567-FD4B-Create-the-image-and-the-hero",
       "verifiedVideoSeconds": 240,
       "videoId": "tJ3ZENutSCw",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "4-3"
     },
     {
       "key": "constraints_verified",
-      "title": "FD4B: Constraints fundamentals (2분 18초)",
+      "title": "Figma 입문 4-4 · Constraints fundamentals (2분 18초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/31591549789975-FD4B-Constraints-fundamentals",
       "verifiedVideoSeconds": 138,
       "videoId": "JZyUE5dY1Wk",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "4-4"
     },
     {
       "key": "clean_f",
-      "title": "FD4B: Clean up your layers (4분 28초)",
+      "title": "Figma 입문 4-5 · Clean up your layers (4분 28초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/30979556779159-FD4B-Clean-up-your-layers",
       "verifiedVideoSeconds": 268,
       "videoId": "Kwic-3CeD-U",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "4-5"
     },
     {
       "key": "sections_f",
-      "title": "FD4B: Advocate sidebar: The differences between sections, groups, and frames (4분 23초)",
+      "title": "Figma 입문 4-6 · Advocate sidebar: The differences between sections, groups, and frames (4분 23초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/31593861050775-FD4B-Advocate-sidebar-The-differences-between-sections-groups-and-frames",
       "verifiedVideoSeconds": 263,
       "videoId": "v1ETJHt6hf4",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "4-6"
     },
     {
       "key": "button_f",
-      "title": "FD4B: Create the button (5분 17초)",
+      "title": "Figma 입문 5-2 · Create the button (5분 17초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/30981948843927-FD4B-Create-the-button",
       "verifiedVideoSeconds": 317,
       "videoId": "6VJKTcd4-5c",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "5-2"
     },
     {
       "key": "fd_components",
-      "title": "FD4B: Components fundamentals (4분 16초)",
+      "title": "Figma 입문 5-3 · Components fundamentals (4분 16초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/30984647753751-FD4B-Components-fundamentals",
       "verifiedVideoSeconds": 256,
       "videoId": "26O96gv8Jk0",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "5-3"
     },
     {
       "key": "tips_f",
-      "title": "FD4B: Advocate sidebar: Auto layout tips and tricks (8분 30초)",
+      "title": "Figma 입문 5-5 · Advocate sidebar: Auto layout tips and tricks (8분 30초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/31717821174167-FD4B-Advocate-sidebar-Auto-layout-tips-and-tricks",
       "verifiedVideoSeconds": 510,
       "videoId": "aaZsP7AYi2w",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "5-5"
     },
     {
       "key": "connections_f",
-      "title": "FD4B: Add prototype connections (6분 22초)",
+      "title": "Figma 입문 9-2 · Add prototype connections (6분 22초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/31011968186007-FD4B-Add-prototype-connections",
       "verifiedVideoSeconds": 382,
       "videoId": "bKiK4N3SWEo",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "9-2"
     },
     {
       "key": "scroll_f",
-      "title": "FD4B: Set page scrolling behavior and customize animations (12분 19초)",
+      "title": "Figma 입문 9-3 · Set page scrolling behavior and customize animations (12분 19초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/31012379669783-FD4B-Set-page-scrolling-behavior-and-customize-animations",
       "verifiedVideoSeconds": 739,
       "videoId": "KsGwt6QmqKo",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "9-3"
     },
     {
       "key": "wrap_f",
-      "title": "FD4B: Course wrap up (1분 15초)",
+      "title": "Figma 입문 10-1 · Course wrap up (1분 15초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/31140325345559-FD4B-Course-wrap-up",
       "verifiedVideoSeconds": 75,
       "videoId": "UjYN9P4LuLE",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "10-1"
     },
     {
       "key": "next_f",
-      "title": "FD4B: Advocate sidebar: What's next? (2분 11초)",
+      "title": "Figma 입문 10-2 · Advocate sidebar: What's next? (2분 11초)",
       "kind": "영상",
       "url": "https://help.figma.com/hc/en-us/articles/30959048057879-FD4B-Advocate-sidebar-What-s-next",
       "verifiedVideoSeconds": 131,
       "videoId": "9SFjiUmlFtg",
-      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04"
+      "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
+      "courseLesson": "10-2"
     }
   ],
   "deliverables": {
