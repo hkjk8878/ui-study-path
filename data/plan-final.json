@@ -4,7 +4,7 @@
     "start": "2026-11-02",
     "end": "2027-04-18",
     "timeZone": "Asia/Seoul",
-    "source": "UIUX_24week_Routine_Efficiency_20261104.pdf",
+    "source": "UIUX_24week_Routine_Progress_20261104.pdf",
     "sourceVersion": "2026-11-04",
     "weekHours": 25,
     "days": 168,
@@ -12,7 +12,7 @@
     "coreHours": 552,
     "aiHours": 48,
     "originalSource": "Product_Designer_24week_Verified_Revised_Plan.pdf",
-    "revision": "2026-11-04-efficiency",
+    "revision": "2026-11-04-progress-through-lesson5",
     "scheduledHours": 600,
     "taskHours": 564,
     "breakHours": 36,
@@ -99,9 +99,9 @@
         "auto_f",
         "button_f",
         "fd_components",
-        "a11y_errors",
         "card_f",
         "tips_f",
+        "a11y_errors",
         "nav_f",
         "assemble_f",
         "proto_f",
@@ -131,7 +131,7 @@
     {
       "week": 2,
       "code": "W02",
-      "title": "Auto layout으로 변경에 견디는 구조 만들기",
+      "title": "Auto layout · 다른 과업에 적용하고 오류 수정하기",
       "phase": "foundation",
       "start": "2026-11-09",
       "end": "2026-11-15",
@@ -139,10 +139,9 @@
       "purpose": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
       "resources": [
         "ui_type",
-        "auto_f",
+        "figma_auto",
         "a11y_labels",
         "card_f",
-        "figma_auto",
         "list_project",
         "responsive_project",
         "a11y_errors"
@@ -1012,7 +1011,7 @@
       "blocks": [
         {
           "id": "w01d2b0",
-          "label": "Figma 입문 4-1~4-6 · 프레임과 Constraints",
+          "label": "Figma 입문 4-1~4-6 · 수행한 결과 보관",
           "original": "UX 1강 노트에서 UI와 UX 차이 확인 [연습]",
           "time": "08:00–09:00",
           "minutes": 60,
@@ -1021,11 +1020,9 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "4장 Frame presets and constraints의 아래 여섯 영상을 순서대로 본다. 프레임 프리셋→제목·본문·인용문→이미지·히어로→Constraints→레이어 정리→섹션·그룹·프레임 순서다.",
-            "영상 합계 23분 47초. 나머지 36분 13초 동안 같은 예제의 프레임을 만들고 너비를 바꿔 Constraints 반응을 확인한다. 그룹·섹션·프레임을 직접 구분해 배치한다.",
-            "결과물 · 4장 예제와 너비 변경·레이어 정리 결과."
+            "11월 4일에 4과 영상 시청과 예제 따라 만들기를 마쳤다. 기존 파일을 보관한다. 같은 영상을 다시 보거나 같은 예제를 다시 제출하지 않는다."
           ],
-          "output": "아래 실습에서 제작·비교·확인한 파일과 기록",
+          "output": "11월 4일에 4과 영상 시청과 예제 따라 만들기를 마쳤다. 기존 파일을 보관한다. 같은 영상을 다시 보거나 같은 예제를 다시 제출하지 않는다.",
           "resourceKeys": [
             "frame_f",
             "heading_f",
@@ -1034,7 +1031,7 @@
             "clean_f",
             "sections_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30974070391191-FD4B-Create-a-frame-using-frame-presets\">Figma 입문 4-1 · Create a frame using frame presets (4분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30975051911703-FD4B-Create-the-section-heading-paragraph-text-and-quote-block\">Figma 입문 4-2 · Create the section heading, paragraph text, and quote block (4분 4초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30979234412567-FD4B-Create-the-image-and-the-hero\">Figma 입문 4-3 · Create the image and the hero (4분 0초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31591549789975-FD4B-Constraints-fundamentals\">Figma 입문 4-4 · Constraints fundamentals (2분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30979556779159-FD4B-Clean-up-your-layers\">Figma 입문 4-5 · Clean up your layers (4분 28초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31593861050775-FD4B-Advocate-sidebar-The-differences-between-sections-groups-and-frames\">Figma 입문 4-6 · Advocate sidebar: The differences between sections, groups, and frames (4분 23초)</a></p><p>4과의 4-1~4-6 영상을 순서대로 본다. 프레임 프리셋→제목·본문·인용문→이미지·히어로→Constraints→레이어 정리→섹션·그룹·프레임 순서다.</p><p>영상 합계 23분 47초. 나머지 36분 13초 동안 같은 예제의 프레임을 만들고 너비를 바꿔 Constraints 반응을 확인한다. 그룹·섹션·프레임을 직접 구분해 배치한다.</p><p>결과물 · 4장 예제와 너비 변경·레이어 정리 결과.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30974070391191-FD4B-Create-a-frame-using-frame-presets\">Figma 입문 4-1 · Create a frame using frame presets (4분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30975051911703-FD4B-Create-the-section-heading-paragraph-text-and-quote-block\">Figma 입문 4-2 · Create the section heading, paragraph text, and quote block (4분 4초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30979234412567-FD4B-Create-the-image-and-the-hero\">Figma 입문 4-3 · Create the image and the hero (4분 0초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31591549789975-FD4B-Constraints-fundamentals\">Figma 입문 4-4 · Constraints fundamentals (2분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30979556779159-FD4B-Clean-up-your-layers\">Figma 입문 4-5 · Clean up your layers (4분 28초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31593861050775-FD4B-Advocate-sidebar-The-differences-between-sections-groups-and-frames\">Figma 입문 4-6 · Advocate sidebar: The differences between sections, groups, and frames (4분 23초)</a></p><p>11월 4일에 4과 영상 시청과 예제 따라 만들기를 마쳤다. 기존 파일을 보관한다. 같은 영상을 다시 보거나 같은 예제를 다시 제출하지 않는다.</p>",
           "saveAs": "W01/2026-11-04_w01d2b0",
           "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1045,7 +1042,7 @@
         },
         {
           "id": "w01d2b1",
-          "label": "Figma 입문 5-1~5-3 · Auto layout과 컴포넌트",
+          "label": "Figma 입문 5-1~5-5 · 수행한 결과 보관",
           "original": "개인 앱에서 일정 하나를 추가하며 화면·행동·결과 기록 [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1054,18 +1051,18 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "Auto layout fundamentals→Create the button→5-3 Components fundamentals 순서로 본다. 위 4장 예제에 이어 버튼 원본과 인스턴스를 만든다.",
-            "영상 합계 14분 38초 + 따라 제작·문구 길이 변경 95분 22초 + 휴식 10분.",
-            "버튼 문구를 짧게·두 줄·길게 바꾸고 패딩·Hug 설정을 확인한다. 원본 패딩을 바꿨을 때 인스턴스에 반영되는지 확인한다.",
-            "결과물 · Auto layout 버튼·원본·인스턴스와 세 문구 조건."
+            "11월 4일에 5과 전체 영상 시청과 영상 속 예제 따라 만들기를 마쳤다. 버튼·카드·컨테이너가 들어 있는 기존 파일을 보관한다. 자료 없이 직접 만드는 능력은 이후 별도 실습에서 확인한다.",
+            "오늘의 실제 소요 시간은 본인 기록에 입력한다. 기존 08:00~11:00은 예정 시간이며, 완료 보고만으로 실제 공부시간이나 완료 체크를 자동 변경하지 않는다."
           ],
-          "output": "Auto layout 버튼·원본·인스턴스와 긴 문구 조건",
+          "output": "오늘의 실제 소요 시간은 본인 기록에 입력한다. 기존 08:00~11:00은 예정 시간이며, 완료 보고만으로 실제 공부시간이나 완료 체크를 자동 변경하지 않는다.",
           "resourceKeys": [
             "auto_f",
             "button_f",
-            "fd_components"
+            "fd_components",
+            "card_f",
+            "tips_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31351261703063-FD4B-Auto-layout-fundamentals\">Figma 입문 5-1 · Auto layout fundamentals (5분 5초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30981948843927-FD4B-Create-the-button\">Figma 입문 5-2 · Create the button (5분 17초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30984647753751-FD4B-Components-fundamentals\">Figma 입문 5-3 · Components fundamentals (4분 16초)</a></p><p>5과의 5-1 Auto layout fundamentals → 5-2 Create the button → 5-3 Components fundamentals 순서로 본다. 앞 시간에 만든 4과 예제 파일에서 계속 작업하며 버튼 원본과 인스턴스를 만든다.</p><p>영상 합계 14분 38초 + 따라 제작·문구 길이 변경 95분 22초 + 휴식 10분.</p><p>버튼 문구를 짧게·두 줄·길게 바꾸고 패딩·Hug 설정을 확인한다. 원본 패딩을 바꿨을 때 인스턴스에 반영되는지 확인한다.</p><p>결과물 · Auto layout 버튼·원본·인스턴스와 세 문구 조건.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31351261703063-FD4B-Auto-layout-fundamentals\">Figma 입문 5-1 · Auto layout fundamentals (5분 5초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30981948843927-FD4B-Create-the-button\">Figma 입문 5-2 · Create the button (5분 17초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30984647753751-FD4B-Components-fundamentals\">Figma 입문 5-3 · Components fundamentals (4분 16초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30987538800023-FD4B-Create-the-card-and-container-system\">Figma 입문 5-4 · Create the card and container system (18분 11초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31717821174167-FD4B-Advocate-sidebar-Auto-layout-tips-and-tricks\">Figma 입문 5-5 · Advocate sidebar: Auto layout tips and tricks (8분 30초)</a></p><p>11월 4일에 5과 전체 영상 시청과 영상 속 예제 따라 만들기를 마쳤다. 버튼·카드·컨테이너가 들어 있는 기존 파일을 보관한다. 자료 없이 직접 만드는 능력은 이후 별도 실습에서 확인한다.</p><p>오늘의 실제 소요 시간은 본인 기록에 입력한다. 기존 08:00~11:00은 예정 시간이며, 완료 보고만으로 실제 공부시간이나 완료 체크를 자동 변경하지 않는다.</p>",
           "saveAs": "W01/2026-11-04_w01d2b1",
           "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1111,7 +1108,7 @@
         },
         {
           "id": "w01d3b1",
-          "label": "실습·제작·검증",
+          "label": "Figma 입문 6-1·8-1·9-1 · 화면 조립과 프로토타입 기초",
           "original": "4번 Frame presets and constraints 예제 따라하기 [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1120,18 +1117,20 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "Create the card and container system→Auto layout tips and tricks→Create the navigation bar and footer 순서로 보며 같은 예제를 만든다.",
-            "영상 합계 40분 15초 + 따라 제작 69분 45초 + 휴식 10분.",
-            "기존 버튼 인스턴스로 카드·컨테이너를 만들고 내비게이션·푸터를 조립한다. 긴 제목과 프레임 너비 변화에서 배치가 유지되는지 확인한다.",
-            "결과물 · 카드·컨테이너·내비게이션·푸터 예제."
+            "11월 4일 만든 버튼·카드·컨테이너 파일을 연다. 5-4·5-5 영상과 같은 예제는 반복하지 않는다. 6-1 내비게이션·푸터, 8-1 페이지 조립, 9-1 프로토타입 기초 순서로 보며 예제를 이어 만든다.",
+            "새 영상은 13분 34초 + 12분 18초 + 5분 27초 = 31분 19초다. 휴식 10분을 제외한 실습 예산은 78분 41초다. 정지·되감기 시간도 실습 예산에 포함한다.",
+            "기존 요소를 인스턴스로 배치해 예제 페이지를 조립한다. 9-1에서 설명하는 시작 화면과 화면 연결 위치를 확인하고, 실제 화면 연결 제작은 금요일 9-2에서 이어 한다.",
+            "조립 뒤 제목을 두 줄로 바꾸고 카드 하나를 추가한다. 부모 프레임 너비를 1440px와 768px로 바꾸어 겹침·잘림을 확인한다. 문제가 생기면 해당 프레임의 Hug·Fill·Fixed와 줄바꿈 설정을 수정한다.",
+            "여기까지 끝나면 예제 파일을 보지 않고 내비게이션을 새 프레임에 만든다. 메뉴는 오늘·이번 주·프로젝트, 제목은 나의 학습 기록으로 바꾸고 기존 버튼 인스턴스를 사용한다. 메뉴 하나를 더 넣어 배치가 유지되는지 확인한다.",
+            "결과물 · 이어서 조립한 예제, 두 너비의 수정 전후, 예제 없이 만든 내비게이션. 미완료 항목은 금요일 실습의 첫 작업으로 넘긴다."
           ],
-          "output": "카드·컨테이너·내비게이션·푸터 예제",
+          "output": "이어서 조립한 예제, 두 너비의 수정 전후, 예제 없이 만든 내비게이션. 미완료 항목은 금요일 실습의 첫 작업으로 넘긴다.",
           "resourceKeys": [
-            "card_f",
-            "tips_f",
-            "nav_f"
+            "nav_f",
+            "assemble_f",
+            "proto_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30987538800023-FD4B-Create-the-card-and-container-system\">Figma 입문 5-4 · Create the card and container system (18분 11초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31717821174167-FD4B-Advocate-sidebar-Auto-layout-tips-and-tricks\">Figma 입문 5-5 · Advocate sidebar: Auto layout tips and tricks (8분 30초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31002534003991-FD4B-Create-the-navigation-bar-and-footer\">Figma 입문 6-1 · Create the navigation bar and footer (13분 34초)</a></p><p>Create the card and container system→Auto layout tips and tricks→Create the navigation bar and footer 순서로 보며 같은 예제를 만든다.</p><p>영상 합계 40분 15초 + 따라 제작 69분 45초 + 휴식 10분.</p><p>기존 버튼 인스턴스로 카드·컨테이너를 만들고 내비게이션·푸터를 조립한다. 긴 제목과 프레임 너비 변화에서 배치가 유지되는지 확인한다.</p><p>결과물 · 카드·컨테이너·내비게이션·푸터 예제.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31002534003991-FD4B-Create-the-navigation-bar-and-footer\">Figma 입문 6-1 · Create the navigation bar and footer (13분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010075634967-FD4B-Assemble-your-portfolio-pages\">Figma 입문 8-1 · Assemble your portfolio pages (12분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals\">Figma 입문 9-1 · Prototyping fundamentals (5분 27초)</a></p><p>11월 4일 만든 버튼·카드·컨테이너 파일을 연다. 5-4·5-5 영상과 같은 예제는 반복하지 않는다. 6-1 내비게이션·푸터, 8-1 페이지 조립, 9-1 프로토타입 기초 순서로 보며 예제를 이어 만든다.</p><p>새 영상은 13분 34초 + 12분 18초 + 5분 27초 = 31분 19초다. 휴식 10분을 제외한 실습 예산은 78분 41초다. 정지·되감기 시간도 실습 예산에 포함한다.</p><p>기존 요소를 인스턴스로 배치해 예제 페이지를 조립한다. 9-1에서 설명하는 시작 화면과 화면 연결 위치를 확인하고, 실제 화면 연결 제작은 금요일 9-2에서 이어 한다.</p><p>조립 뒤 제목을 두 줄로 바꾸고 카드 하나를 추가한다. 부모 프레임 너비를 1440px와 768px로 바꾸어 겹침·잘림을 확인한다. 문제가 생기면 해당 프레임의 Hug·Fill·Fixed와 줄바꿈 설정을 수정한다.</p><p>여기까지 끝나면 예제 파일을 보지 않고 내비게이션을 새 프레임에 만든다. 메뉴는 오늘·이번 주·프로젝트, 제목은 나의 학습 기록으로 바꾸고 기존 버튼 인스턴스를 사용한다. 메뉴 하나를 더 넣어 배치가 유지되는지 확인한다.</p><p>결과물 · 이어서 조립한 예제, 두 너비의 수정 전후, 예제 없이 만든 내비게이션. 미완료 항목은 금요일 실습의 첫 작업으로 넘긴다.</p>",
           "saveAs": "W01/2026-11-05_w01d3b1",
           "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1204,7 +1203,7 @@
         },
         {
           "id": "w01d4b1",
-          "label": "실습·제작·검증",
+          "label": "Figma 입문 9-2~9-3·10-1~10-2 · 연결과 독립 제작",
           "original": "영상 없이 글자·프레임 크기 바꾸고 결과 확인 [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1213,21 +1212,21 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "Assemble your portfolio pages→Prototyping fundamentals→Add prototype connections→Set page scrolling behavior and customize animations→Course wrap up→What’s next? 순서로 본다.",
-            "영상 합계 39분 52초 + 화면 조립·연결·스크롤 실습 70분 8초 + 휴식 10분.",
-            "이미 만든 요소로 예제 화면을 조립한다. 시작→다음 화면→뒤로 가기와 스크롤을 실행하고 이동하지 않는 연결을 수정한다.",
-            "결과물 · 화면 조립·정상 연결·뒤로 가기·스크롤이 실행되는 입문 예제."
+            "목요일 파일을 열고 미완료 항목부터 이어 한다. 완료한 6-1·8-1·9-1은 다시 시청하지 않는다. 9-2 연결 추가 → 9-3 스크롤·애니메이션 → 10-1 마무리 → 10-2 다음 학습 순서로 본다.",
+            "새 영상은 6분 22초 + 12분 19초 + 1분 15초 + 2분 11초 = 22분 7초다. 휴식 10분을 제외한 제작·검증 예산은 87분 53초다. 정지·되감기와 수정 시간을 포함한다.",
+            "예제의 시작 화면·다음 화면·뒤로 가기를 연결하고 세로 스크롤을 설정한다. 실행 모드에서 각 연결을 눌러 도착 화면과 스크롤 범위를 확인한다.",
+            "예제 연결을 마치면 영상과 예제 페이지를 닫는다. 새 페이지에 나의 학습 기록 화면을 만든다. 제목, 이번 주 목표 문장, 강의 듣기·카드 만들기·기록 정리 카드, 학습 기록 보기 버튼을 배치하고 Auto layout과 기존 인스턴스를 사용한다.",
+            "학습 기록 보기 버튼을 누르면 학습 상세 화면으로 이동하고 뒤로 가기로 돌아오게 연결한다. 제목을 두 줄로 바꾸고 카드를 하나 더 넣은 뒤 겹침·잘림·잘못된 연결을 수정한다. 이 파일은 토요일 일정 목록·입력 과제와 구분해 저장한다.",
+            "결과물 · 실행 가능한 공식 예제, 예제 없이 만든 학습 기록·상세 두 화면, 연결·콘텐츠 변경 점검 기록."
           ],
-          "output": "시작·이동·뒤로 가기·스크롤이 실행되는 예제",
+          "output": "실행 가능한 공식 예제, 예제 없이 만든 학습 기록·상세 두 화면, 연결·콘텐츠 변경 점검 기록.",
           "resourceKeys": [
-            "assemble_f",
-            "proto_f",
             "connections_f",
             "scroll_f",
             "wrap_f",
             "next_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010075634967-FD4B-Assemble-your-portfolio-pages\">Figma 입문 8-1 · Assemble your portfolio pages (12분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals\">Figma 입문 9-1 · Prototyping fundamentals (5분 27초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31011968186007-FD4B-Add-prototype-connections\">Figma 입문 9-2 · Add prototype connections (6분 22초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31012379669783-FD4B-Set-page-scrolling-behavior-and-customize-animations\">Figma 입문 9-3 · Set page scrolling behavior and customize animations (12분 19초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31140325345559-FD4B-Course-wrap-up\">Figma 입문 10-1 · Course wrap up (1분 15초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30959048057879-FD4B-Advocate-sidebar-What-s-next\">Figma 입문 10-2 · Advocate sidebar: What&#x27;s next? (2분 11초)</a></p><p>Assemble your portfolio pages→Prototyping fundamentals→Add prototype connections→Set page scrolling behavior and customize animations→Course wrap up→What’s next? 순서로 본다.</p><p>영상 합계 39분 52초 + 화면 조립·연결·스크롤 실습 70분 8초 + 휴식 10분.</p><p>이미 만든 요소로 예제 화면을 조립한다. 시작→다음 화면→뒤로 가기와 스크롤을 실행하고 이동하지 않는 연결을 수정한다.</p><p>결과물 · 화면 조립·정상 연결·뒤로 가기·스크롤이 실행되는 입문 예제.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31011968186007-FD4B-Add-prototype-connections\">Figma 입문 9-2 · Add prototype connections (6분 22초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31012379669783-FD4B-Set-page-scrolling-behavior-and-customize-animations\">Figma 입문 9-3 · Set page scrolling behavior and customize animations (12분 19초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31140325345559-FD4B-Course-wrap-up\">Figma 입문 10-1 · Course wrap up (1분 15초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30959048057879-FD4B-Advocate-sidebar-What-s-next\">Figma 입문 10-2 · Advocate sidebar: What&#x27;s next? (2분 11초)</a></p><p>목요일 파일을 열고 미완료 항목부터 이어 한다. 완료한 6-1·8-1·9-1은 다시 시청하지 않는다. 9-2 연결 추가 → 9-3 스크롤·애니메이션 → 10-1 마무리 → 10-2 다음 학습 순서로 본다.</p><p>새 영상은 6분 22초 + 12분 19초 + 1분 15초 + 2분 11초 = 22분 7초다. 휴식 10분을 제외한 제작·검증 예산은 87분 53초다. 정지·되감기와 수정 시간을 포함한다.</p><p>예제의 시작 화면·다음 화면·뒤로 가기를 연결하고 세로 스크롤을 설정한다. 실행 모드에서 각 연결을 눌러 도착 화면과 스크롤 범위를 확인한다.</p><p>예제 연결을 마치면 영상과 예제 페이지를 닫는다. 새 페이지에 나의 학습 기록 화면을 만든다. 제목, 이번 주 목표 문장, 강의 듣기·카드 만들기·기록 정리 카드, 학습 기록 보기 버튼을 배치하고 Auto layout과 기존 인스턴스를 사용한다.</p><p>학습 기록 보기 버튼을 누르면 학습 상세 화면으로 이동하고 뒤로 가기로 돌아오게 연결한다. 제목을 두 줄로 바꾸고 카드를 하나 더 넣은 뒤 겹침·잘림·잘못된 연결을 수정한다. 이 파일은 토요일 일정 목록·입력 과제와 구분해 저장한다.</p><p>결과물 · 실행 가능한 공식 예제, 예제 없이 만든 학습 기록·상세 두 화면, 연결·콘텐츠 변경 점검 기록.</p>",
           "saveAs": "W01/2026-11-06_w01d4b1",
           "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1393,7 +1392,7 @@
         },
         {
           "id": "w02d0b1",
-          "label": "실습·제작·검증",
+          "label": "Auto layout · 크기 규칙을 직접 설계하기",
           "original": "개인 일정관리 앱의 불편/편리 사례를 경험 기준으로 분류 [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1402,14 +1401,16 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "버튼·카드·목록의 부모와 자식 프레임을 종이에 그리기. Auto layout 영상 예제를 따라 Hug·Fill·Fixed가 적용된 버튼과 카드 각각 1개를 만들고 설정값을 기록하기.",
-            "결과물 · 구조 그림·예제. 확인: 왜 그 크기 설정을 썼는지 설명한다."
+            "지난주 버튼·카드를 열고 Hug·Fill·Fixed가 적용된 위치와 이유를 적는다. 5과 영상을 다시 따라 만드는 대신 현재 공식 문서에서 막힌 크기 설정 부분만 확인한다.",
+            "새 페이지에 학습 자료 목록을 만든다. 각 항목에는 강의 제목, 설명, 예상 시간, 열기 버튼을 넣고 기존 카드·버튼 인스턴스를 사용한다. 항목을 세 개 배치하고 부모·자식 프레임의 크기 규칙을 직접 정한다.",
+            "전체 너비를 390px와 768px로 바꾼다. 제목은 두 줄, 설명은 네 줄로 바꿔 버튼이 내용과 겹치지 않고 다음 항목이 아래로 이동하는지 확인한다. 위치를 수동으로 다시 맞추지 않고 크기 설정을 수정한다.",
+            "결과물 · 학습 자료 목록, 부모·자식 구조와 설정 이유, 두 너비·긴 문장 조건의 수정 전후."
           ],
-          "output": "구조 그림·예제. 확인: 왜 그 크기 설정을 썼는지 설명한다.",
+          "output": "학습 자료 목록, 부모·자식 구조와 설정 이유, 두 너비·긴 문장 조건의 수정 전후.",
           "resourceKeys": [
-            "auto_f"
+            "figma_auto"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31351261703063-FD4B-Auto-layout-fundamentals\">Figma 입문 5-1 · Auto layout fundamentals (5분 5초)</a></p><p>버튼·카드·목록의 부모와 자식 프레임을 종이에 그리기. Auto layout 영상 예제를 따라 Hug·Fill·Fixed가 적용된 버튼과 카드 각각 1개를 만들고 설정값을 기록하기.</p><p>결과물 · 구조 그림·예제. 확인: 왜 그 크기 설정을 썼는지 설명한다.</p>",
+          "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout-in-Figma\">Figma Auto Layout</a></p><p>지난주 버튼·카드를 열고 Hug·Fill·Fixed가 적용된 위치와 이유를 적는다. 5과 영상을 다시 따라 만드는 대신 현재 공식 문서에서 막힌 크기 설정 부분만 확인한다.</p><p>새 페이지에 학습 자료 목록을 만든다. 각 항목에는 강의 제목, 설명, 예상 시간, 열기 버튼을 넣고 기존 카드·버튼 인스턴스를 사용한다. 항목을 세 개 배치하고 부모·자식 프레임의 크기 규칙을 직접 정한다.</p><p>전체 너비를 390px와 768px로 바꾼다. 제목은 두 줄, 설명은 네 줄로 바꿔 버튼이 내용과 겹치지 않고 다음 항목이 아래로 이동하는지 확인한다. 위치를 수동으로 다시 맞추지 않고 크기 설정을 수정한다.</p><p>결과물 · 학습 자료 목록, 부모·자식 구조와 설정 이유, 두 너비·긴 문장 조건의 수정 전후.</p>",
           "saveAs": "W02/2026-11-09_w02d0b1",
           "acceptance": "세 너비와 긴 콘텐츠 조건에서 목록·폼이 유지된다. 설정을 보지 않고 Auto layout의 크기 결정 방식을 설명한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1437,13 +1438,13 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "참고한 레이블 자료에서 입력 이름·필수 표시·안내문을 확인한다. 이번 주 만들 일정 폼의 제목·날짜·설명에 사용할 이름과 필수 여부를 적는다. 폼 제작은 수요일에 진행한다."
+            "참고한 레이블 자료에서 입력 이름·필수 표시·안내문을 확인한다. 이번 주 만들 자료 추가 폼의 제목·자료 링크·설명에 사용할 이름과 필수 여부를 적는다. 폼 제작은 수요일에 진행한다."
           ],
           "output": "아래 실습에서 제작·비교·확인한 파일과 기록",
           "resourceKeys": [
             "a11y_labels"
           ],
-          "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.w3.org/WAI/tutorials/forms/labels/\">W3C WAI: 입력 항목의 레이블</a></p><p>참고한 레이블 자료에서 입력 이름·필수 표시·안내문을 확인한다. 이번 주 만들 일정 폼의 제목·날짜·설명에 사용할 이름과 필수 여부를 적는다. 폼 제작은 수요일에 진행한다.</p>",
+          "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.w3.org/WAI/tutorials/forms/labels/\">W3C WAI: 입력 항목의 레이블</a></p><p>참고한 레이블 자료에서 입력 이름·필수 표시·안내문을 확인한다. 이번 주 만들 자료 추가 폼의 제목·자료 링크·설명에 사용할 이름과 필수 여부를 적는다. 폼 제작은 수요일에 진행한다.</p>",
           "saveAs": "W02/2026-11-10_w02d1b0",
           "acceptance": "세 너비와 긴 콘텐츠 조건에서 목록·폼이 유지된다. 설정을 보지 않고 Auto layout의 크기 결정 방식을 설명한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1454,7 +1455,7 @@
         },
         {
           "id": "w02d1b1",
-          "label": "실습·제작·검증",
+          "label": "Auto layout · 빈 목록과 긴 콘텐츠 처리",
           "original": "5번 Create the button 및 Components fundamentals [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1463,15 +1464,16 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "확인할 내용 · 설정이 막힌 구간만 재시청",
-            "어제 예제를 보지 않고 카드와 목록을 만들기. 제목을 짧은 문장·두 줄·긴 문장으로 바꾸고 항목을 1개에서 6개로 늘려라.",
-            "결과물 · 세 텍스트 조건과 목록. 확인: 겹침·잘림이 발생한 위치와 수정한 속성을 기록한다."
+            "월요일 학습 자료 목록 파일을 이어 사용한다. 5-4 영상은 제작 중 막힌 부분만 확인한다.",
+            "항목 한 개·여섯 개·빈 목록 상태를 만든다. 빈 상태에는 아직 추가한 자료가 없습니다 문장과 자료 추가 버튼을 넣는다. 가장 긴 제목은 네 줄로 만들고 나머지 항목이 자연스럽게 내려가는지 확인한다.",
+            "이름이 긴 버튼 문구를 넣고 320px 너비에서도 제목·설명·버튼이 잘리지 않는지 확인한다. 기존 390px·768px에서도 수정한 설정이 유지되는지 다시 확인한다.",
+            "결과물 · 0·1·6개 항목 상태, 세 너비 점검표, 오류 위치·수정한 속성 기록."
           ],
-          "output": "세 텍스트 조건과 목록. 확인: 겹침·잘림이 발생한 위치와 수정한 속성을 기록한다.",
+          "output": "0·1·6개 항목 상태, 세 너비 점검표, 오류 위치·수정한 속성 기록.",
           "resourceKeys": [
             "card_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30987538800023-FD4B-Create-the-card-and-container-system\">Figma 입문 5-4 · Create the card and container system (18분 11초)</a></p><p>확인할 내용 · 설정이 막힌 구간만 재시청</p><p>어제 예제를 보지 않고 카드와 목록을 만들기. 제목을 짧은 문장·두 줄·긴 문장으로 바꾸고 항목을 1개에서 6개로 늘려라.</p><p>결과물 · 세 텍스트 조건과 목록. 확인: 겹침·잘림이 발생한 위치와 수정한 속성을 기록한다.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30987538800023-FD4B-Create-the-card-and-container-system\">Figma 입문 5-4 · Create the card and container system (18분 11초)</a></p><p>월요일 학습 자료 목록 파일을 이어 사용한다. 5-4 영상은 제작 중 막힌 부분만 확인한다.</p><p>항목 한 개·여섯 개·빈 목록 상태를 만든다. 빈 상태에는 아직 추가한 자료가 없습니다 문장과 자료 추가 버튼을 넣는다. 가장 긴 제목은 네 줄로 만들고 나머지 항목이 자연스럽게 내려가는지 확인한다.</p><p>이름이 긴 버튼 문구를 넣고 320px 너비에서도 제목·설명·버튼이 잘리지 않는지 확인한다. 기존 390px·768px에서도 수정한 설정이 유지되는지 다시 확인한다.</p><p>결과물 · 0·1·6개 항목 상태, 세 너비 점검표, 오류 위치·수정한 속성 기록.</p>",
           "saveAs": "W02/2026-11-10_w02d1b1",
           "acceptance": "세 너비와 긴 콘텐츠 조건에서 목록·폼이 유지된다. 설정을 보지 않고 Auto layout의 크기 결정 방식을 설명한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1544,7 +1546,7 @@
         },
         {
           "id": "w02d2b1",
-          "label": "실습·제작·검증",
+          "label": "중첩 Auto layout · 목록과 입력 폼 연결",
           "original": "개인 앱의 누름→반응→완료/실패 사례 3개 기록 [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1553,15 +1555,17 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "확인할 내용 · 제작 절차를 보조로 확인",
-            "중첩 Auto layout으로 레이블·입력창·안내문·저장 버튼이 있는 폼을 만들기.",
-            "결과물 · 제목·날짜·설명 입력 폼. 확인: 안내문을 두 줄로 바꾸어도 다음 입력창이 자동으로 아래로 이동한다."
+            "보조 자료에서 중첩 구조와 재사용 절차 중 필요한 부분만 확인한다. 기존 학습 자료 목록에 연결할 자료 추가 폼을 만든다.",
+            "폼에는 강의 제목·자료 링크·설명과 추가·취소 버튼을 넣는다. 필수 항목은 제목과 링크로 정하고 각 입력창에 레이블을 배치한다. 실제 데이터 저장 기능은 구현하지 않고 화면 상태를 만든다.",
+            "제목 누락·잘못된 링크 형식·입력 완료 세 상태를 만든다. 오류 문구에는 어느 입력을 어떻게 고칠지 쓴다. 안내문을 두 줄로 바꿔도 다음 입력창이 자동으로 이동하는지 확인한다.",
+            "목록의 자료 추가 → 폼 → 추가 완료 안내 → 목록 경로와 폼의 취소 → 목록 경로를 연결한다. 실제 저장이 아니라 미리 준비한 화면 전환임을 파일에 표시한다.",
+            "결과물 · 목록과 연결된 입력 폼·오류·완료 상태, 정상·취소 경로, 화면 전환의 한계 메모."
           ],
-          "output": "제목·날짜·설명 입력 폼. 확인: 안내문을 두 줄로 바꾸어도 다음 입력창이 자동으로 아래로 이동한다.",
+          "output": "목록과 연결된 입력 폼·오류·완료 상태, 정상·취소 경로, 화면 전환의 한계 메모.",
           "resourceKeys": [
             "list_project"
           ],
-          "scheduleHtml": "<p><b>문서 실습</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/39749003039511-Create-a-reusable-list-component\">Create a reusable list component</a></p><p>확인할 내용 · 제작 절차를 보조로 확인</p><p>중첩 Auto layout으로 레이블·입력창·안내문·저장 버튼이 있는 폼을 만들기.</p><p>결과물 · 제목·날짜·설명 입력 폼. 확인: 안내문을 두 줄로 바꾸어도 다음 입력창이 자동으로 아래로 이동한다.</p>",
+          "scheduleHtml": "<p><b>문서 실습</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/39749003039511-Create-a-reusable-list-component\">Create a reusable list component</a></p><p>보조 자료에서 중첩 구조와 재사용 절차 중 필요한 부분만 확인한다. 기존 학습 자료 목록에 연결할 자료 추가 폼을 만든다.</p><p>폼에는 강의 제목·자료 링크·설명과 추가·취소 버튼을 넣는다. 필수 항목은 제목과 링크로 정하고 각 입력창에 레이블을 배치한다. 실제 데이터 저장 기능은 구현하지 않고 화면 상태를 만든다.</p><p>제목 누락·잘못된 링크 형식·입력 완료 세 상태를 만든다. 오류 문구에는 어느 입력을 어떻게 고칠지 쓴다. 안내문을 두 줄로 바꿔도 다음 입력창이 자동으로 이동하는지 확인한다.</p><p>목록의 자료 추가 → 폼 → 추가 완료 안내 → 목록 경로와 폼의 취소 → 목록 경로를 연결한다. 실제 저장이 아니라 미리 준비한 화면 전환임을 파일에 표시한다.</p><p>결과물 · 목록과 연결된 입력 폼·오류·완료 상태, 정상·취소 경로, 화면 전환의 한계 메모.</p>",
           "saveAs": "W02/2026-11-11_w02d2b1",
           "acceptance": "세 너비와 긴 콘텐츠 조건에서 목록·폼이 유지된다. 설정을 보지 않고 Auto layout의 크기 결정 방식을 설명한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1642,18 +1646,18 @@
           "category": "ai",
           "categoryLabel": "AI 실습",
           "method": "ai_lab",
-          "inputs": "수요일에 직접 만든 Figma 제목·날짜·설명 입력 폼. 없으면 같은 세 필드를 종이에 배치한다.",
+          "inputs": "수요일에 만든 학습 자료 추가 폼. 강의 제목·자료 링크·설명 세 필드와 오류·완료 화면을 사용한다.",
           "instructions": [
-            "대상·자료 · 수요일에 직접 만든 Figma 제목·날짜·설명 입력 폼. 없으면 같은 세 필드를 종이에 배치한다.",
-            "직접 결정하기 · 제목·날짜만 필수로 정한다. 오늘 실습에서는 날짜가 비어 있는 경우까지만 검사하고 과거 날짜 금지 같은 규칙은 임의로 넣지 않는다.",
-            "AI에 요청하기 · 화면 하나의 HTML 폼을 요청한다. 빈 필수 값이면 해당 입력 아래 원인과 수정 방법을 표시하고, 정상 입력이면 입력 내용을 확인 화면에 표시하게 한다. 실제 저장은 제외한다.",
-            "실행·수정하기 · 제목 누락·날짜 누락·둘 다 누락·모두 정상·설명만 비움의 다섯 조건을 실행한다. 오류 문구와 해당 입력의 연결·수정 후 오류 해제를 확인한다."
+            "대상·자료 · 수요일에 만든 학습 자료 추가 폼. 강의 제목·자료 링크·설명 세 필드와 오류·완료 화면을 사용한다.",
+            "직접 결정하기 · 제목과 자료 링크만 필수로 정한다. 링크는 https://로 시작해야 한다. 실제 저장·외부 사이트 접속은 만들지 않는다.",
+            "AI에 요청하기 · Figma 폼과 같은 세 필드의 단일 HTML 화면을 요청한다. 빈 필수 값과 https://로 시작하지 않는 링크에는 해당 입력 아래 원인과 수정 방법을 표시한다. 정상 입력은 확인 영역에 표시하고 실제 저장은 제외한다.",
+            "실행·수정하기 · 제목 누락·링크 누락·둘 다 누락·잘못된 링크·모두 정상·설명만 비움의 여섯 조건을 실행한다. 오류 문구와 해당 입력의 연결, 수정 후 오류 해제, 기존 정상 입력을 다시 확인한다."
           ],
           "output": "요청문·최종 파일 또는 표·직접 확인한 결과·수정 내용과 이유. 코드 작업은 HTML, 분석 작업은 원문 번호가 연결된 표로 저장한다.",
           "resourceKeys": [],
-          "scheduleHtml": "<h3>대상·자료</h3><p>수요일에 직접 만든 Figma 제목·날짜·설명 입력 폼. 없으면 같은 세 필드를 종이에 배치한다.</p><h3>직접 결정하기</h3><p>제목·날짜만 필수로 정한다. 오늘 실습에서는 날짜가 비어 있는 경우까지만 검사하고 과거 날짜 금지 같은 규칙은 임의로 넣지 않는다.</p><h3>AI에 요청하기</h3><p>화면 하나의 HTML 폼을 요청한다. 빈 필수 값이면 해당 입력 아래 원인과 수정 방법을 표시하고, 정상 입력이면 입력 내용을 확인 화면에 표시하게 한다. 실제 저장은 제외한다.</p><h3>실행·수정하기</h3><p>제목 누락·날짜 누락·둘 다 누락·모두 정상·설명만 비움의 다섯 조건을 실행한다. 오류 문구와 해당 입력의 연결·수정 후 오류 해제를 확인한다.</p><h3>기록·저장하기</h3><p>요청문·최종 파일 또는 표·검증 결과·수정 이유를 저장한다. 원문 분석에는 출처 번호를 남긴다. 효율 기록표에 도구·모델·전체 요청·수정 요청 횟수·시간·품질 결과를 한 줄 적는다. 미확인·미실시와 다음 작업을 남긴다.</p>",
+          "scheduleHtml": "<h3>대상·자료</h3><p>수요일에 만든 학습 자료 추가 폼. 강의 제목·자료 링크·설명 세 필드와 오류·완료 화면을 사용한다.</p><h3>직접 결정하기</h3><p>제목과 자료 링크만 필수로 정한다. 링크는 https://로 시작해야 한다. 실제 저장·외부 사이트 접속은 만들지 않는다.</p><h3>AI에 요청하기</h3><p>Figma 폼과 같은 세 필드의 단일 HTML 화면을 요청한다. 빈 필수 값과 https://로 시작하지 않는 링크에는 해당 입력 아래 원인과 수정 방법을 표시한다. 정상 입력은 확인 영역에 표시하고 실제 저장은 제외한다.</p><h3>실행·수정하기</h3><p>제목 누락·링크 누락·둘 다 누락·잘못된 링크·모두 정상·설명만 비움의 여섯 조건을 실행한다. 오류 문구와 해당 입력의 연결, 수정 후 오류 해제, 기존 정상 입력을 다시 확인한다.</p><h3>기록·저장하기</h3><p>요청문·최종 파일 또는 표·검증 결과·수정 이유를 저장한다. 원문 분석에는 출처 번호를 남긴다. 효율 기록표에 도구·모델·전체 요청·수정 요청 횟수·시간·품질 결과를 한 줄 적는다. 미확인·미실시와 다음 작업을 남긴다.</p>",
           "saveAs": "W02/2026-11-12_w02d3b2",
-          "acceptance": "제목 누락·날짜 누락·둘 다 누락·모두 정상·설명만 비움의 다섯 조건을 실행한다. 오류 문구와 해당 입력의 연결·수정 후 오류 해제를 확인한다.",
+          "acceptance": "제목 누락·링크 누락·둘 다 누락·잘못된 링크·모두 정상·설명만 비움의 여섯 조건을 실행한다. 오류 문구와 해당 입력의 연결, 수정 후 오류 해제, 기존 정상 입력을 다시 확인한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1680,13 +1684,13 @@
           "inputs": "",
           "instructions": [
             "확인할 내용 · 입력 오류 설명과 다음 행동",
-            "입력 오류 자료를 읽고 일정 입력 연습 폼의 원인·복구 안내를 수정하기."
+            "입력 오류 자료를 읽고 자료 추가 연습 폼의 원인·복구 안내를 수정하기."
           ],
           "output": "아래 실습에서 제작·비교·확인한 파일과 기록",
           "resourceKeys": [
             "a11y_errors"
           ],
-          "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.w3.org/WAI/tutorials/forms/validation/\">W3C WAI: 입력 검증과 오류</a></p><p>확인할 내용 · 입력 오류 설명과 다음 행동</p><p>입력 오류 자료를 읽고 일정 입력 연습 폼의 원인·복구 안내를 수정하기.</p>",
+          "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.w3.org/WAI/tutorials/forms/validation/\">W3C WAI: 입력 검증과 오류</a></p><p>확인할 내용 · 입력 오류 설명과 다음 행동</p><p>입력 오류 자료를 읽고 자료 추가 연습 폼의 원인·복구 안내를 수정하기.</p>",
           "saveAs": "W02/2026-11-13_w02d4b0",
           "acceptance": "세 너비와 긴 콘텐츠 조건에서 목록·폼이 유지된다. 설정을 보지 않고 Auto layout의 크기 결정 방식을 설명한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1739,14 +1743,15 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "확인할 내용 · 목록·입력 화면의 위계 비교",
-            "월요일 예제를 보지 않고 목록·폼 한 쌍을 새로 만들기."
+            "기존 일정 목록·입력 연습과 이번 주 학습 자료 목록·폼을 비교한다. 내용만 바꾼 복사본인지 확인하고 필요한 정보와 오류 안내가 다른 위치를 표시한다.",
+            "두 흐름 중 막힌 설정이 많았던 한 화면을 고른다. 예제를 닫고 새 페이지에 직접 만들고 원본과 비교해 누락된 요소·설정·연결을 수정한다.",
+            "결과물 · 두 과업의 차이 기록, 자료 없이 만든 한 화면, 누락·수정 기록."
           ],
           "output": "아래 실습에서 제작·비교·확인한 파일과 기록",
           "resourceKeys": [
             "ui_type"
           ],
-          "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://m3.material.io/styles/typography/overview\">Google Material 3: Typography(브라우저 JavaScript 필요)</a></p><p>확인할 내용 · 목록·입력 화면의 위계 비교</p><p>월요일 예제를 보지 않고 목록·폼 한 쌍을 새로 만들기.</p>",
+          "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://m3.material.io/styles/typography/overview\">Google Material 3: Typography(브라우저 JavaScript 필요)</a></p><p>기존 일정 목록·입력 연습과 이번 주 학습 자료 목록·폼을 비교한다. 내용만 바꾼 복사본인지 확인하고 필요한 정보와 오류 안내가 다른 위치를 표시한다.</p><p>두 흐름 중 막힌 설정이 많았던 한 화면을 고른다. 예제를 닫고 새 페이지에 직접 만들고 원본과 비교해 누락된 요소·설정·연결을 수정한다.</p><p>결과물 · 두 과업의 차이 기록, 자료 없이 만든 한 화면, 누락·수정 기록.</p>",
           "saveAs": "W02/2026-11-14_w02d5b0",
           "acceptance": "세 너비와 긴 콘텐츠 조건에서 목록·폼이 유지된다. 설정을 보지 않고 Auto layout의 크기 결정 방식을 설명한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1799,14 +1804,14 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "확인할 내용 · 실제 앱의 레이블과 일정 입력 연습 폼 비교",
-            "상용 앱 폼에서 입력 레이블·필수 표시·오류 안내를 관찰하고 일정 입력 연습 폼과 비교하기."
+            "확인할 내용 · 실제 앱의 레이블과 자료 추가 연습 폼 비교",
+            "상용 앱 폼에서 입력 레이블·필수 표시·오류 안내를 관찰하고 자료 추가 연습 폼과 비교하기."
           ],
           "output": "아래 실습에서 제작·비교·확인한 파일과 기록",
           "resourceKeys": [
             "a11y_labels"
           ],
-          "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.w3.org/WAI/tutorials/forms/labels/\">W3C WAI: 입력 항목의 레이블</a></p><p>확인할 내용 · 실제 앱의 레이블과 일정 입력 연습 폼 비교</p><p>상용 앱 폼에서 입력 레이블·필수 표시·오류 안내를 관찰하고 일정 입력 연습 폼과 비교하기.</p>",
+          "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.w3.org/WAI/tutorials/forms/labels/\">W3C WAI: 입력 항목의 레이블</a></p><p>확인할 내용 · 실제 앱의 레이블과 자료 추가 연습 폼 비교</p><p>상용 앱 폼에서 입력 레이블·필수 표시·오류 안내를 관찰하고 자료 추가 연습 폼과 비교하기.</p>",
           "saveAs": "W02/2026-11-15_w02d6b0",
           "acceptance": "세 너비와 긴 콘텐츠 조건에서 목록·폼이 유지된다. 설정을 보지 않고 Auto layout의 크기 결정 방식을 설명한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1826,12 +1831,13 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "1주차 버튼을 자료 없이 재현한 뒤 이번 주 폼에 합치고 깨지는 조건을 수정하기.",
-            "결과물 · 조건별 점검표와 수정 파일."
+            "이번 주 학습 자료 목록과 입력 폼을 320·390·768px에서 실행한다. 긴 제목·설명, 0·1·6개 항목, 제목 누락·잘못된 링크·취소 경로를 확인한다.",
+            "화면을 추가하기 전에 확인에서 실패한 설정·문구·연결을 수정한다. 같은 조건을 다시 실행하고 통과·실패·미실시를 표시한다.",
+            "결과물 · 조건별 점검표, 수정 전후와 재확인 기록. 다음 주에는 같은 파일에 상태 속성과 중첩 인스턴스를 적용한다."
           ],
           "output": "조건별 점검표와 수정 파일.",
           "resourceKeys": [],
-          "scheduleHtml": "<p>1주차 버튼을 자료 없이 재현한 뒤 이번 주 폼에 합치고 깨지는 조건을 수정하기.</p><p>결과물 · 조건별 점검표와 수정 파일.</p>",
+          "scheduleHtml": "<p>이번 주 학습 자료 목록과 입력 폼을 320·390·768px에서 실행한다. 긴 제목·설명, 0·1·6개 항목, 제목 누락·잘못된 링크·취소 경로를 확인한다.</p><p>화면을 추가하기 전에 확인에서 실패한 설정·문구·연결을 수정한다. 같은 조건을 다시 실행하고 통과·실패·미실시를 표시한다.</p><p>결과물 · 조건별 점검표, 수정 전후와 재확인 기록. 다음 주에는 같은 파일에 상태 속성과 중첩 인스턴스를 적용한다.</p>",
           "saveAs": "W02/2026-11-15_w02d6b1",
           "acceptance": "세 너비와 긴 콘텐츠 조건에서 목록·폼이 유지된다. 설정을 보지 않고 Auto layout의 크기 결정 방식을 설명한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
