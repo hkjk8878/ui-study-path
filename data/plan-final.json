@@ -4,7 +4,7 @@
     "start": "2026-11-02",
     "end": "2027-04-18",
     "timeZone": "Asia/Seoul",
-    "source": "UIUX_24week_Routine_Progress_20261104.pdf",
+    "source": "UIUX_24week_Routine_FullCourse_20261104.pdf",
     "sourceVersion": "2026-11-04",
     "weekHours": 25,
     "days": 168,
@@ -12,7 +12,7 @@
     "coreHours": 552,
     "aiHours": 48,
     "originalSource": "Product_Designer_24week_Verified_Revised_Plan.pdf",
-    "revision": "2026-11-04-progress-through-lesson5",
+    "revision": "2026-11-04-full-intro-course",
     "scheduledHours": 600,
     "taskHours": 564,
     "breakHours": 36,
@@ -85,11 +85,20 @@
       "phase": "foundation",
       "start": "2026-11-02",
       "end": "2026-11-08",
-      "output": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+      "output": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
       "purpose": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
       "resources": [
         "task",
-        "figma",
+        "intro_1_1",
+        "intro_1_2",
+        "intro_1_3",
+        "intro_1_4",
+        "intro_2_1",
+        "intro_2_2",
+        "intro_3_1",
+        "intro_3_2",
+        "intro_3_3",
+        "intro_3_4",
         "frame_f",
         "heading_f",
         "hero_f",
@@ -101,8 +110,13 @@
         "fd_components",
         "card_f",
         "tips_f",
+        "intro_overview",
         "a11y_errors",
         "nav_f",
+        "intro_7_1",
+        "intro_7_2",
+        "intro_7_3",
+        "intro_7_4",
         "assemble_f",
         "proto_f",
         "connections_f",
@@ -111,9 +125,9 @@
         "next_f",
         "ui_type"
       ],
-      "coreOutput": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+      "coreOutput": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
       "aiOutput": "이미 작성한 7단계 메모·AI 표·원문 대조 결과. 추가 제작 과제 없음. / 요청문·최종 파일 또는 표·직접 확인한 결과·수정 내용과 이유. 코드 작업은 HTML, 분석 작업은 원문 번호가 연결된 표로 저장한다.",
-      "qualityCriterion": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+      "qualityCriterion": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
       "aiResources": [
         "ai_pair",
         "ai_ms",
@@ -122,7 +136,7 @@
       ],
       "learningGuide": null,
       "reviewChecklist": [
-        "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다."
+        "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다."
       ],
       "evidenceMap": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
       "feedback": null,
@@ -879,7 +893,7 @@
           ],
           "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.nngroup.com/articles/task-analysis/\">NN/g 과업 분석</a></p><p>평소 사용하는 상용 캘린더 앱에서 가상의 연습 일정 하나를 추가하고 시간을 수정한 뒤 삭제한다. 누르거나 입력할 때마다 “내 행동 / 직후 화면 변화”를 한 줄씩 적는다. 실제 버튼 이름과 필수 입력·저장·삭제 후 표시를 기록한다.</p><p>참고한 과업 분석 자료에서 사용자 목표·행동·완료 조건을 확인하고 본인 기록에 각각 표시한다.</p>",
           "saveAs": "W01/2026-11-02_w01d0b0",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -904,7 +918,7 @@
           "resourceKeys": [],
           "scheduleHtml": "<p>Figma 연습 파일에 프레임·그룹·섹션을 만들고 텍스트·도형을 배치하기. 레이어 이름을 역할대로 정하고 차이를 확인하기.</p><p>결과물 · 프레임·그룹·섹션이 구분되는 연습 파일</p>",
           "saveAs": "W01/2026-11-02_w01d0b1",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -936,11 +950,16 @@
           ],
           "output": "아래 실습에서 제작·비교·확인한 파일과 기록",
           "resourceKeys": [
-            "figma"
+            "intro_1_1",
+            "intro_1_2",
+            "intro_1_3",
+            "intro_1_4",
+            "intro_2_1",
+            "intro_2_2"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/sections/30880632542743-Figma-Design-for-beginners\">Figma 공식 입문 1~10번</a></p><p>확인할 내용 · 1~3장 중 아직 안 본 구간만: Get started / Explore / Layers and frames. 오늘 진도는 3장까지.</p><p>오늘 범위 · 이미 본 영상은 건너뛰기. 남은 1~3장만 진행하고 3장까지 끝났으면 종료.</p><p>현재 진도 반영: 오늘 Figma는 3장까지. 이미 마쳤으면 추가 제작을 하지 않는다.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30925496128407-FD4B-Create-your-Figma-account\">Figma 입문 1-1 · Create your Figma account (0분 54초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30926159906967-FD4B-Tour-the-file-browser-and-customize-your-profile\">Figma 입문 1-2 · Tour the file browser and customize your profile (2분 32초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30926129986199-FD4B-Create-your-first-design-file\">Figma 입문 1-3 · Create your first design file (0분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31592472915479-FD4B-Advocate-sidebar-Learn-more-about-portfolios\">Figma 입문 1-4 · Advocate sidebar: Learn more about portfolios (2분 43초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30925881896727-FD4B-Navigate-Figma-Design-files\">Figma 입문 2-1 · Navigate Figma Design files (7분 26초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30928303842327-FD4B-Set-your-file-preferences\">Figma 입문 2-2 · Set your file preferences (1분 15초)</a></p><p>확인할 내용 · 1~3장 중 아직 안 본 구간만: Get started / Explore / Layers and frames. 오늘 진도는 3장까지.</p><p>오늘 범위 · 이미 본 영상은 건너뛰기. 남은 1~3장만 진행하고 3장까지 끝났으면 종료.</p><p>현재 진도 반영: 오늘 Figma는 3장까지. 이미 마쳤으면 추가 제작을 하지 않는다.</p>",
           "saveAs": "W01/2026-11-03_w01d1b0",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -965,11 +984,14 @@
           ],
           "output": "3장까지 작업한 예제 파일. 오늘 종료 후 추가 제출물 없음.",
           "resourceKeys": [
-            "figma"
+            "intro_3_1",
+            "intro_3_2",
+            "intro_3_3",
+            "intro_3_4"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/sections/30880632542743-Figma-Design-for-beginners\">Figma 공식 입문 1~10번</a></p><p>확인할 내용 · 3장 Layers and frames까지만</p><p>3장 Layers and frames까지의 예제에서 레이어 선택·텍스트 수정·도형 배치·프레임 넣기를 확인하기. 아직 안 본 3장 구간이 있으면 먼저 시청하며 따라 만들기. 3장까지 끝났으면 오늘 Figma 학습 종료. 4장 이후와 추가 제작 과제는 수요일부터 진행.</p><p>결과물 · 3장까지 작업한 예제 파일. 오늘 종료 후 추가 제출물 없음.</p><p>현재 진도 반영: 오늘 Figma는 3장까지. 이미 마쳤으면 추가 제작을 하지 않는다.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30928855233175-FD4B-Create-your-avatar-using-shapes-and-fills\">Figma 입문 3-1 · Create your avatar using shapes and fills (6분 30초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30938465113751-FD4B-Build-your-bio-using-text-layers\">Figma 입문 3-2 · Build your bio using text layers (8분 52초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30954388121495-FD4B-Add-your-layers-to-a-frame\">Figma 입문 3-3 · Add your layers to a frame (3분 52초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31594334075927-FD4B-Advocate-sidebar-Portfolio-personalization\">Figma 입문 3-4 · Advocate sidebar: Portfolio personalization (3분 19초)</a></p><p>확인할 내용 · 3장 Layers and frames까지만</p><p>3장 Layers and frames까지의 예제에서 레이어 선택·텍스트 수정·도형 배치·프레임 넣기를 확인하기. 아직 안 본 3장 구간이 있으면 먼저 시청하며 따라 만들기. 3장까지 끝났으면 오늘 Figma 학습 종료. 4장 이후와 추가 제작 과제는 수요일부터 진행.</p><p>결과물 · 3장까지 작업한 예제 파일. 오늘 종료 후 추가 제출물 없음.</p><p>현재 진도 반영: 오늘 Figma는 3장까지. 이미 마쳤으면 추가 제작을 하지 않는다.</p>",
           "saveAs": "W01/2026-11-03_w01d1b1",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1033,7 +1055,7 @@
           ],
           "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30974070391191-FD4B-Create-a-frame-using-frame-presets\">Figma 입문 4-1 · Create a frame using frame presets (4분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30975051911703-FD4B-Create-the-section-heading-paragraph-text-and-quote-block\">Figma 입문 4-2 · Create the section heading, paragraph text, and quote block (4분 4초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30979234412567-FD4B-Create-the-image-and-the-hero\">Figma 입문 4-3 · Create the image and the hero (4분 0초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31591549789975-FD4B-Constraints-fundamentals\">Figma 입문 4-4 · Constraints fundamentals (2분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30979556779159-FD4B-Clean-up-your-layers\">Figma 입문 4-5 · Clean up your layers (4분 28초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31593861050775-FD4B-Advocate-sidebar-The-differences-between-sections-groups-and-frames\">Figma 입문 4-6 · Advocate sidebar: The differences between sections, groups, and frames (4분 23초)</a></p><p>11월 4일에 4과 영상 시청과 예제 따라 만들기를 마쳤다. 기존 파일을 보관한다. 같은 영상을 다시 보거나 같은 예제를 다시 제출하지 않는다.</p>",
           "saveAs": "W01/2026-11-04_w01d2b0",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1064,7 +1086,7 @@
           ],
           "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31351261703063-FD4B-Auto-layout-fundamentals\">Figma 입문 5-1 · Auto layout fundamentals (5분 5초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30981948843927-FD4B-Create-the-button\">Figma 입문 5-2 · Create the button (5분 17초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30984647753751-FD4B-Components-fundamentals\">Figma 입문 5-3 · Components fundamentals (4분 16초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30987538800023-FD4B-Create-the-card-and-container-system\">Figma 입문 5-4 · Create the card and container system (18분 11초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31717821174167-FD4B-Advocate-sidebar-Auto-layout-tips-and-tricks\">Figma 입문 5-5 · Advocate sidebar: Auto layout tips and tricks (8분 30초)</a></p><p>11월 4일에 5과 전체 영상 시청과 영상 속 예제 따라 만들기를 마쳤다. 버튼·카드·컨테이너가 들어 있는 기존 파일을 보관한다. 자료 없이 직접 만드는 능력은 이후 별도 실습에서 확인한다.</p><p>오늘의 실제 소요 시간은 본인 기록에 입력한다. 기존 08:00~11:00은 예정 시간이며, 완료 보고만으로 실제 공부시간이나 완료 체크를 자동 변경하지 않는다.</p>",
           "saveAs": "W01/2026-11-04_w01d2b1",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1090,16 +1112,18 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
+            "Figma 입문 0 안내 페이지에서 수업 소개 영상과 공식 예제 파일 링크를 확인한다. 이미 본 안내 영상은 반복하지 않는다. 이후에는 아래 상용 앱 오류 관찰을 진행한다.",
             "월요일 관찰한 상용 캘린더 앱에서 일정 입력을 열고 필수 항목을 비운 채 저장을 시도한다. 오류 문구·입력 위치·취소 후 화면·정상 저장 후 표시를 기록한다. 실습용 가상 일정만 사용한다.",
             "참고한 W3C 자료의 오류 식별·수정 안내와 비교해 원인·수정 방법이 화면에 표시되는지 적는다."
           ],
           "output": "아래 실습에서 제작·비교·확인한 파일과 기록",
           "resourceKeys": [
+            "intro_overview",
             "a11y_errors"
           ],
-          "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.w3.org/WAI/tutorials/forms/validation/\">W3C WAI: 입력 검증과 오류</a></p><p>월요일 관찰한 상용 캘린더 앱에서 일정 입력을 열고 필수 항목을 비운 채 저장을 시도한다. 오류 문구·입력 위치·취소 후 화면·정상 저장 후 표시를 기록한다. 실습용 가상 일정만 사용한다.</p><p>참고한 W3C 자료의 오류 식별·수정 안내와 비교해 원인·수정 방법이 화면에 표시되는지 적는다.</p>",
+          "scheduleHtml": "<p><b>강의 안내·영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30848209492887-Course-overview-Figma-Design-for-beginners-2025\">Figma 입문 0 · Course overview: Figma Design for beginners (2025)</a></p><p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.w3.org/WAI/tutorials/forms/validation/\">W3C WAI: 입력 검증과 오류</a></p><p>Figma 입문 0 안내 페이지에서 수업 소개 영상과 공식 예제 파일 링크를 확인한다. 이미 본 안내 영상은 반복하지 않는다. 이후에는 아래 상용 앱 오류 관찰을 진행한다.</p><p>월요일 관찰한 상용 캘린더 앱에서 일정 입력을 열고 필수 항목을 비운 채 저장을 시도한다. 오류 문구·입력 위치·취소 후 화면·정상 저장 후 표시를 기록한다. 실습용 가상 일정만 사용한다.</p><p>참고한 W3C 자료의 오류 식별·수정 안내와 비교해 원인·수정 방법이 화면에 표시되는지 적는다.</p>",
           "saveAs": "W01/2026-11-05_w01d3b0",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1108,7 +1132,7 @@
         },
         {
           "id": "w01d3b1",
-          "label": "Figma 입문 6-1·8-1·9-1 · 화면 조립과 프로토타입 기초",
+          "label": "Figma 입문 6-1 → 7-1~7-4 · 벡터와 스킬 목록",
           "original": "4번 Frame presets and constraints 예제 따라하기 [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1117,22 +1141,23 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "11월 4일 만든 버튼·카드·컨테이너 파일을 연다. 5-4·5-5 영상과 같은 예제는 반복하지 않는다. 6-1 내비게이션·푸터, 8-1 페이지 조립, 9-1 프로토타입 기초 순서로 보며 예제를 이어 만든다.",
-            "새 영상은 13분 34초 + 12분 18초 + 5분 27초 = 31분 19초다. 휴식 10분을 제외한 실습 예산은 78분 41초다. 정지·되감기 시간도 실습 예산에 포함한다.",
-            "기존 요소를 인스턴스로 배치해 예제 페이지를 조립한다. 9-1에서 설명하는 시작 화면과 화면 연결 위치를 확인하고, 실제 화면 연결 제작은 금요일 9-2에서 이어 한다.",
-            "조립 뒤 제목을 두 줄로 바꾸고 카드 하나를 추가한다. 부모 프레임 너비를 1440px와 768px로 바꾸어 겹침·잘림을 확인한다. 문제가 생기면 해당 프레임의 Hug·Fill·Fixed와 줄바꿈 설정을 수정한다.",
-            "여기까지 끝나면 예제 파일을 보지 않고 내비게이션을 새 프레임에 만든다. 메뉴는 오늘·이번 주·프로젝트, 제목은 나의 학습 기록으로 바꾸고 기존 버튼 인스턴스를 사용한다. 메뉴 하나를 더 넣어 배치가 유지되는지 확인한다.",
-            "결과물 · 이어서 조립한 예제, 두 너비의 수정 전후, 예제 없이 만든 내비게이션. 미완료 항목은 금요일 실습의 첫 작업으로 넘긴다."
+            "11월 4일 만든 버튼·카드·컨테이너 파일을 연다. 6-1 내비게이션·푸터 → 7-1 Boolean operations → 7-2 벡터 편집 → 7-3 호 만들기 → 7-4 스킬 목록 순서로 보고 같은 예제를 만든다. Illustrator 경험을 이유로 영상을 생략하지 않는다.",
+            "새 영상 합계는 36분 21초다. 휴식 10분을 제외한 실습 예산은 73분 39초다. 정지·되감기·설정 확인과 수정도 이 시간에 포함한다.",
+            "6-1에서 내비게이션과 푸터를 만든다. 7-1에서는 영상의 다섯 도형을 Boolean operations로 만들고, 원본 도형이 남아 다시 수정할 수 있는지 확인한다. 7-2에서 벡터 편집 모드로 점과 선을 수정하고, 7-3에서 타원의 호·시작 위치·두께를 조절한다.",
+            "7-4에서 직접 만든 도형 컴포넌트와 텍스트를 결합해 스킬 목록을 만든다. 인스턴스 교체로 아이콘을 바꾸고 Auto layout 줄바꿈을 적용한다. 제목을 길게 바꾸고 부모 프레임 너비를 줄여 아이콘·텍스트가 겹치지 않는지 확인한다.",
+            "결과물 · 내비게이션·푸터, 다섯 도형, 벡터 점 수정·호 조절 예제, 인스턴스 교체와 줄바꿈이 적용된 스킬 목록. 미완료 예제는 금요일 첫 실습에서 이어 하고 8과로 넘어간다."
           ],
-          "output": "이어서 조립한 예제, 두 너비의 수정 전후, 예제 없이 만든 내비게이션. 미완료 항목은 금요일 실습의 첫 작업으로 넘긴다.",
+          "output": "내비게이션·푸터, 다섯 도형, 벡터 점 수정·호 조절 예제, 인스턴스 교체와 줄바꿈이 적용된 스킬 목록. 미완료 예제는 금요일 첫 실습에서 이어 하고 8과로 넘어간다.",
           "resourceKeys": [
             "nav_f",
-            "assemble_f",
-            "proto_f"
+            "intro_7_1",
+            "intro_7_2",
+            "intro_7_3",
+            "intro_7_4"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31002534003991-FD4B-Create-the-navigation-bar-and-footer\">Figma 입문 6-1 · Create the navigation bar and footer (13분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010075634967-FD4B-Assemble-your-portfolio-pages\">Figma 입문 8-1 · Assemble your portfolio pages (12분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals\">Figma 입문 9-1 · Prototyping fundamentals (5분 27초)</a></p><p>11월 4일 만든 버튼·카드·컨테이너 파일을 연다. 5-4·5-5 영상과 같은 예제는 반복하지 않는다. 6-1 내비게이션·푸터, 8-1 페이지 조립, 9-1 프로토타입 기초 순서로 보며 예제를 이어 만든다.</p><p>새 영상은 13분 34초 + 12분 18초 + 5분 27초 = 31분 19초다. 휴식 10분을 제외한 실습 예산은 78분 41초다. 정지·되감기 시간도 실습 예산에 포함한다.</p><p>기존 요소를 인스턴스로 배치해 예제 페이지를 조립한다. 9-1에서 설명하는 시작 화면과 화면 연결 위치를 확인하고, 실제 화면 연결 제작은 금요일 9-2에서 이어 한다.</p><p>조립 뒤 제목을 두 줄로 바꾸고 카드 하나를 추가한다. 부모 프레임 너비를 1440px와 768px로 바꾸어 겹침·잘림을 확인한다. 문제가 생기면 해당 프레임의 Hug·Fill·Fixed와 줄바꿈 설정을 수정한다.</p><p>여기까지 끝나면 예제 파일을 보지 않고 내비게이션을 새 프레임에 만든다. 메뉴는 오늘·이번 주·프로젝트, 제목은 나의 학습 기록으로 바꾸고 기존 버튼 인스턴스를 사용한다. 메뉴 하나를 더 넣어 배치가 유지되는지 확인한다.</p><p>결과물 · 이어서 조립한 예제, 두 너비의 수정 전후, 예제 없이 만든 내비게이션. 미완료 항목은 금요일 실습의 첫 작업으로 넘긴다.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31002534003991-FD4B-Create-the-navigation-bar-and-footer\">Figma 입문 6-1 · Create the navigation bar and footer (13분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130266267287-FD4B-Combine-shapes-using-boolean-operations\">Figma 입문 7-1 · Combine shapes using boolean operations (10분 52초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130310976663-FD4B-Use-vector-edit-mode-to-modify-shapes\">Figma 입문 7-2 · Use vector edit mode to modify shapes (2분 10초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130312631191-FD4B-Turn-an-ellipse-into-an-arc\">Figma 입문 7-3 · Turn an ellipse into an arc (4분 43초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130329934231-FD4B-Create-the-skills-list\">Figma 입문 7-4 · Create the skills list (5분 2초)</a></p><p>11월 4일 만든 버튼·카드·컨테이너 파일을 연다. 6-1 내비게이션·푸터 → 7-1 Boolean operations → 7-2 벡터 편집 → 7-3 호 만들기 → 7-4 스킬 목록 순서로 보고 같은 예제를 만든다. Illustrator 경험을 이유로 영상을 생략하지 않는다.</p><p>새 영상 합계는 36분 21초다. 휴식 10분을 제외한 실습 예산은 73분 39초다. 정지·되감기·설정 확인과 수정도 이 시간에 포함한다.</p><p>6-1에서 내비게이션과 푸터를 만든다. 7-1에서는 영상의 다섯 도형을 Boolean operations로 만들고, 원본 도형이 남아 다시 수정할 수 있는지 확인한다. 7-2에서 벡터 편집 모드로 점과 선을 수정하고, 7-3에서 타원의 호·시작 위치·두께를 조절한다.</p><p>7-4에서 직접 만든 도형 컴포넌트와 텍스트를 결합해 스킬 목록을 만든다. 인스턴스 교체로 아이콘을 바꾸고 Auto layout 줄바꿈을 적용한다. 제목을 길게 바꾸고 부모 프레임 너비를 줄여 아이콘·텍스트가 겹치지 않는지 확인한다.</p><p>결과물 · 내비게이션·푸터, 다섯 도형, 벡터 점 수정·호 조절 예제, 인스턴스 교체와 줄바꿈이 적용된 스킬 목록. 미완료 예제는 금요일 첫 실습에서 이어 하고 8과로 넘어간다.</p>",
           "saveAs": "W01/2026-11-05_w01d3b1",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1194,7 +1219,7 @@
           ],
           "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.nngroup.com/articles/task-analysis/\">NN/g 과업 분석</a></p><p>확인할 내용 · 캘린더 일정 추가의 시작·입력·저장 확인 단계</p><p>과업 분석 자료에서 목표·행동·완료 조건을 읽고 캘린더 기록에 적용하기.</p>",
           "saveAs": "W01/2026-11-06_w01d4b0",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1203,7 +1228,7 @@
         },
         {
           "id": "w01d4b1",
-          "label": "Figma 입문 9-2~9-3·10-1~10-2 · 연결과 독립 제작",
+          "label": "Figma 입문 8-1 → 9-1~9-3 → 10-1~10-2 · 조립과 연결",
           "original": "영상 없이 글자·프레임 크기 바꾸고 결과 확인 [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1212,23 +1237,25 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "목요일 파일을 열고 미완료 항목부터 이어 한다. 완료한 6-1·8-1·9-1은 다시 시청하지 않는다. 9-2 연결 추가 → 9-3 스크롤·애니메이션 → 10-1 마무리 → 10-2 다음 학습 순서로 본다.",
-            "새 영상은 6분 22초 + 12분 19초 + 1분 15초 + 2분 11초 = 22분 7초다. 휴식 10분을 제외한 제작·검증 예산은 87분 53초다. 정지·되감기와 수정 시간을 포함한다.",
-            "예제의 시작 화면·다음 화면·뒤로 가기를 연결하고 세로 스크롤을 설정한다. 실행 모드에서 각 연결을 눌러 도착 화면과 스크롤 범위를 확인한다.",
-            "예제 연결을 마치면 영상과 예제 페이지를 닫는다. 새 페이지에 나의 학습 기록 화면을 만든다. 제목, 이번 주 목표 문장, 강의 듣기·카드 만들기·기록 정리 카드, 학습 기록 보기 버튼을 배치하고 Auto layout과 기존 인스턴스를 사용한다.",
-            "학습 기록 보기 버튼을 누르면 학습 상세 화면으로 이동하고 뒤로 가기로 돌아오게 연결한다. 제목을 두 줄로 바꾸고 카드를 하나 더 넣은 뒤 겹침·잘림·잘못된 연결을 수정한다. 이 파일은 토요일 일정 목록·입력 과제와 구분해 저장한다.",
-            "결과물 · 실행 가능한 공식 예제, 예제 없이 만든 학습 기록·상세 두 화면, 연결·콘텐츠 변경 점검 기록."
+            "목요일 파일을 열고 미완료 6·7과 예제부터 끝낸다. 완료한 4·5과는 다시 보지 않는다. 8-1 화면 조립 → 9-1 프로토타입 기초 → 9-2 연결 추가 → 9-3 스크롤·애니메이션 → 10-1 마무리 → 10-2 다음 학습 순서로 본다.",
+            "새 영상 합계는 39분 52초다. 휴식 10분을 제외한 화면 조립·연결·검증 예산은 70분 8초다. 정지·되감기와 수정 시간을 포함한다.",
+            "8-1에서 지금까지 만든 내비게이션·히어로·카드·스킬 목록·푸터를 예제 페이지에 조립한다. 새 복사본을 여러 개 만들기보다 원본과 인스턴스의 관계를 유지한다.",
+            "9과에서 시작 화면·다음 화면·뒤로 가기를 연결하고 세로 스크롤을 설정한다. 실행 모드에서 실제 도착 화면·되돌아오기·스크롤 범위를 확인한다. 10과의 두 영상까지 본 뒤 파일을 저장한다.",
+            "전체 1~10과 대조표에서 영상과 예제 실습을 각각 확인한다. 아직 하지 않은 영상·예제는 미실시로 기록하고 다음 실습에서 먼저 이어 한다. 예제 없이 만드는 학습 기록 두 화면은 일요일 오후에 배정한다.",
+            "결과물 · 모든 예제 요소가 조립되고 연결·뒤로 가기·스크롤이 실행되는 공식 입문 파일, 영상·실습별 확인 결과."
           ],
-          "output": "실행 가능한 공식 예제, 예제 없이 만든 학습 기록·상세 두 화면, 연결·콘텐츠 변경 점검 기록.",
+          "output": "모든 예제 요소가 조립되고 연결·뒤로 가기·스크롤이 실행되는 공식 입문 파일, 영상·실습별 확인 결과.",
           "resourceKeys": [
+            "assemble_f",
+            "proto_f",
             "connections_f",
             "scroll_f",
             "wrap_f",
             "next_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31011968186007-FD4B-Add-prototype-connections\">Figma 입문 9-2 · Add prototype connections (6분 22초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31012379669783-FD4B-Set-page-scrolling-behavior-and-customize-animations\">Figma 입문 9-3 · Set page scrolling behavior and customize animations (12분 19초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31140325345559-FD4B-Course-wrap-up\">Figma 입문 10-1 · Course wrap up (1분 15초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30959048057879-FD4B-Advocate-sidebar-What-s-next\">Figma 입문 10-2 · Advocate sidebar: What&#x27;s next? (2분 11초)</a></p><p>목요일 파일을 열고 미완료 항목부터 이어 한다. 완료한 6-1·8-1·9-1은 다시 시청하지 않는다. 9-2 연결 추가 → 9-3 스크롤·애니메이션 → 10-1 마무리 → 10-2 다음 학습 순서로 본다.</p><p>새 영상은 6분 22초 + 12분 19초 + 1분 15초 + 2분 11초 = 22분 7초다. 휴식 10분을 제외한 제작·검증 예산은 87분 53초다. 정지·되감기와 수정 시간을 포함한다.</p><p>예제의 시작 화면·다음 화면·뒤로 가기를 연결하고 세로 스크롤을 설정한다. 실행 모드에서 각 연결을 눌러 도착 화면과 스크롤 범위를 확인한다.</p><p>예제 연결을 마치면 영상과 예제 페이지를 닫는다. 새 페이지에 나의 학습 기록 화면을 만든다. 제목, 이번 주 목표 문장, 강의 듣기·카드 만들기·기록 정리 카드, 학습 기록 보기 버튼을 배치하고 Auto layout과 기존 인스턴스를 사용한다.</p><p>학습 기록 보기 버튼을 누르면 학습 상세 화면으로 이동하고 뒤로 가기로 돌아오게 연결한다. 제목을 두 줄로 바꾸고 카드를 하나 더 넣은 뒤 겹침·잘림·잘못된 연결을 수정한다. 이 파일은 토요일 일정 목록·입력 과제와 구분해 저장한다.</p><p>결과물 · 실행 가능한 공식 예제, 예제 없이 만든 학습 기록·상세 두 화면, 연결·콘텐츠 변경 점검 기록.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010075634967-FD4B-Assemble-your-portfolio-pages\">Figma 입문 8-1 · Assemble your portfolio pages (12분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals\">Figma 입문 9-1 · Prototyping fundamentals (5분 27초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31011968186007-FD4B-Add-prototype-connections\">Figma 입문 9-2 · Add prototype connections (6분 22초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31012379669783-FD4B-Set-page-scrolling-behavior-and-customize-animations\">Figma 입문 9-3 · Set page scrolling behavior and customize animations (12분 19초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31140325345559-FD4B-Course-wrap-up\">Figma 입문 10-1 · Course wrap up (1분 15초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30959048057879-FD4B-Advocate-sidebar-What-s-next\">Figma 입문 10-2 · Advocate sidebar: What&#x27;s next? (2분 11초)</a></p><p>목요일 파일을 열고 미완료 6·7과 예제부터 끝낸다. 완료한 4·5과는 다시 보지 않는다. 8-1 화면 조립 → 9-1 프로토타입 기초 → 9-2 연결 추가 → 9-3 스크롤·애니메이션 → 10-1 마무리 → 10-2 다음 학습 순서로 본다.</p><p>새 영상 합계는 39분 52초다. 휴식 10분을 제외한 화면 조립·연결·검증 예산은 70분 8초다. 정지·되감기와 수정 시간을 포함한다.</p><p>8-1에서 지금까지 만든 내비게이션·히어로·카드·스킬 목록·푸터를 예제 페이지에 조립한다. 새 복사본을 여러 개 만들기보다 원본과 인스턴스의 관계를 유지한다.</p><p>9과에서 시작 화면·다음 화면·뒤로 가기를 연결하고 세로 스크롤을 설정한다. 실행 모드에서 실제 도착 화면·되돌아오기·스크롤 범위를 확인한다. 10과의 두 영상까지 본 뒤 파일을 저장한다.</p><p>전체 1~10과 대조표에서 영상과 예제 실습을 각각 확인한다. 아직 하지 않은 영상·예제는 미실시로 기록하고 다음 실습에서 먼저 이어 한다. 예제 없이 만드는 학습 기록 두 화면은 일요일 오후에 배정한다.</p><p>결과물 · 모든 예제 요소가 조립되고 연결·뒤로 가기·스크롤이 실행되는 공식 입문 파일, 영상·실습별 확인 결과.</p>",
           "saveAs": "W01/2026-11-06_w01d4b1",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1263,7 +1290,7 @@
           ],
           "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://m3.material.io/styles/typography/overview\">Google Material 3: Typography(브라우저 JavaScript 필요)</a></p><p>확인할 내용 · 제목·본문·보조 정보의 위계</p><p>영상을 닫고 새 Figma 프레임에 “일정 목록 → 일정 입력 → 저장 완료” 세 화면 만들기. 제목·날짜·저장 버튼을 배치하고 화면 연결하기. 긴 제목과 잘못된 날짜를 표시하는 상태도 추가하기.</p>",
           "saveAs": "W01/2026-11-07_w01d5b0",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1288,7 +1315,7 @@
           "resourceKeys": [],
           "scheduleHtml": "<p>월요일 관찰 기록을 사용자 목표·실제 행동·관찰 결과로 다시 적고, 화면 설계와 사용자 경험의 차이를 실제 예로 설명하기.</p><p>결과물 · 수정 파일과 본인 관찰 노트 1쪽.</p>",
           "saveAs": "W01/2026-11-07_w01d5b1",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1323,7 +1350,7 @@
           ],
           "scheduleHtml": "<p><b>자료</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.nngroup.com/articles/task-analysis/\">NN/g 과업 분석</a></p><p>확인할 내용 · 상용 앱과 연습 화면의 과업 순서 비교</p><p>상용 캘린더의 일정 추가와 내 연습 흐름을 비교해 날짜 선택·필수 입력·저장 피드백 차이를 기록하기.</p>",
           "saveAs": "W01/2026-11-08_w01d6b0",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -1332,7 +1359,7 @@
         },
         {
           "id": "w01d6b1",
-          "label": "실습·제작·검증",
+          "label": "자료 없이 학습 기록 화면 직접 만들기",
           "original": "UX 관찰 메모 1장 작성, 모르는 내용 표시 [연습]",
           "time": "13:00–15:00",
           "minutes": 120,
@@ -1341,14 +1368,16 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "빈 프레임에서 Auto layout 버튼과 카드 1개를 재현하고 주간 파일을 정리하기.",
-            "결과물 · 비교표와 독립 제작 파일. 확인: 상용 앱 관찰과 내 제작물을 구분한다."
+            "공식 입문 예제를 닫는다. 새 페이지에 나의 학습 기록 화면과 학습 상세 화면을 만든다. 기록 화면에는 제목·이번 주 목표·강의 듣기·카드 만들기·기록 정리 카드와 학습 기록 보기 버튼을 배치한다.",
+            "Auto layout 버튼과 카드 한 개는 예제와 원본을 보지 않고 직접 만든다. 이를 화면에 재사용하고, 학습 기록 보기 → 상세 → 뒤로 가기 경로를 연결한다.",
+            "제목을 두 줄로 바꾸고 카드를 한 개 더 넣는다. 390px·768px에서 겹침·잘림과 잘못된 연결을 수정한다. 예제를 다시 확인한 기능은 기록하고, 수정 후 해당 조건을 다시 실행한다.",
+            "결과물 · 독립 제작 버튼·카드, 학습 기록·상세 두 화면, 변경 조건·연결 점검표. 토요일 일정 목록·입력 파일과 공식 입문 예제를 구분해 보관한다."
           ],
-          "output": "비교표와 독립 제작 파일. 확인: 상용 앱 관찰과 내 제작물을 구분한다.",
+          "output": "독립 제작 버튼·카드, 학습 기록·상세 두 화면, 변경 조건·연결 점검표. 토요일 일정 목록·입력 파일과 공식 입문 예제를 구분해 보관한다.",
           "resourceKeys": [],
-          "scheduleHtml": "<p>빈 프레임에서 Auto layout 버튼과 카드 1개를 재현하고 주간 파일을 정리하기.</p><p>결과물 · 비교표와 독립 제작 파일. 확인: 상용 앱 관찰과 내 제작물을 구분한다.</p>",
+          "scheduleHtml": "<p>공식 입문 예제를 닫는다. 새 페이지에 나의 학습 기록 화면과 학습 상세 화면을 만든다. 기록 화면에는 제목·이번 주 목표·강의 듣기·카드 만들기·기록 정리 카드와 학습 기록 보기 버튼을 배치한다.</p><p>Auto layout 버튼과 카드 한 개는 예제와 원본을 보지 않고 직접 만든다. 이를 화면에 재사용하고, 학습 기록 보기 → 상세 → 뒤로 가기 경로를 연결한다.</p><p>제목을 두 줄로 바꾸고 카드를 한 개 더 넣는다. 390px·768px에서 겹침·잘림과 잘못된 연결을 수정한다. 예제를 다시 확인한 기능은 기록하고, 수정 후 해당 조건을 다시 실행한다.</p><p>결과물 · 독립 제작 버튼·카드, 학습 기록·상세 두 화면, 변경 조건·연결 점검표. 토요일 일정 목록·입력 파일과 공식 입문 예제를 구분해 보관한다.</p>",
           "saveAs": "W01/2026-11-08_w01d6b1",
-          "acceptance": "공식 입문 필수 영상 완료, 독립 제작 흐름 1개, 내용 변경 시 배치 유지. 영상 완주와 독립 수행을 따로 표시한다.",
+          "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
@@ -12498,9 +12527,9 @@
   "resources": [
     {
       "key": "figma",
-      "title": "Figma 공식 입문 1~10번",
+      "title": "Figma 공식 입문 1~10과 전체 목차",
       "url": "https://help.figma.com/hc/en-us/sections/30880632542743-Figma-Design-for-beginners",
-      "note": "무료 영상 중심. 전체 180분. 1~3장 완료분 인정, 7장 벡터는 선택. 나머지 필수 영상 116분.",
+      "note": "안내 1개와 1~10과 영상 32개. 7-1~7-4를 포함해 전체 과정을 배정한다. 사용자가 완료를 보고한 1~5과는 다시 시청시키지 않는다.",
       "kind": "영상"
     },
     {
@@ -12615,7 +12644,7 @@
       "key": "auto_video",
       "title": "Figma 공식 Auto layout 영상 모음",
       "url": "https://www.youtube.com/playlist?list=PLXDU_eVOJTx55HFubfbTL3ellJjBM2QE2",
-      "note": "무료 영상. 목록 전체 재생시간 미확정. 해당 주 지정 기능에 한해 선택 시청.",
+      "note": "추가 참고용 영상 모음. 날짜별 필수 강의는 개별 제목·번호로 지정한다. 이 목록의 선택 시청으로 필수 과정을 대신하지 않는다.",
       "kind": "영상 모음"
     },
     {
@@ -12673,7 +12702,8 @@
       "verifiedVideoSeconds": 305,
       "videoId": "Aik8tMRdI90",
       "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "5-1"
+      "courseLesson": "5-1",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "card_f",
@@ -12683,7 +12713,8 @@
       "verifiedVideoSeconds": 1091,
       "videoId": "gLB8PRm5HI4",
       "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "5-4"
+      "courseLesson": "5-4",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "nav_f",
@@ -12693,7 +12724,8 @@
       "verifiedVideoSeconds": 814,
       "videoId": "ObgYJ74C_uE",
       "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "6-1"
+      "courseLesson": "6-1",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "assemble_f",
@@ -12703,7 +12735,8 @@
       "verifiedVideoSeconds": 738,
       "videoId": "2mDhasIHLCw",
       "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "8-1"
+      "courseLesson": "8-1",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "proto_f",
@@ -12713,7 +12746,8 @@
       "verifiedVideoSeconds": 327,
       "videoId": "eKVPXk2BnB8",
       "verification": "공식 삽입 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "9-1"
+      "courseLesson": "9-1",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "component_f",
@@ -12873,7 +12907,8 @@
       "verifiedVideoSeconds": 274,
       "videoId": "g9JF_s1FYnI",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "4-1"
+      "courseLesson": "4-1",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "heading_f",
@@ -12883,7 +12918,8 @@
       "verifiedVideoSeconds": 244,
       "videoId": "4tPnQ7MXTJI",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "4-2"
+      "courseLesson": "4-2",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "hero_f",
@@ -12893,7 +12929,8 @@
       "verifiedVideoSeconds": 240,
       "videoId": "tJ3ZENutSCw",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "4-3"
+      "courseLesson": "4-3",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "constraints_verified",
@@ -12903,7 +12940,8 @@
       "verifiedVideoSeconds": 138,
       "videoId": "JZyUE5dY1Wk",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "4-4"
+      "courseLesson": "4-4",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "clean_f",
@@ -12913,7 +12951,8 @@
       "verifiedVideoSeconds": 268,
       "videoId": "Kwic-3CeD-U",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "4-5"
+      "courseLesson": "4-5",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "sections_f",
@@ -12923,7 +12962,8 @@
       "verifiedVideoSeconds": 263,
       "videoId": "v1ETJHt6hf4",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "4-6"
+      "courseLesson": "4-6",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "button_f",
@@ -12933,7 +12973,8 @@
       "verifiedVideoSeconds": 317,
       "videoId": "6VJKTcd4-5c",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "5-2"
+      "courseLesson": "5-2",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "fd_components",
@@ -12943,7 +12984,8 @@
       "verifiedVideoSeconds": 256,
       "videoId": "26O96gv8Jk0",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "5-3"
+      "courseLesson": "5-3",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "tips_f",
@@ -12953,7 +12995,8 @@
       "verifiedVideoSeconds": 510,
       "videoId": "aaZsP7AYi2w",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "5-5"
+      "courseLesson": "5-5",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "connections_f",
@@ -12963,7 +13006,8 @@
       "verifiedVideoSeconds": 382,
       "videoId": "bKiK4N3SWEo",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "9-2"
+      "courseLesson": "9-2",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "scroll_f",
@@ -12973,7 +13017,8 @@
       "verifiedVideoSeconds": 739,
       "videoId": "KsGwt6QmqKo",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "9-3"
+      "courseLesson": "9-3",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "wrap_f",
@@ -12983,7 +13028,8 @@
       "verifiedVideoSeconds": 75,
       "videoId": "UjYN9P4LuLE",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "10-1"
+      "courseLesson": "10-1",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
     },
     {
       "key": "next_f",
@@ -12993,7 +13039,127 @@
       "verifiedVideoSeconds": 131,
       "videoId": "9SFjiUmlFtg",
       "verification": "공식 페이지에 삽입된 YouTube 영상의 lengthSeconds 메타데이터, 2026-11-04",
-      "courseLesson": "10-2"
+      "courseLesson": "10-2",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_1_1",
+      "url": "https://help.figma.com/hc/en-us/articles/30925496128407-FD4B-Create-your-Figma-account",
+      "kind": "영상",
+      "title": "Figma 입문 1-1 · Create your Figma account (0분 54초)",
+      "courseLesson": "1-1",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_1_2",
+      "url": "https://help.figma.com/hc/en-us/articles/30926159906967-FD4B-Tour-the-file-browser-and-customize-your-profile",
+      "kind": "영상",
+      "title": "Figma 입문 1-2 · Tour the file browser and customize your profile (2분 32초)",
+      "courseLesson": "1-2",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_1_3",
+      "url": "https://help.figma.com/hc/en-us/articles/30926129986199-FD4B-Create-your-first-design-file",
+      "kind": "영상",
+      "title": "Figma 입문 1-3 · Create your first design file (0분 34초)",
+      "courseLesson": "1-3",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_1_4",
+      "url": "https://help.figma.com/hc/en-us/articles/31592472915479-FD4B-Advocate-sidebar-Learn-more-about-portfolios",
+      "kind": "영상",
+      "title": "Figma 입문 1-4 · Advocate sidebar: Learn more about portfolios (2분 43초)",
+      "courseLesson": "1-4",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_2_1",
+      "url": "https://help.figma.com/hc/en-us/articles/30925881896727-FD4B-Navigate-Figma-Design-files",
+      "kind": "영상",
+      "title": "Figma 입문 2-1 · Navigate Figma Design files (7분 26초)",
+      "courseLesson": "2-1",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_2_2",
+      "url": "https://help.figma.com/hc/en-us/articles/30928303842327-FD4B-Set-your-file-preferences",
+      "kind": "영상",
+      "title": "Figma 입문 2-2 · Set your file preferences (1분 15초)",
+      "courseLesson": "2-2",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_3_1",
+      "url": "https://help.figma.com/hc/en-us/articles/30928855233175-FD4B-Create-your-avatar-using-shapes-and-fills",
+      "kind": "영상",
+      "title": "Figma 입문 3-1 · Create your avatar using shapes and fills (6분 30초)",
+      "courseLesson": "3-1",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_3_2",
+      "url": "https://help.figma.com/hc/en-us/articles/30938465113751-FD4B-Build-your-bio-using-text-layers",
+      "kind": "영상",
+      "title": "Figma 입문 3-2 · Build your bio using text layers (8분 52초)",
+      "courseLesson": "3-2",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_3_3",
+      "url": "https://help.figma.com/hc/en-us/articles/30954388121495-FD4B-Add-your-layers-to-a-frame",
+      "kind": "영상",
+      "title": "Figma 입문 3-3 · Add your layers to a frame (3분 52초)",
+      "courseLesson": "3-3",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_3_4",
+      "url": "https://help.figma.com/hc/en-us/articles/31594334075927-FD4B-Advocate-sidebar-Portfolio-personalization",
+      "kind": "영상",
+      "title": "Figma 입문 3-4 · Advocate sidebar: Portfolio personalization (3분 19초)",
+      "courseLesson": "3-4",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_7_1",
+      "url": "https://help.figma.com/hc/en-us/articles/31130266267287-FD4B-Combine-shapes-using-boolean-operations",
+      "kind": "영상",
+      "title": "Figma 입문 7-1 · Combine shapes using boolean operations (10분 52초)",
+      "courseLesson": "7-1",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_7_2",
+      "url": "https://help.figma.com/hc/en-us/articles/31130310976663-FD4B-Use-vector-edit-mode-to-modify-shapes",
+      "kind": "영상",
+      "title": "Figma 입문 7-2 · Use vector edit mode to modify shapes (2분 10초)",
+      "courseLesson": "7-2",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_7_3",
+      "url": "https://help.figma.com/hc/en-us/articles/31130312631191-FD4B-Turn-an-ellipse-into-an-arc",
+      "kind": "영상",
+      "title": "Figma 입문 7-3 · Turn an ellipse into an arc (4분 43초)",
+      "courseLesson": "7-3",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_7_4",
+      "url": "https://help.figma.com/hc/en-us/articles/31130329934231-FD4B-Create-the-skills-list",
+      "kind": "영상",
+      "title": "Figma 입문 7-4 · Create the skills list (5분 2초)",
+      "courseLesson": "7-4",
+      "note": "공식 입문 과정의 해당 과·영상 순서. 영상과 예제 실습을 함께 진행한다."
+    },
+    {
+      "key": "intro_overview",
+      "title": "Figma 입문 0 · Course overview: Figma Design for beginners (2025)",
+      "url": "https://help.figma.com/hc/en-us/articles/30848209492887-Course-overview-Figma-Design-for-beginners-2025",
+      "kind": "강의 안내·영상",
+      "note": "수업 안내 영상과 공식 예제 파일 링크를 확인한다."
     }
   ],
   "deliverables": {
