@@ -1132,7 +1132,7 @@
         },
         {
           "id": "w01d3b1",
-          "label": "Figma 입문 6-1 → 7-1~7-4 · 벡터와 스킬 목록",
+          "label": "Figma 입문 6-1 → 7-1~7-4 → 8-1 · 전체 예제 연결",
           "original": "4번 Frame presets and constraints 예제 따라하기 [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1141,21 +1141,23 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "11월 4일 만든 버튼·카드·컨테이너 파일을 연다. 6-1 내비게이션·푸터 → 7-1 Boolean operations → 7-2 벡터 편집 → 7-3 호 만들기 → 7-4 스킬 목록 순서로 보고 같은 예제를 만든다. Illustrator 경험을 이유로 영상을 생략하지 않는다.",
-            "새 영상 합계는 36분 21초다. 휴식 10분을 제외한 실습 예산은 73분 39초다. 정지·되감기·설정 확인과 수정도 이 시간에 포함한다.",
-            "6-1에서 내비게이션과 푸터를 만든다. 7-1에서는 영상의 다섯 도형을 Boolean operations로 만들고, 원본 도형이 남아 다시 수정할 수 있는지 확인한다. 7-2에서 벡터 편집 모드로 점과 선을 수정하고, 7-3에서 타원의 호·시작 위치·두께를 조절한다.",
-            "7-4에서 직접 만든 도형 컴포넌트와 텍스트를 결합해 스킬 목록을 만든다. 인스턴스 교체로 아이콘을 바꾸고 Auto layout 줄바꿈을 적용한다. 제목을 길게 바꾸고 부모 프레임 너비를 줄여 아이콘·텍스트가 겹치지 않는지 확인한다.",
-            "결과물 · 내비게이션·푸터, 다섯 도형, 벡터 점 수정·호 조절 예제, 인스턴스 교체와 줄바꿈이 적용된 스킬 목록. 미완료 예제는 금요일 첫 실습에서 이어 하고 8과로 넘어간다."
+            "11월 4일 만든 예제 파일에서 이어 한다. 6-1 내비게이션·푸터 → 7-1 도형 결합 → 7-2 벡터 편집 → 7-3 호 만들기 → 7-4 스킬 목록 → 8-1 화면 조립 순서로 영상과 예제를 모두 진행한다.",
+            "새 영상 합계 48분 39초, 휴식 10분, 직접 조작·제작·확인 예산 61분 21초다. 정지·되감기는 제작 예산에 포함한다.",
+            "6-1에서 내비게이션·푸터를 만든다. 7-1~7-3에서는 다섯 도형·점과 선 수정·호 조절을 영상에 맞춰 한 번씩 직접 한다. Illustrator와 겹치는 개념은 Figma에서 조작과 수정 결과를 확인하는 데 집중하고, 같은 도형을 추가로 여러 벌 만들지 않는다. 이 기능 확인 실습은 약 20분을 시작 예산으로 둔다.",
+            "7-4에서 도형 컴포넌트와 텍스트를 결합한다. 아이콘을 인스턴스 교체로 바꾸고 Auto layout 줄바꿈을 적용한다. 문구를 길게 바꾸고 너비를 줄여 겹침·잘림을 확인한다. 단순 도형 반복을 줄여 확보한 시간은 이 재사용 구조와 너비 변경 확인에 쓴다.",
+            "8-1에서 내비게이션·히어로·카드·스킬 목록·푸터를 예제 페이지에 조립한다. 원본 컴포넌트와 인스턴스 연결을 유지하고 제목 길이·항목 수를 바꿔 화면 배치를 확인한다.",
+            "결과물 · 6~8과 전체 예제, 다섯 도형·벡터·호 조작, 인스턴스 교체·줄바꿈과 화면 조립 결과. 11시까지 미완료인 예제만 금요일 첫 작업으로 넘긴다."
           ],
-          "output": "내비게이션·푸터, 다섯 도형, 벡터 점 수정·호 조절 예제, 인스턴스 교체와 줄바꿈이 적용된 스킬 목록. 미완료 예제는 금요일 첫 실습에서 이어 하고 8과로 넘어간다.",
+          "output": "결과물 · 6~8과 전체 예제, 다섯 도형·벡터·호 조작, 인스턴스 교체·줄바꿈과 화면 조립 결과. 11시까지 미완료인 예제만 금요일 첫 작업으로 넘긴다.",
           "resourceKeys": [
             "nav_f",
             "intro_7_1",
             "intro_7_2",
             "intro_7_3",
-            "intro_7_4"
+            "intro_7_4",
+            "assemble_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31002534003991-FD4B-Create-the-navigation-bar-and-footer\">Figma 입문 6-1 · Create the navigation bar and footer (13분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130266267287-FD4B-Combine-shapes-using-boolean-operations\">Figma 입문 7-1 · Combine shapes using boolean operations (10분 52초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130310976663-FD4B-Use-vector-edit-mode-to-modify-shapes\">Figma 입문 7-2 · Use vector edit mode to modify shapes (2분 10초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130312631191-FD4B-Turn-an-ellipse-into-an-arc\">Figma 입문 7-3 · Turn an ellipse into an arc (4분 43초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130329934231-FD4B-Create-the-skills-list\">Figma 입문 7-4 · Create the skills list (5분 2초)</a></p><p>11월 4일 만든 버튼·카드·컨테이너 파일을 연다. 6-1 내비게이션·푸터 → 7-1 Boolean operations → 7-2 벡터 편집 → 7-3 호 만들기 → 7-4 스킬 목록 순서로 보고 같은 예제를 만든다. Illustrator 경험을 이유로 영상을 생략하지 않는다.</p><p>새 영상 합계는 36분 21초다. 휴식 10분을 제외한 실습 예산은 73분 39초다. 정지·되감기·설정 확인과 수정도 이 시간에 포함한다.</p><p>6-1에서 내비게이션과 푸터를 만든다. 7-1에서는 영상의 다섯 도형을 Boolean operations로 만들고, 원본 도형이 남아 다시 수정할 수 있는지 확인한다. 7-2에서 벡터 편집 모드로 점과 선을 수정하고, 7-3에서 타원의 호·시작 위치·두께를 조절한다.</p><p>7-4에서 직접 만든 도형 컴포넌트와 텍스트를 결합해 스킬 목록을 만든다. 인스턴스 교체로 아이콘을 바꾸고 Auto layout 줄바꿈을 적용한다. 제목을 길게 바꾸고 부모 프레임 너비를 줄여 아이콘·텍스트가 겹치지 않는지 확인한다.</p><p>결과물 · 내비게이션·푸터, 다섯 도형, 벡터 점 수정·호 조절 예제, 인스턴스 교체와 줄바꿈이 적용된 스킬 목록. 미완료 예제는 금요일 첫 실습에서 이어 하고 8과로 넘어간다.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31002534003991-FD4B-Create-the-navigation-bar-and-footer\">Figma 입문 6-1 · Create the navigation bar and footer (13분 34초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130266267287-FD4B-Combine-shapes-using-boolean-operations\">Figma 입문 7-1 · Combine shapes using boolean operations (10분 52초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130310976663-FD4B-Use-vector-edit-mode-to-modify-shapes\">Figma 입문 7-2 · Use vector edit mode to modify shapes (2분 10초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130312631191-FD4B-Turn-an-ellipse-into-an-arc\">Figma 입문 7-3 · Turn an ellipse into an arc (4분 43초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31130329934231-FD4B-Create-the-skills-list\">Figma 입문 7-4 · Create the skills list (5분 2초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010075634967-FD4B-Assemble-your-portfolio-pages\">Figma 입문 8-1 · Assemble your portfolio pages (12분 18초)</a></p><p>11월 4일 만든 예제 파일에서 이어 한다. 6-1 내비게이션·푸터 → 7-1 도형 결합 → 7-2 벡터 편집 → 7-3 호 만들기 → 7-4 스킬 목록 → 8-1 화면 조립 순서로 영상과 예제를 모두 진행한다.</p><p>새 영상 합계 48분 39초, 휴식 10분, 직접 조작·제작·확인 예산 61분 21초다. 정지·되감기는 제작 예산에 포함한다.</p><p>6-1에서 내비게이션·푸터를 만든다. 7-1~7-3에서는 다섯 도형·점과 선 수정·호 조절을 영상에 맞춰 한 번씩 직접 한다. Illustrator와 겹치는 개념은 Figma에서 조작과 수정 결과를 확인하는 데 집중하고, 같은 도형을 추가로 여러 벌 만들지 않는다. 이 기능 확인 실습은 약 20분을 시작 예산으로 둔다.</p><p>7-4에서 도형 컴포넌트와 텍스트를 결합한다. 아이콘을 인스턴스 교체로 바꾸고 Auto layout 줄바꿈을 적용한다. 문구를 길게 바꾸고 너비를 줄여 겹침·잘림을 확인한다. 단순 도형 반복을 줄여 확보한 시간은 이 재사용 구조와 너비 변경 확인에 쓴다.</p><p>8-1에서 내비게이션·히어로·카드·스킬 목록·푸터를 예제 페이지에 조립한다. 원본 컴포넌트와 인스턴스 연결을 유지하고 제목 길이·항목 수를 바꿔 화면 배치를 확인한다.</p><p>결과물 · 6~8과 전체 예제, 다섯 도형·벡터·호 조작, 인스턴스 교체·줄바꿈과 화면 조립 결과. 11시까지 미완료인 예제만 금요일 첫 작업으로 넘긴다.</p>",
           "saveAs": "W01/2026-11-05_w01d3b1",
           "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1228,7 +1230,7 @@
         },
         {
           "id": "w01d4b1",
-          "label": "Figma 입문 8-1 → 9-1~9-3 → 10-1~10-2 · 조립과 연결",
+          "label": "Figma 입문 9-1~9-3 → 10-1~10-2 · 동작과 독립 제작",
           "original": "영상 없이 글자·프레임 크기 바꾸고 결과 확인 [연습]",
           "time": "09:00–11:00",
           "minutes": 120,
@@ -1237,23 +1239,23 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "목요일 파일을 열고 미완료 6·7과 예제부터 끝낸다. 완료한 4·5과는 다시 보지 않는다. 8-1 화면 조립 → 9-1 프로토타입 기초 → 9-2 연결 추가 → 9-3 스크롤·애니메이션 → 10-1 마무리 → 10-2 다음 학습 순서로 본다.",
-            "새 영상 합계는 39분 52초다. 휴식 10분을 제외한 화면 조립·연결·검증 예산은 70분 8초다. 정지·되감기와 수정 시간을 포함한다.",
-            "8-1에서 지금까지 만든 내비게이션·히어로·카드·스킬 목록·푸터를 예제 페이지에 조립한다. 새 복사본을 여러 개 만들기보다 원본과 인스턴스의 관계를 유지한다.",
-            "9과에서 시작 화면·다음 화면·뒤로 가기를 연결하고 세로 스크롤을 설정한다. 실행 모드에서 실제 도착 화면·되돌아오기·스크롤 범위를 확인한다. 10과의 두 영상까지 본 뒤 파일을 저장한다.",
-            "전체 1~10과 대조표에서 영상과 예제 실습을 각각 확인한다. 아직 하지 않은 영상·예제는 미실시로 기록하고 다음 실습에서 먼저 이어 한다. 예제 없이 만드는 학습 기록 두 화면은 일요일 오후에 배정한다.",
-            "결과물 · 모든 예제 요소가 조립되고 연결·뒤로 가기·스크롤이 실행되는 공식 입문 파일, 영상·실습별 확인 결과."
+            "목요일 파일을 열고 미완료 예제만 먼저 이어 한다. 9-1 프로토타입 기초 → 9-2 연결 추가 → 9-3 스크롤·애니메이션 → 10-1 마무리 → 10-2 다음 학습 순서로 영상과 예제를 모두 진행한다.",
+            "새 영상 합계 27분 34초, 휴식 10분, 제작·검증 예산 82분 26초다. 영상 정지·되감기와 오류 수정도 이 시간에 포함한다.",
+            "공식 예제에서 시작 화면·다음 화면·뒤로 가기·세로 스크롤을 설정한다. 실행 모드에서 각 연결의 도착 화면과 스크롤 범위를 확인한다. 정상 실행을 확인한 연결을 같은 형태로 여러 번 새로 만들지 않는다.",
+            "공식 예제를 닫고 새 페이지에 나의 학습 기록 화면을 만든다. 제목·이번 주 목표·강의 듣기·카드 만들기·기록 정리 카드와 학습 기록 보기 버튼을 배치한다. Auto layout과 기존 인스턴스를 사용하고 새로운 텍스트 길이에 맞춰 크기 규칙을 정한다.",
+            "학습 기록 보기 → 학습 상세 → 뒤로 가기 경로를 직접 연결한다. 제목을 두 줄로 바꾸고 카드를 한 개 추가한 뒤 390px·768px에서 겹침·잘림·잘못된 연결을 수정한다.",
+            "전체 1~10과의 영상과 예제 수행을 각각 확인한다. 미실시 항목은 표시하고 주말 실습에서 먼저 끝낸다. 직접 제작 중 다시 확인한 기능과 수정한 속성을 기록한다.",
+            "결과물 · 실행 가능한 공식 입문 예제, 자료 없이 만든 학습 기록·상세 두 화면, 영상·예제 대조와 변경·연결 점검 기록."
           ],
-          "output": "모든 예제 요소가 조립되고 연결·뒤로 가기·스크롤이 실행되는 공식 입문 파일, 영상·실습별 확인 결과.",
+          "output": "결과물 · 실행 가능한 공식 입문 예제, 자료 없이 만든 학습 기록·상세 두 화면, 영상·예제 대조와 변경·연결 점검 기록.",
           "resourceKeys": [
-            "assemble_f",
             "proto_f",
             "connections_f",
             "scroll_f",
             "wrap_f",
             "next_f"
           ],
-          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010075634967-FD4B-Assemble-your-portfolio-pages\">Figma 입문 8-1 · Assemble your portfolio pages (12분 18초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals\">Figma 입문 9-1 · Prototyping fundamentals (5분 27초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31011968186007-FD4B-Add-prototype-connections\">Figma 입문 9-2 · Add prototype connections (6분 22초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31012379669783-FD4B-Set-page-scrolling-behavior-and-customize-animations\">Figma 입문 9-3 · Set page scrolling behavior and customize animations (12분 19초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31140325345559-FD4B-Course-wrap-up\">Figma 입문 10-1 · Course wrap up (1분 15초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30959048057879-FD4B-Advocate-sidebar-What-s-next\">Figma 입문 10-2 · Advocate sidebar: What&#x27;s next? (2분 11초)</a></p><p>목요일 파일을 열고 미완료 6·7과 예제부터 끝낸다. 완료한 4·5과는 다시 보지 않는다. 8-1 화면 조립 → 9-1 프로토타입 기초 → 9-2 연결 추가 → 9-3 스크롤·애니메이션 → 10-1 마무리 → 10-2 다음 학습 순서로 본다.</p><p>새 영상 합계는 39분 52초다. 휴식 10분을 제외한 화면 조립·연결·검증 예산은 70분 8초다. 정지·되감기와 수정 시간을 포함한다.</p><p>8-1에서 지금까지 만든 내비게이션·히어로·카드·스킬 목록·푸터를 예제 페이지에 조립한다. 새 복사본을 여러 개 만들기보다 원본과 인스턴스의 관계를 유지한다.</p><p>9과에서 시작 화면·다음 화면·뒤로 가기를 연결하고 세로 스크롤을 설정한다. 실행 모드에서 실제 도착 화면·되돌아오기·스크롤 범위를 확인한다. 10과의 두 영상까지 본 뒤 파일을 저장한다.</p><p>전체 1~10과 대조표에서 영상과 예제 실습을 각각 확인한다. 아직 하지 않은 영상·예제는 미실시로 기록하고 다음 실습에서 먼저 이어 한다. 예제 없이 만드는 학습 기록 두 화면은 일요일 오후에 배정한다.</p><p>결과물 · 모든 예제 요소가 조립되고 연결·뒤로 가기·스크롤이 실행되는 공식 입문 파일, 영상·실습별 확인 결과.</p>",
+          "scheduleHtml": "<p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31010011820311-FD4B-Prototyping-fundamentals\">Figma 입문 9-1 · Prototyping fundamentals (5분 27초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31011968186007-FD4B-Add-prototype-connections\">Figma 입문 9-2 · Add prototype connections (6분 22초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31012379669783-FD4B-Set-page-scrolling-behavior-and-customize-animations\">Figma 입문 9-3 · Set page scrolling behavior and customize animations (12분 19초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/31140325345559-FD4B-Course-wrap-up\">Figma 입문 10-1 · Course wrap up (1분 15초)</a></p><p><b>영상</b> · <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://help.figma.com/hc/en-us/articles/30959048057879-FD4B-Advocate-sidebar-What-s-next\">Figma 입문 10-2 · Advocate sidebar: What&#x27;s next? (2분 11초)</a></p><p>목요일 파일을 열고 미완료 예제만 먼저 이어 한다. 9-1 프로토타입 기초 → 9-2 연결 추가 → 9-3 스크롤·애니메이션 → 10-1 마무리 → 10-2 다음 학습 순서로 영상과 예제를 모두 진행한다.</p><p>새 영상 합계 27분 34초, 휴식 10분, 제작·검증 예산 82분 26초다. 영상 정지·되감기와 오류 수정도 이 시간에 포함한다.</p><p>공식 예제에서 시작 화면·다음 화면·뒤로 가기·세로 스크롤을 설정한다. 실행 모드에서 각 연결의 도착 화면과 스크롤 범위를 확인한다. 정상 실행을 확인한 연결을 같은 형태로 여러 번 새로 만들지 않는다.</p><p>공식 예제를 닫고 새 페이지에 나의 학습 기록 화면을 만든다. 제목·이번 주 목표·강의 듣기·카드 만들기·기록 정리 카드와 학습 기록 보기 버튼을 배치한다. Auto layout과 기존 인스턴스를 사용하고 새로운 텍스트 길이에 맞춰 크기 규칙을 정한다.</p><p>학습 기록 보기 → 학습 상세 → 뒤로 가기 경로를 직접 연결한다. 제목을 두 줄로 바꾸고 카드를 한 개 추가한 뒤 390px·768px에서 겹침·잘림·잘못된 연결을 수정한다.</p><p>전체 1~10과의 영상과 예제 수행을 각각 확인한다. 미실시 항목은 표시하고 주말 실습에서 먼저 끝낸다. 직접 제작 중 다시 확인한 기능과 수정한 속성을 기록한다.</p><p>결과물 · 실행 가능한 공식 입문 예제, 자료 없이 만든 학습 기록·상세 두 화면, 영상·예제 대조와 변경·연결 점검 기록.</p>",
           "saveAs": "W01/2026-11-06_w01d4b1",
           "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1359,7 +1361,7 @@
         },
         {
           "id": "w01d6b1",
-          "label": "자료 없이 학습 기록 화면 직접 만들기",
+          "label": "주간 독립 수행 확인과 변경 조건 재검사",
           "original": "UX 관찰 메모 1장 작성, 모르는 내용 표시 [연습]",
           "time": "13:00–15:00",
           "minutes": 120,
@@ -1368,14 +1370,14 @@
           "method": "scheduled_practice",
           "inputs": "",
           "instructions": [
-            "공식 입문 예제를 닫는다. 새 페이지에 나의 학습 기록 화면과 학습 상세 화면을 만든다. 기록 화면에는 제목·이번 주 목표·강의 듣기·카드 만들기·기록 정리 카드와 학습 기록 보기 버튼을 배치한다.",
-            "Auto layout 버튼과 카드 한 개는 예제와 원본을 보지 않고 직접 만든다. 이를 화면에 재사용하고, 학습 기록 보기 → 상세 → 뒤로 가기 경로를 연결한다.",
-            "제목을 두 줄로 바꾸고 카드를 한 개 더 넣는다. 390px·768px에서 겹침·잘림과 잘못된 연결을 수정한다. 예제를 다시 확인한 기능은 기록하고, 수정 후 해당 조건을 다시 실행한다.",
-            "결과물 · 독립 제작 버튼·카드, 학습 기록·상세 두 화면, 변경 조건·연결 점검표. 토요일 일정 목록·입력 파일과 공식 입문 예제를 구분해 보관한다."
+            "버튼과 카드 한 개를 자료 없이 새 프레임에서 만든다. 이 확인은 합계 15분을 시작 예산으로 두고 이미 성공한 같은 예제를 반복 생성하지 않는다. 막힌 조작과 다시 확인한 설정을 적는다.",
+            "금요일 학습 기록·상세 화면과 토요일 일정 목록·입력 화면을 연다. 첫 화면에서 목표 행동을 찾을 수 있는지, 내용이 길어졌을 때 정보 순서가 유지되는지 비교한다.",
+            "각 파일에서 제목 두 줄·항목 추가·390px·768px·다음 화면·뒤로 가기를 실행한다. 실패한 위치만 수정하고 같은 조건을 다시 확인한다. 미완료 공식 예제가 있으면 먼저 마친다.",
+            "결과물 · 독립 확인 버튼·카드, 두 과업의 비교·변경 조건 점검표, 수정 전후와 다음 주 보완 항목."
           ],
-          "output": "독립 제작 버튼·카드, 학습 기록·상세 두 화면, 변경 조건·연결 점검표. 토요일 일정 목록·입력 파일과 공식 입문 예제를 구분해 보관한다.",
+          "output": "결과물 · 독립 확인 버튼·카드, 두 과업의 비교·변경 조건 점검표, 수정 전후와 다음 주 보완 항목.",
           "resourceKeys": [],
-          "scheduleHtml": "<p>공식 입문 예제를 닫는다. 새 페이지에 나의 학습 기록 화면과 학습 상세 화면을 만든다. 기록 화면에는 제목·이번 주 목표·강의 듣기·카드 만들기·기록 정리 카드와 학습 기록 보기 버튼을 배치한다.</p><p>Auto layout 버튼과 카드 한 개는 예제와 원본을 보지 않고 직접 만든다. 이를 화면에 재사용하고, 학습 기록 보기 → 상세 → 뒤로 가기 경로를 연결한다.</p><p>제목을 두 줄로 바꾸고 카드를 한 개 더 넣는다. 390px·768px에서 겹침·잘림과 잘못된 연결을 수정한다. 예제를 다시 확인한 기능은 기록하고, 수정 후 해당 조건을 다시 실행한다.</p><p>결과물 · 독립 제작 버튼·카드, 학습 기록·상세 두 화면, 변경 조건·연결 점검표. 토요일 일정 목록·입력 파일과 공식 입문 예제를 구분해 보관한다.</p>",
+          "scheduleHtml": "<p>버튼과 카드 한 개를 자료 없이 새 프레임에서 만든다. 이 확인은 합계 15분을 시작 예산으로 두고 이미 성공한 같은 예제를 반복 생성하지 않는다. 막힌 조작과 다시 확인한 설정을 적는다.</p><p>금요일 학습 기록·상세 화면과 토요일 일정 목록·입력 화면을 연다. 첫 화면에서 목표 행동을 찾을 수 있는지, 내용이 길어졌을 때 정보 순서가 유지되는지 비교한다.</p><p>각 파일에서 제목 두 줄·항목 추가·390px·768px·다음 화면·뒤로 가기를 실행한다. 실패한 위치만 수정하고 같은 조건을 다시 확인한다. 미완료 공식 예제가 있으면 먼저 마친다.</p><p>결과물 · 독립 확인 버튼·카드, 두 과업의 비교·변경 조건 점검표, 수정 전후와 다음 주 보완 항목.</p>",
           "saveAs": "W01/2026-11-08_w01d6b1",
           "acceptance": "1~10과 전체 영상·예제 확인, 자료 없이 만든 흐름, 콘텐츠 변경·연결 재확인. 영상 시청과 예제 실습·독립 제작을 각각 표시한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
