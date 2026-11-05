@@ -1028,7 +1028,31 @@
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-11-03",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -1187,21 +1211,139 @@
           "method": "ai_lab",
           "inputs": "기존 파일 없이 새로 만드는 연습 화면. 강의 듣기·장보기·운동하기·자료 정리·세탁하기·책 읽기 순서의 목록",
           "instructions": [
-            "사용 자료 · 기존 파일 없이 새로 만드는 연습 화면. 강의 듣기·장보기·운동하기·자료 정리·세탁하기·책 읽기 순서의 목록",
-            "판단할 내용 · 완료 항목을 제자리에 두는 A안과 아래 완료 영역으로 옮기는 B안 중 남은 일 찾기·완료 취소에 유리할 안을 예상한다.",
-            "AI 요청 조건 · 단일 HTML, 완료 체크·해제, A/B 전환만 요청한다. 전환 중 완료 상태 유지, 각 영역의 최초 순서 유지, 동일한 글자·색상·간격, 빈 영역 안내를 조건으로 쓴다.",
-            "확인·수정 · A에서 장보기 완료→B→A 전환, B에서 완료 취소, 세탁하기→장보기 순서로 완료, 전부 완료를 실행한다. 남은 일 찾기·운동하기 완료 취소·자료 정리 완료 직후 취소를 두 안에서 같은 초기 상태로 비교한다."
+            "화면 구성과 조건을 AI에 전달하고 HTML 파일을 실행하세요.",
+            "검증 결과와 A/B 관찰을 과제 안에 기록하세요."
           ],
-          "output": "HTML·조건별 실행 결과·수정 전후 / 요청문 / 전체 시간·전체 요청·수정 요청 횟수",
+          "output": "HTML 파일 1개, A/B 캡처, 앱에 저장한 요청문·검증·관찰 기록",
           "resourceKeys": [],
-          "scheduleHtml": "<p><b>목표</b> · 구현 조건 작성 → 결과 검증·수정 → 설계 선택</p><p><b>결과물</b> · A/B 전환 HTML 1개와 검증·비교 기록</p><h3>1. 화면 구성</h3><p>AI로 새 웹 화면을 만든다. “오늘 할 일” 제목, A/B 전환 버튼, 할 일 6개와 항목별 완료 체크를 넣는다.</p><p>처음 순서: 강의 듣기 → 장보기 → 운동하기 → 자료 정리 → 세탁하기 → 책 읽기</p><table style=\"width:100%;table-layout:fixed;border-collapse:collapse;margin:10px 0\"><thead><tr><th style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;background:#eff5f9\">A안 · 위치 유지</th><th style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;background:#eff5f9\">B안 · 완료 항목 분리</th></tr></thead><tbody><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">완료해도 처음 자리에 남고 취소선을 표시한다. 취소해도 위치는 그대로다.</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">완료하면 아래 “완료한 일”로 이동하고 취소선을 표시한다. 취소하면 위 “할 일”로 돌아온다.</td></tr></tbody></table><h3>2. 예상 작성</h3><p>남은 일 찾기와 잘못 누른 완료 취소 각각에 유리할 안과 이유를 한 줄씩 적는다.</p><h3>3. AI 요청 조건</h3><p>• 초기 상태는 6개 모두 미완료. 항목별 완료 체크·해제 가능.</p><p>• A/B 전환 중 완료 상태 유지. 글자·색상·간격·체크 모양 동일.</p><p>• A안은 처음 목록 순서 유지. B안은 두 영역 각각에서 처음 순서 유지.</p><p>• B안의 빈 영역에 “남은 할 일이 없습니다” 또는 “완료한 일이 없습니다” 표시.</p><p>• 외부 서비스·라이브러리 없이 실행되는 단일 HTML. 추가·삭제·로그인·알림·저장 기능 제외. 새로고침 시 초기화 가능.</p><p>요청문을 직접 작성·저장하고 생성된 HTML을 실행한다.</p><h3>4. 구현 검증·수정</h3><table style=\"width:100%;table-layout:fixed;border-collapse:collapse;margin:10px 0\"><thead><tr><th style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;background:#eff5f9\">조작</th><th style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;background:#eff5f9\">기대 결과</th></tr></thead><tbody><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">A에서 장보기 완료</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">두 번째 자리에 남고 취소선.</td></tr><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">B로 전환</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">장보기가 완료 영역으로 이동.</td></tr><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">다시 A로 전환</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">완료 상태를 유지하며 두 번째 자리.</td></tr><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">B에서 장보기 완료 취소</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">할 일 영역의 두 번째 자리로 복귀.</td></tr><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">B에서 세탁하기 다음 장보기 완료</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">완료 영역에 장보기 → 세탁하기 순서.</td></tr><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">B에서 모든 항목 완료</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">“남은 할 일이 없습니다”.</td></tr><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">B에서 모든 완료 해제</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">처음 순서 복귀·“완료한 일이 없습니다”.</td></tr></tbody></table><p>각 항목에 통과·실패·미확인을 적는다. 실패하면 조작 순서·기대 결과·실제 결과를 전달해 수정한다. 수정 후 해당 조작과 A/B 전환·완료 체크·해제를 재확인한다.</p><h3>5. 두 안 비교</h3><p>완료: 장보기·운동하기·세탁하기 / 미완료: 강의 듣기·자료 정리·책 읽기. A안 과업 후 같은 상태로 되돌리고 B안에서 실행한다.</p><table style=\"width:100%;table-layout:fixed;border-collapse:collapse;margin:10px 0\"><thead><tr><th style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;background:#eff5f9\">과업</th><th style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;background:#eff5f9\">기록</th></tr></thead><tbody><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">남은 할 일 세 개 찾기</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">완료 항목 때문에 다시 훑었는가?</td></tr><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">운동하기 완료 취소</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">어디에서 찾았고 혼동했는가?</td></tr><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">자료 정리 완료 후 바로 취소</td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">항목이 이동했는가? 다시 찾아야 했는가?</td></tr></tbody></table><p>차이가 없으면 그대로 적는다. 본인의 사용 검토 결과로 표시한다.</p><h3>6. 선택 이유</h3><p>남은 일 찾기·완료 취소 각각 유리했던 안과 관찰 근거, 더 중요하게 본 과업·최종 선택·남은 단점·예상과 차이를 적는다. 선택하기 어렵다면 실제 사용자에게 시킬 과업과 관찰할 행동을 하나 적는다.</p><h3>7. 저장</h3><p>2026-11-05_AI.html / 같은 완료 상태의 A·B 캡처 / 처음 요청문 / 검증·수정·재확인 / 예상·비교·선택 이유. 전체 시간·전체 요청·수정 요청 횟수를 기록한다. 23시에 저장하고 미완료·다음 작업을 한 줄 남긴다.</p><figure style=\"margin:18px 0\"><img src=\"./assets/examples/figure-13.png\" alt=\"A/B 대안과 비교 조건\" loading=\"lazy\" style=\"display:block;width:100%;max-width:680px;height:auto;margin:auto\"></figure>",
+          "scheduleHtml": "\n<p><strong>결과물</strong> · 브라우저에서 작동하는 HTML 파일 1개와 아래 기록.</p>\n<h3>1. 만들 화면</h3>\n<p>‘오늘 할 일’ 제목, A/B 전환 버튼, 체크박스가 있는 할 일 6개를 넣습니다. 처음 순서는 강의 듣기 → 장보기 → 운동하기 → 자료 정리 → 세탁하기 → 책 읽기입니다.</p>\n<p>AI를 열기 전에 남은 일을 찾기 편할 안과 잘못 누른 체크를 취소하기 편할 안을 각각 예상해 보세요.</p>\n<h3>2. AI에 전달할 조건</h3>\n<p>만들 화면과 아래 조건을 요청문에 넣어 AI에 보내세요. 조건은 그대로 써도 됩니다. AI가 만든 HTML 파일을 브라우저에서 여세요.</p>\n<ol>\n<li>처음 열면 6개 모두 미완료입니다. 각 할 일을 체크하거나 해제할 수 있습니다.</li>\n<li>A/B를 바꿔도 각 할 일의 체크 여부는 그대로입니다. 문구, 글자 스타일, 색상, 간격과 체크박스 모양도 같게 합니다.</li>\n<li>A안에서 체크하면 원래 위치에 취소선이 생깁니다. 체크를 해제하면 같은 자리에서 취소선이 사라집니다.</li>\n<li>B안에서 체크하면 아래쪽 ‘완료한 일’로 옮기고 취소선을 표시합니다. 해제하면 위쪽 ‘할 일’로 돌아옵니다. 각 영역에서 항목 순서는 처음 목록을 따릅니다.</li>\n<li>B안의 위쪽이 비면 “남은 할 일이 없습니다”, 아래쪽이 비면 “완료한 일이 없습니다”를 표시합니다.</li>\n<li>외부 서비스나 라이브러리 없이 HTML 파일 하나로 작동하게 합니다. 추가·삭제·로그인·알림·저장 기능은 제외합니다. 새로고침하면 체크가 풀려도 됩니다.</li>\n</ol>\n<div data-record-section=\"prompt\"></div>\n<h3>3. 브라우저에서 동작 확인</h3>\n<p>아래 순서로 눌러 보고 결과를 선택하세요. 실패하면 AI에 누른 순서와 기대한 결과, 실제 결과를 전달하세요. 수정한 뒤 실패했던 동작과 A/B 전환, 체크·해제를 다시 확인하세요.</p>\n<div data-record-section=\"test\"></div>\n<h3>4. 두 안을 같은 조건에서 써 보기</h3>\n<p>A안에서 장보기·운동하기·세탁하기만 체크한 상태로 시작하세요. 아래 세 가지를 해본 뒤, 같은 세 항목만 체크한 상태로 되돌리고 B안에서도 반복하세요.</p>\n<ol><li>남은 할 일 세 개를 찾으세요. 목록을 다시 훑었는지 적으세요.</li><li>운동하기의 체크를 해제하세요. 어디서 찾았고 헷갈렸는지 적으세요.</li><li>자료 정리를 체크한 뒤 바로 해제하세요. 항목이 이동했는지, 해제할 때 다시 찾아야 했는지 적으세요.</li></ol>\n<p>차이가 없으면 그대로 적으세요. 이 기록은 본인이 두 안을 직접 써본 결과입니다.</p>\n<div data-record-section=\"compare\"></div>\n<h3>5. 선택과 작업 기록</h3>\n<p>HTML 파일은 보관하고, 같은 체크 상태의 A/B 캡처는 아래 ‘오늘의 공부 기록’에 첨부하세요. 요청문과 검증 결과는 이 과제에 저장됩니다.</p>\n<div data-record-section=\"decision\"></div>\n",
           "saveAs": "W01/2026-11-05_w01d3b2",
           "acceptance": "A에서 장보기 완료→B→A 전환, B에서 완료 취소, 세탁하기→장보기 순서로 완료, 전부 완료를 실행한다. 남은 일 찾기·운동하기 완료 취소·자료 정리 완료 직후 취소를 두 안에서 같은 초기 상태로 비교한다.",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-11-05",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "prompt": [
+              {
+                "key": "prompt",
+                "label": "AI에 보낸 요청문",
+                "kind": "text"
+              }
+            ],
+            "test": [
+              {
+                "key": "test-0",
+                "label": "A안에서 장보기 체크 → 두 번째 자리에 남고 취소선이 생긴다.",
+                "kind": "status"
+              },
+              {
+                "key": "test-1",
+                "label": "B안으로 전환 → 장보기가 체크된 채 완료한 일 영역에 나타난다.",
+                "kind": "status"
+              },
+              {
+                "key": "test-2",
+                "label": "다시 A안으로 전환 → 장보기가 체크된 채 두 번째 자리에 나타난다.",
+                "kind": "status"
+              },
+              {
+                "key": "test-3",
+                "label": "B안에서 장보기 체크 해제 → 할 일 영역의 두 번째 자리로 돌아온다.",
+                "kind": "status"
+              },
+              {
+                "key": "test-4",
+                "label": "B안에서 세탁하기, 장보기 순으로 체크 → 완료 영역은 장보기, 세탁하기 순이다.",
+                "kind": "status"
+              },
+              {
+                "key": "test-5",
+                "label": "B안에서 모두 체크 → 위쪽에 “남은 할 일이 없습니다”가 보인다.",
+                "kind": "status"
+              },
+              {
+                "key": "test-6",
+                "label": "B안에서 모두 해제 → 처음 순서로 돌아오고 아래쪽에 “완료한 일이 없습니다”가 보인다.",
+                "kind": "status"
+              },
+              {
+                "key": "fix",
+                "label": "오류가 있었다면 누른 순서, 기대한 결과, 실제 결과, 수정 후 다시 확인한 결과",
+                "kind": "text"
+              }
+            ],
+            "compare": [
+              {
+                "key": "compare-0-A",
+                "label": "남은 할 일 찾기 · A안에서 관찰한 내용",
+                "kind": "text"
+              },
+              {
+                "key": "compare-0-B",
+                "label": "남은 할 일 찾기 · B안에서 관찰한 내용",
+                "kind": "text"
+              },
+              {
+                "key": "compare-1-A",
+                "label": "운동하기 완료 취소 · A안에서 관찰한 내용",
+                "kind": "text"
+              },
+              {
+                "key": "compare-1-B",
+                "label": "운동하기 완료 취소 · B안에서 관찰한 내용",
+                "kind": "text"
+              },
+              {
+                "key": "compare-2-A",
+                "label": "자료 정리 완료 후 바로 취소 · A안에서 관찰한 내용",
+                "kind": "text"
+              },
+              {
+                "key": "compare-2-B",
+                "label": "자료 정리 완료 후 바로 취소 · B안에서 관찰한 내용",
+                "kind": "text"
+              }
+            ],
+            "decision": [
+              {
+                "key": "prediction",
+                "label": "처음 예상과 실제 사용 결과의 차이",
+                "kind": "text"
+              },
+              {
+                "key": "decision",
+                "label": "어느 안을 선택했나요? 더 중요하게 본 과업, 관찰 근거, 남은 불편을 적으세요. 판단이 어렵다면 사용자에게 시킬 과업과 관찰할 행동을 적으세요.",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "HTML 파일 이름 또는 링크",
+                "kind": "text"
+              },
+              {
+                "key": "minutes",
+                "label": "전체 작업 시간(분)",
+                "kind": "number"
+              },
+              {
+                "key": "requests",
+                "label": "전체 AI 요청 횟수",
+                "kind": "number"
+              },
+              {
+                "key": "revisions",
+                "label": "그중 수정 요청 횟수",
+                "kind": "number"
+              },
+              {
+                "key": "next",
+                "label": "남은 작업이 있다면 다음에 할 일",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -1557,7 +1699,31 @@
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-11-10",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -1711,7 +1877,31 @@
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-11-12",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -2050,7 +2240,31 @@
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-11-17",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -2205,7 +2419,31 @@
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-11-19",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -2541,7 +2779,31 @@
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-11-24",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -2690,7 +2952,31 @@
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-11-26",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -3020,7 +3306,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-12-01",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -3165,7 +3475,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-12-03",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -3492,7 +3826,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-12-08",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -3639,7 +3997,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-12-10",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -3966,7 +4348,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-12-15",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -4113,7 +4519,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-12-17",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -4442,7 +4872,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-12-22",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -4589,7 +5043,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-12-24",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -4919,7 +5397,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-12-29",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -5068,7 +5570,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2026-12-31",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -5401,7 +5927,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-01-05",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -5548,7 +6098,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-01-07",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -5877,7 +6451,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-01-12",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -6024,7 +6622,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-01-14",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -6353,7 +6975,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-01-19",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -6500,7 +7146,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-01-21",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -6827,7 +7497,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-01-26",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -6974,7 +7668,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-01-28",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -7302,7 +8020,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-02-02",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -7450,7 +8192,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-02-04",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -7781,7 +8547,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-02-09",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -7928,7 +8718,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-02-11",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -8255,7 +9069,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-02-16",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -8401,7 +9239,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-02-18",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -8731,7 +9593,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-02-23",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -8878,7 +9764,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-02-25",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -9207,7 +10117,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-03-02",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -9354,7 +10288,31 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-03-04",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -9685,7 +10643,31 @@
           "competency": "인터랙션 목적·상태·동작 명세·검증·접근성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-03-09",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -9836,7 +10818,31 @@
           "competency": "인터랙션 목적·상태·동작 명세·검증·접근성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-03-11",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -10173,7 +11179,31 @@
           "competency": "인터랙션 목적·상태·동작 명세·검증·접근성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-03-16",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -10324,7 +11354,31 @@
           "competency": "인터랙션 목적·상태·동작 명세·검증·접근성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-03-18",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -10657,7 +11711,31 @@
           "competency": "인터랙션 목적·상태·동작 명세·검증·접근성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-03-23",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -10808,7 +11886,31 @@
           "competency": "인터랙션 목적·상태·동작 명세·검증·접근성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-03-25",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -11143,7 +12245,31 @@
           "competency": "인터랙션 목적·상태·동작 명세·검증·접근성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-03-30",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -11294,7 +12420,31 @@
           "competency": "인터랙션 목적·상태·동작 명세·검증·접근성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-04-01",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -11625,7 +12775,31 @@
           "competency": "사례 설명·기여·근거·지원 적합성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-04-06",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -11772,7 +12946,31 @@
           "competency": "사례 설명·기여·근거·지원 적합성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-04-08",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -12099,7 +13297,31 @@
           "competency": "사례 설명·기여·근거·지원 적합성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-04-13",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
@@ -12246,7 +13468,31 @@
           "competency": "사례 설명·기여·근거·지원 적합성",
           "prerequisiteDates": [],
           "pdfBlockId": "ai-2027-04-15",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "recordSections": {
+            "general": [
+              {
+                "key": "status",
+                "label": "과제의 확인 조건을 실행한 결과",
+                "kind": "status"
+              },
+              {
+                "key": "evidence",
+                "label": "확인한 내용과 근거",
+                "kind": "text"
+              },
+              {
+                "key": "fix",
+                "label": "수정한 내용과 다시 확인한 결과",
+                "kind": "text"
+              },
+              {
+                "key": "file",
+                "label": "결과물 링크 또는 파일 이름",
+                "kind": "text"
+              }
+            ]
+          }
         }
       ]
     },
