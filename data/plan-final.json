@@ -1187,6 +1187,9 @@
                 "kind": "text"
               }
             ]
+          },
+          "attachments": {
+            "images": true
           }
         },
         {
@@ -1342,11 +1345,6 @@
                 "kind": "text"
               },
               {
-                "key": "file",
-                "label": "HTML 파일 이름 또는 링크",
-                "kind": "text"
-              },
-              {
                 "key": "minutes",
                 "label": "전체 작업 시간(분)",
                 "kind": "number"
@@ -1429,6 +1427,9 @@
                 "kind": "text"
               }
             ]
+          },
+          "attachments": {
+            "images": true
           }
         },
         {
@@ -1464,7 +1465,10 @@
           "competency": "Figma 구조·독립 제작과 UX 기초",
           "prerequisiteDates": [],
           "pdfBlockId": "core-011",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "attachments": {
+            "images": true
+          }
         }
       ]
     },
@@ -1844,11 +1848,6 @@
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
                 "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
-                "kind": "text"
               }
             ]
           },
@@ -2055,11 +2054,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
@@ -2483,11 +2477,6 @@
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
                 "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
-                "kind": "text"
               }
             ]
           },
@@ -2677,11 +2666,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
@@ -3072,11 +3056,6 @@
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
                 "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
-                "kind": "text"
               }
             ]
           },
@@ -3274,11 +3253,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
@@ -5544,11 +5518,6 @@
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
                 "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
-                "kind": "text"
               }
             ]
           },
@@ -5759,11 +5728,6 @@
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
                 "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
-                "kind": "text"
               }
             ]
           },
@@ -5879,7 +5843,10 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "core-124",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "attachments": {
+            "images": true
+          }
         },
         {
           "id": "w08d5b1",
@@ -5919,6 +5886,9 @@
                 "kind": "text"
               }
             ]
+          },
+          "attachments": {
+            "images": true
           }
         }
       ]
@@ -5954,7 +5924,10 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "core-126",
-          "aiIntegratedHours": 0.0
+          "aiIntegratedHours": 0.0,
+          "attachments": {
+            "images": true
+          }
         },
         {
           "id": "w08d6b1",
@@ -6143,6 +6116,9 @@
                 "kind": "text"
               }
             ]
+          },
+          "attachments": {
+            "images": true
           }
         },
         {
@@ -6198,11 +6174,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
@@ -6415,11 +6386,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
@@ -6868,11 +6834,6 @@
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
                 "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
-                "kind": "text"
               }
             ]
           },
@@ -7082,11 +7043,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
@@ -7741,11 +7697,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
@@ -10324,11 +10275,6 @@
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
                 "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
-                "kind": "text"
               }
             ]
           },
@@ -10444,7 +10390,10 @@
           "competency": "실제 문제 근거·설계 판단·시각적 완성도·검증·전달",
           "prerequisiteDates": [],
           "pdfBlockId": "core-236",
-          "aiIntegratedHours": 0.16666666666666666
+          "aiIntegratedHours": 0.16666666666666666,
+          "attachments": {
+            "images": true
+          }
         },
         {
           "id": "w15d5b1",
@@ -10733,11 +10682,6 @@
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
                 "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
-                "kind": "text"
               }
             ]
           },
@@ -10937,11 +10881,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
@@ -11582,11 +11521,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
@@ -12660,11 +12594,6 @@
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
                 "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
-                "kind": "text"
               }
             ]
           },
@@ -12864,11 +12793,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
@@ -13340,11 +13264,6 @@
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
                 "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
-                "kind": "text"
               }
             ]
           },
@@ -13558,11 +13477,6 @@
               {
                 "key": "fix",
                 "label": "수정한 내용과 다시 확인한 결과",
-                "kind": "text"
-              },
-              {
-                "key": "file",
-                "label": "결과물 링크 또는 파일 이름",
                 "kind": "text"
               }
             ]
