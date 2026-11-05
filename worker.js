@@ -6,6 +6,7 @@
 const KEY_PATTERN = /^(day:\d{4}-\d{2}-\d{2}|deliverable:[\w-]+:\d+|project:[\w-]+|review:\d+|gate:[\w-]+)$/;
 const PREFIX = 'ui-study-path:entry:';
 const IMAGE_PREFIX = 'ui-study-path:image:';
+const HTML_PREFIX = 'ui-study-path:html:';
 const IMAGE_ID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 const MAX_IMAGE_SIZE = 1024 * 1024;
 function cors(request){
@@ -33,6 +34,31 @@ export default {
     const url=new URL(request.url);
     if(request.method==='GET'&&url.pathname==='/api/session')return result(request,{user:{id:'study-path-shared',email:null},backend:'cloudflare-kv-independent'});
     if(request.method==='GET'&&url.pathname==='/health')return result(request,{ok:true,app:'ui-study-path',storage:'independent-kv'});
+
+    if(request.method==='POST'&&url.pathname==='/api/html-files'){
+      if(request.headers.get('Content-Type')!=='application/octet-stream')
+        return result(request,{error:'HTML 파일을 선택해 주세요.'},415);
+      if(Number(request.headers.get('Content-Length'))>MAX_IMAGE_SIZE)
+        return result(request,{error:'HTML 파일은 1MB 이하여야 해요.'},413);
+      const bytes=await request.arrayBuffer();
+      if(!bytes.byteLength||bytes.byteLength>MAX_IMAGE_SIZE)
+        return result(request,{error:'HTML 파일은 1MB 이하여야 해요.'},413);
+      const id=crypto.randomUUID();
+      await env.STUDY_KV.put(HTML_PREFIX+id,bytes);
+      return result(request,{ok:true,id},201);
+    }
+    const htmlFile=url.pathname.match(/^\/api\/html-files\/([0-9a-f-]{36})$/);
+    if(request.method==='GET'&&htmlFile&&IMAGE_ID.test(htmlFile[1])){
+      const bytes=await env.STUDY_KV.get(HTML_PREFIX+htmlFile[1],'arrayBuffer');
+      if(bytes===null)return result(request,{error:'HTML 파일이 없어요.'},404);
+      return new Response(bytes,{headers:{
+        'Content-Type':'application/octet-stream',
+        'Content-Disposition':'attachment; filename="study-exercise.html"',
+        'Content-Security-Policy':"sandbox; default-src 'none'",
+        'X-Content-Type-Options':'nosniff',
+        'Cache-Control':'no-store',
+      }});
+    }
 
     // Compressed study images, stored as separate binary KV values (not large base64 notes).
     if(request.method==='POST'&&url.pathname==='/api/images'){
