@@ -1600,17 +1600,15 @@
           "method": "scheduled_practice",
           "inputs": "Figma / 일정 입력 연습·학습 기록 연습 / 상용 캘린더 사용 기록",
           "instructions": [
-            "월요일 관찰한 상용 캘린더와 토요일 Figma 일정 흐름에서 일정 추가→제목·날짜 확인→저장 완료 과업을 검토한다. 상용 앱에는 가상 연습 일정만 사용한다.",
-            "각 흐름의 필수 표시·날짜 선택·저장 피드백·취소 후 복귀를 표로 비교한다. 실제로 실행한 상용 앱과 준비한 상태만 전환하는 Figma를 구분해 적는다.",
-            "내 연습 파일에서 목표 행동을 찾기 어렵거나 오류 복구가 불명확한 지점 하나를 고른다. 문구·배치·연결을 수정하고 같은 경로를 다시 실행한다.",
-            "차이마다 화면·조작 근거가 있는가?",
-            "수정 후 원래 문제와 정상·취소 경로를 다시 확인했는가?"
+            "NN/g 자료를 읽고 상용 캘린더와 Figma 시안에서 같은 일정 추가 과업을 실행한다.",
+            "필수 표시, 저장 완료, 취소 후 복귀를 비교하고 Figma의 문구·배치·연결 중 한 곳을 수정한다.",
+            "원래 과업과 취소 경로를 다시 실행하고 수정 전후를 남긴다."
           ],
-          "output": "동일 과업 비교표, 선택한 수정과 이유, 재확인 기록.",
+          "output": "일정 화면 수정 전후 캡처와 상용 앱·Figma의 비교 근거 한 줄.",
           "resourceKeys": [
             "task"
           ],
-          "scheduleHtml": "<p><strong>시작</strong> · 월요일에 본 상용 캘린더 앱과 Figma의 ‘일정 입력 연습’을 각각 열고 같은 일정 추가 흐름을 비교한다.</p><h3>강의·자료</h3><table style=\"width:100%;table-layout:fixed;border-collapse:collapse;margin:10px 0\"><thead><tr><th style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;background:#eff5f9\">자료 · 제목을 누르면 열림</th><th style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;background:#eff5f9\">사용 범위</th></tr></thead><tbody><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.nngroup.com/articles/task-analysis/\">NN/g 과업 분석</a></td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">사용자 목표·행동 단계·완료 조건</td></tr></tbody></table><h3>할 일</h3><ol><li>월요일 관찰한 상용 캘린더와 토요일 Figma 일정 흐름에서 일정 추가→제목·날짜 확인→저장 완료 과업을 검토한다. 상용 앱에는 가상 연습 일정만 사용한다.</li><li>각 흐름의 필수 표시·날짜 선택·저장 피드백·취소 후 복귀를 표로 비교한다. 실제로 실행한 상용 앱과 준비한 상태만 전환하는 Figma를 구분해 적는다.</li><li>내 연습 파일에서 목표 행동을 찾기 어렵거나 오류 복구가 불명확한 지점 하나를 고른다. 문구·배치·연결을 수정하고 같은 경로를 다시 실행한다.</li></ol><h3>확인</h3><p class=\"check-purpose\">정상 입력에서는 보이지 않는 문제를 찾는다. 사용자가 막힌 이유를 알아보고 입력을 고치거나 이전 화면으로 돌아갈 수 있는지 확인한다.</p><div data-record-section=\"checks\"></div><h3>결과물</h3><p>동일 과업 비교표, 선택한 수정과 이유, 재확인 기록.</p>",
+          "scheduleHtml": "\n<p><strong>시작</strong> · 월요일에 관찰한 상용 캘린더 앱과 토요일에 만든 Figma ‘일정 입력 연습’을 연다.</p>\n<h3>강의·자료</h3><table style=\"width:100%;table-layout:fixed;border-collapse:collapse;margin:10px 0\"><thead><tr><th style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;background:#eff5f9\">자료 · 제목을 누르면 열림</th><th style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;background:#eff5f9\">사용 범위</th></tr></thead><tbody><tr><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.nngroup.com/articles/task-analysis/\">NN/g 과업 분석</a></td><td style=\"padding:8px;text-align:left;vertical-align:top;border-bottom:1px solid #d4dfe7;overflow-wrap:anywhere;\">사용자 목표·행동 단계·완료 조건</td></tr></tbody></table>\n<h3>09:00–10:00 · 같은 일정 추가 과업 비교</h3>\n<ol>\n<li><strong>09:00–09:20 · UX 자료 읽기</strong><p>NN/g 과업 분석 자료를 읽고, 이번 과업의 목표를 “가상의 일정을 추가하고 목록에서 제목·날짜·시간을 확인하기”로 정한다.</p></li>\n<li><strong>09:20–09:40 · 상용 앱에서 직접 실행</strong><p>가상 일정 ‘Figma 복습’을 11월 8일 오후 2시로 추가한다. 목록에서 제목·날짜·시간을 확인한다. 입력 화면을 다시 열고 취소하면 어디로 가는지도 본다.</p></li>\n<li><strong>09:40–10:00 · 내 시안과 비교</strong><p>Figma 미리보기에서 같은 과업을 실행한다. 필수 입력을 어디서 알 수 있는지, 완료를 무엇으로 알 수 있는지, 취소 후 어디로 돌아오는지 비교한다. 준비한 화면과 연결만 확인한다.</p></li>\n</ol>\n<p><strong>10:00–10:10 · 휴식</strong></p>\n<h3>10:10–11:00 · Figma에서 한 곳 고치기</h3>\n<ol><li>비교에서 찾은 차이 하나를 고른다. 예를 들어 목록에서 새 일정을 알아보기 어렵다면 완료 화면과 복귀한 목록에 같은 제목·날짜·시간이 보이도록 맞춘다.</li>\n<li>바꾸기 전 화면을 캡처한 뒤 문구·배치·연결 중 필요한 부분을 수정한다.</li>\n<li>미리보기에서 일정 추가부터 목록 복귀까지 다시 누른다. 취소 경로도 한 번 확인한다.</li></ol>\n<h3>확인</h3>\n<div data-record-section=\"checks\"></div>\n<h3>결과물</h3><p>일정 화면 수정 전후 캡처. 어느 화면의 무엇을 바꿨고 사용자가 무엇을 확인하기 쉬워졌는지 한 줄 남긴다.</p>\n",
           "saveAs": "W01/2026-11-08_w01d6b0",
           "acceptance": "차이마다 화면·조작 근거가 있는가? / 수정 후 원래 문제와 정상·취소 경로를 다시 확인했는가?",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1622,21 +1620,24 @@
             "checks": [
               {
                 "key": "check-0",
-                "label": "차이마다 화면·조작 근거가 있는가?",
+                "label": "상용 앱과 Figma에서 같은 과업을 해 보고, 필수 표시·완료 안내·취소 후 도착 화면을 비교했나요?",
                 "kind": "status"
               },
               {
                 "key": "check-1",
-                "label": "수정 후 원래 문제와 정상·취소 경로를 다시 확인했는가?",
+                "label": "수정 후 일정 추가 → 목록 복귀와 입력 → 취소 → 목록을 다시 실행했나요?",
                 "kind": "status"
               },
               {
                 "key": "note",
-                "label": "이전에 저장한 문제·수정 기록",
+                "label": "두 화면에서 직접 확인한 차이 하나와 그 차이를 근거로 고친 부분",
                 "kind": "text",
-                "legacyOnly": true
+                "legacyOnly": false
               }
             ]
+          },
+          "attachments": {
+            "images": true
           }
         },
         {
@@ -1650,13 +1651,13 @@
           "method": "scheduled_practice",
           "inputs": "Figma / 일정 입력 연습·학습 기록 연습 / 상용 캘린더 사용 기록",
           "instructions": [
-            "버튼과 카드 한 개를 자료 없이 새 프레임에서 만든다. 막힌 조작과 다시 확인한 설정을 적는다.",
-            "금요일 학습 기록·상세 화면과 토요일 일정 목록·입력 화면을 연다. 첫 화면에서 목표 행동을 찾을 수 있는지, 내용이 길어졌을 때 정보 순서가 유지되는지 비교한다.",
-            "각 파일에서 제목 두 줄·항목 추가·390px·768px·다음 화면·뒤로 가기를 실행한다. 실패한 위치만 수정하고 같은 조건을 다시 확인한다. 미완료 공식 예제가 있으면 먼저 마친다."
+            "Figma에 새 실습 페이지를 만들고 일정 추가 버튼과 일정 카드를 Auto layout으로 만든다.",
+            "복제한 목록에 배치하고 제목 두 줄·항목 추가·390px·768px 조건을 확인한다.",
+            "실습 페이지의 복제 목록·입력을 연결하고, 금요일 학습 기록의 상세·복귀도 확인한다."
           ],
-          "output": "독립 확인 버튼·카드, 두 과업의 비교·변경 조건 점검표, 수정 전후와 다음 주 보완 항목.",
+          "output": "Figma 실습 페이지, 390px·768px 캡처, 수정한 설정이나 연결 기록.",
           "resourceKeys": [],
-          "scheduleHtml": "<p><strong>시작</strong> · Figma의 새 프레임에서 버튼·카드를 자료 없이 다시 만든 뒤, 이번 주 일정·학습 기록 화면에서 변경 조건을 확인한다.</p><h3>할 일</h3><ol><li>버튼과 카드 한 개를 자료 없이 새 프레임에서 만든다. 막힌 조작과 다시 확인한 설정을 적는다.</li><li>금요일 학습 기록·상세 화면과 토요일 일정 목록·입력 화면을 연다. 첫 화면에서 목표 행동을 찾을 수 있는지, 내용이 길어졌을 때 정보 순서가 유지되는지 비교한다.</li><li>각 파일에서 제목 두 줄·항목 추가·390px·768px·다음 화면·뒤로 가기를 실행한다. 실패한 위치만 수정하고 같은 조건을 다시 확인한다. 미완료 공식 예제가 있으면 먼저 마친다.</li></ol><h3>결과물</h3><p>독립 확인 버튼·카드, 두 과업의 비교·변경 조건 점검표, 수정 전후와 다음 주 보완 항목.</p><p class=\"check-purpose\">수정 전과 같은 조건에서 다시 실행해야 문제가 해결됐는지 알 수 있다. 함께 쓰던 정상 동작도 확인한다.</p>",
+          "scheduleHtml": "\n<p><strong>시작</strong> · Figma ‘일정 입력 연습’에 새 페이지 ‘일요일 버튼·카드 실습’을 만든다.</p>\n<h3>13:00–14:00 · 버튼과 카드 만들기</h3>\n<ol>\n<li><strong>13:00–13:25 · 버튼</strong><p>‘＋’와 ‘일정 추가’ 글자를 넣고 가로 Auto layout으로 묶는다. 아래 예시의 간격과 여백을 적용하고, 문구를 ‘새 일정 추가하기’로 바꿔 너비가 늘어나는지 본다.</p></li>\n<li><strong>13:25–14:00 · 일정 카드</strong><p>‘Figma 복습’과 ‘11월 8일 · 오후 2시’를 넣고 세로 Auto layout으로 묶는다. 버튼과 카드부터 직접 만든 뒤 막힌 설정만 앞서 본 5과에서 확인한다.</p></li>\n</ol>\n\n<figure class=\"study-example redrawn-example\" aria-label=\"일정 추가 버튼과 일정 카드 제작 예시\">\n<figcaption><span class=\"example-kind\">화면 예시</span>직접 만들 버튼 한 개와 일정 카드 한 개</figcaption>\n<div class=\"mock-grid\">\n<article class=\"mock-screen\"><div class=\"mock-step\">① 버튼 · 가로 Auto layout</div><div class=\"mock-body\">\n<span class=\"mock-action mock-primary\">＋ 일정 추가</span>\n<p>＋와 글자 사이 8px · 안쪽 여백 가로 16px / 세로 10px</p>\n<p>너비는 Hug contents. 문구가 길어지면 버튼이 함께 넓어진다.</p>\n</div></article>\n<article class=\"mock-screen\"><div class=\"mock-step\">② 카드 · 세로 Auto layout</div><div class=\"mock-body\">\n<div class=\"mock-row\"><strong>Figma 복습</strong><small>11월 8일 · 오후 2시</small></div>\n<p>제목과 날짜·시간 사이 6px · 카드 안쪽 여백 12px</p>\n<p>세로 Auto layout 목록에 넣은 뒤, 목록의 가로 공간을 채우도록 카드 너비를 Fill container로 설정한다.</p>\n</div></article>\n</div>\n<p class=\"example-caption\">색과 글꼴은 자유롭게 정한다. 제목이 두 줄이 되어도 날짜와 시간이 제목 아래에 보이면 된다.</p>\n</figure>\n\n<p><strong>14:00–14:10 · 휴식</strong></p>\n<h3>14:10–15:00 · 화면에 넣고 변경해 보기</h3>\n<ol>\n<li><strong>14:10–14:35 · 배치 확인</strong><p>토요일 목록과 입력 프레임을 실습 페이지에 복제한다. 복제한 목록에 새 버튼을 넣고, 카드 두 개를 세로 Auto layout으로 묶는다. 첫 카드 제목을 두 줄로 늘리고, 목록 너비를 390px와 768px로 각각 바꿔 겹치거나 잘리는 곳을 수정한다.</p></li>\n<li><strong>14:35–15:00 · 연결 확인</strong><p>실습 페이지에서 ‘일정 추가’ → 복제한 입력 화면, ‘취소’ → 복제한 목록으로 연결한다. 미리보기에서 두 버튼을 눌러 본다. 금요일 학습 기록 파일의 ‘학습 기록 보기’와 ‘뒤로 가기’도 한 번씩 실행하고, 끊긴 곳이 있으면 고친다.</p></li>\n</ol>\n<h3>확인</h3>\n<div data-record-section=\"checks\"></div>\n<h3>결과물</h3><p>‘일요일 버튼·카드 실습’ 페이지와 390px·768px 캡처. 고친 설정이나 연결이 있으면 확인란에 한 줄 적는다.</p>\n",
           "saveAs": "W01/2026-11-08_w01d6b1",
           "acceptance": "",
           "portfolioPosition": "기초 연습 파일 · 대표 사례의 근거로 과장하지 않음",
@@ -1669,10 +1670,25 @@
             "images": true
           },
           "recordSections": {
-            "general": [
+            "checks": [
+              {
+                "key": "check-0",
+                "label": "버튼 문구를 바꾸면 버튼 너비가 따라 늘어나나요?",
+                "kind": "status"
+              },
+              {
+                "key": "check-1",
+                "label": "390px와 768px에서 카드 두 개를 배치해도 두 줄 제목, 날짜·시간, 일정 추가 버튼이 겹치거나 잘리지 않나요?",
+                "kind": "status"
+              },
+              {
+                "key": "check-2",
+                "label": "일정 추가로 입력 화면이 열리고 취소하면 목록으로 돌아오나요? 금요일 학습 기록의 상세·뒤로 가기도 작동하나요?",
+                "kind": "status"
+              },
               {
                 "key": "note",
-                "label": "어떤 조건에서 문제가 생겼고, 무엇을 바꿨나요? 수정 전과 같은 조건으로 다시 확인한 결과를 적으세요.",
+                "label": "어느 너비나 조작에서 문제가 있었고, 무엇을 바꾼 뒤 다시 확인했나요?",
                 "kind": "text"
               }
             ]
