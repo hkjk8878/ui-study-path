@@ -5,3 +5,5 @@ README.md
 .assetsignore
 .gitignore
 .git/**
+routine-src/**
+routine-src
