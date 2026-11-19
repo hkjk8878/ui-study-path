@@ -98,7 +98,7 @@ for w in WEEKS:
             rs = records(b)
             import forms2 as FORMS2
             fk = (d.date[5:], b.t[:5])
-            if d.date >= '2026-11-20' and fk in FORMS2.FORMS:
+            if (d.date >= '2026-11-20' or d.date == '2026-11-19') and fk in FORMS2.FORMS:
                 sforms = (sforms or []) + FORMS2.FORMS[fk]
             if d.date >= '2026-11-20' and b.title.startswith('주간 기록') and rs:
                 import re as _re
