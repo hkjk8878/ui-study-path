@@ -428,6 +428,21 @@ HARU_STEP = ('15:00 예비 시간(밀린 일이 없으면): ‘하루’ 웹 점
     '· 주요 일 5개를 직접 해 본다: 할 일 추가·완료, 일정 등록, 루틴 체크, 목표 확인, 가계부 기록\n'
     '· 걸린 곳마다 아래 ‘하루 웹 점검’ 표에 한 줄씩 적는다(어긴 기준·심각도 고르는 법은 표 아래 설명)\n'
     '왜: 문제를 스스로 찾는 눈이 디자이너의 핵심 실력이다. 찾은 문제는 11/28 ‘하루’ 전체 정리에서 Figma 시안으로 고친다(실제 앱 코드는 고치지 않는다).')
+AL_STEP = ('15:00 예비 시간 — Auto layout 겹치기 연습 60분 (이번 주는 예비 시간을 17:00까지 쓴다)\n'
+    '· 자료: Figma Learn ‘Combine vertical, horizontal, and grid auto layout flows’ (따라 하는 문서, 예제 파일 없음)\n'
+    '· 어디서: Figma ‘하루’ 파일에 새 페이지 ‘연습’을 만들어 그 안에서 한다\n'
+    '시간: ①–⑤ 25분 · ⑥ 15분 · ⑦ 20분\n'
+    '| 순서 | 만드는 것 | 하는 일 |\n'
+    '| ① | 작성자·날짜 | T → 이름 글자 입력 → Ctrl+D로 복제해 아래로 옮기고 날짜로 바꾼다 → 둘 선택 → Shift+A → 방향 Vertical(세로) |\n'
+    '| ② | 프로필 | O 누르고 Shift+드래그로 원 → 원과 ① Frame 선택 → Shift+A → Horizontal(가로) → 이름·날짜 글자와 ① Frame의 W를 Fill container |\n'
+    '| ③ | 게시물 | R로 사각형 → Fill 색 칸 → Image로 바꿔 사진 넣기 → T로 끌어서 설명 글 상자 → 프로필·사진·설명 선택 → Shift+A → Vertical → 프로필·설명: W Fill container, H Hug contents / 사진: W Fill container + Aspect ratio 잠금 켜기 → 게시물 Frame에 Stroke(테두리)를 넣어 범위를 보이게 한다 |\n'
+    '| ④ | 피드 | 게시물 선택 → Shift+A로 한 번 더 감싼다 → Vertical, H Hug contents → 게시물 W Fill container → 게시물 Ctrl+D 두 번 → 피드 Frame이 따라 늘어나는지 본다 |\n'
+    '| ⑤ | 확인 | 피드 Frame의 W를 390 → 768로 바꿔 글이 줄바꿈되고 사진이 비율을 지키는지 본다 |\n'
+    '| ⑥ | 홈 화면 Grid | F → 오른쪽 프리셋에서 휴대폰 크기 선택 → Layout의 Grid → 열 3 · 행 6 → F로 칸 하나를 눌러 앱 Frame → Ctrl+D로 남은 칸 채움 → 폴더 자리의 앱을 지우고 폴더 Frame을 끌어 여러 칸 차지 → 폴더 선택 → Shift+A → Grid 3×3 → 앱을 복사해 폴더 안에 붙여 넣기 |\n'
+    '| ⑦ | ‘하루’ 할 일 목록 | 같은 ‘연습’ 페이지에서 처음부터 만든다(원본 컴포넌트는 건드리지 않는다): 체크박스(leading) + 제목·보조 글을 세로로 감싼 content → 둘을 가로로 감싼 todo-row → todo-row 3개를 세로로 감싼 목록 → 목록 W를 390 → 768로 바꿔 확인 |\n'
+    '→ 아래 ‘결과물 기입표’의 「Auto layout 겹치기 확인」에 Frame마다 적는다\n'
+    '왜: 화면은 작은 Frame을 안에서부터 차례로 감싸 만든다. Frame마다 방향·간격·Fill/Hug를 스스로 정할 수 있어야 폭이 바뀌어도 안 깨지는 화면을 만들고, 개발자에게도 같은 구조로 넘길 수 있다.')
+HARU_STEP_1122 = HARU_STEP.replace('15:00 예비 시간(밀린 일이 없으면): ‘하루’ 웹 점검 50분', '16:10–17:00 ‘하루’ 웹 점검 50분', 1)
 NAME_CHECK = '이름 점검(5분, 이번 주 Figma 작업이 있었으면)\n· Ctrl+F로 Frame · Group · Rectangle을 검색해 남은 기본 이름을 바꾼다\n· [영어, 첫 글자 대문자] ◆ Main component와 Variant가 맞는가 (Todo/Row · State=Default)\n· [한국어] 화면 Frame이 ‘화면-상태’인가 (추가-오류)\n· [영어 소문자] 그 밖의 영어 이름이 소문자인가 (header · more-button)'
 
 QA_LEAD = '아래 ‘디자인 QA 점검표’를 위에서부터 하나씩 해 보고 통과·실패를 적는다.\n왜: 실무에서 개발자가 가장 자주 되묻는 것이 빠진 상태와 이름 없는 값이다. 넘기기 전에 잡으면 다시 만드는 일이 준다.'
@@ -508,7 +523,7 @@ def apply_extra(weeks):
                 if k in (('01-03','13:00'), ('02-21','13:00'), ('03-21','14:10')):
                     b.steps = tuple(b.steps) + (QA_LEAD,); b.show_fixed = True
                 if k == ('11-22','14:10'):
-                    b.steps = tuple(b.steps) + (HARU_STEP,); b.show_fixed = True
+                    b.steps = tuple(b.steps) + (AL_STEP, HARU_STEP_1122); b.show_fixed = True
                 if k == ('11-28','13:00'):
                     b.steps = ('11/22에 찾은 ‘하루’ 웹 문제 중 심각도 3·4부터 Figma 시안에서 고친다.',) + tuple(b.steps)
                 if '주간 기록' in b.title:
@@ -560,6 +575,6 @@ def apply_checks(weeks):
                 if k in (('12-21','08:00'), ('02-11','08:00')):
                     b.steps = (STRUCT_CASE,) + tuple(b.steps)
                 if '주간 기록' in b.title:
-                    st = [s for s in b.steps if not s.startswith('15:00 예비 시간')]
-                    tail = [s for s in b.steps if s.startswith('15:00 예비 시간')]
+                    st = [s for s in b.steps if not s.startswith(('15:00 예비 시간', '16:10–17:00 ‘하루’'))]
+                    tail = [s for s in b.steps if s.startswith(('15:00 예비 시간', '16:10–17:00 ‘하루’'))]
                     b.steps = tuple(st) + tuple(WEEKLY_ADD) + tuple(tail)
