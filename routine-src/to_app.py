@@ -96,6 +96,20 @@ for w in WEEKS:
                    'category': cat, 'categoryLabel': lab, 'instructions': instr, 'output': b.out,
                    'resourceKeys': list(b.res), 'scheduleHtml': sched(b, weekend, instr), 'acceptance': b.chk}
             rs = records(b)
+            import forms2 as FORMS2
+            fk = (d.date[5:], b.t[:5])
+            if d.date >= '2026-11-20' and fk in FORMS2.FORMS:
+                sforms = (sforms or []) + FORMS2.FORMS[fk]
+            if d.date >= '2026-11-20' and b.title.startswith('주간 기록') and rs:
+                import re as _re
+                first = b.steps[0] if b.steps else ''
+                parts = [p.strip(' .') for p in _re.split(r',\s*', first.split('을 확인한다')[0].split('.')[0]) if p.strip()]
+                third = next((p for p in parts if '다음 주' in p), '다음 주에 준비할 것').replace('을 적는다', '').replace('를 적는다', '')
+                for f in rs.get('output', []):
+                    if f['label'] == '주간 기록' and f['columns'] == ['항목', '내용']:
+                        f['fixed'] = ['실제 걸린 시간 · 넘친 블록', '못 끝낸 것', third, '이름 점검 결과']
+                        f['rows'] = 4
+                        f['tip'] = '채용 기준 칸과 사례에 쓸 결정 4줄은 앱 ‘주간 회고’에 적는다'
             if sforms:
                 rs = rs or {}
                 extra = [f for f in rs.get('output', []) if f['key'] not in [x['key'] for x in out_fields(b.kind, b.out, b.title, getattr(b, 'when', ''))]]

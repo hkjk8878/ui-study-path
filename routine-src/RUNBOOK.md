@@ -8,7 +8,7 @@ cd routine-src
 python3 -c "import pypdf, reportlab" || pip install --break-system-packages pypdf reportlab
 python3 validate.py          # 블록 데이터 생성(오류 없으면 total work minutes 출력)
 ```
-- 블록 내용 원본: `w02_04.py` · `w05_12.py` · `w13_18.py` · `w19_24.py`(기본) → `clarify.py`(표 · Figma 기능 · 이름) → `aiplan.py`(화·목 AI) → `detail.py` · `detail2.py`(하는 법 · 순서표 · `OVERRIDE` = 블록 전체 교체) → `forms.py`(할 일 속 기입표를 앱 기입표로)
+- 블록 내용 원본: `w02_04.py` · `w05_12.py` · `w13_18.py` · `w19_24.py`(기본) → `clarify.py`(표 · Figma 기능 · 이름) → `aiplan.py`(화·목 AI) → `detail.py` · `detail2.py`(하는 법 · 순서표 · `OVERRIDE` = 블록 전체 교체) → `forms.py`(할 일 속 기입표를 앱 기입표로) → `forms2.py`(블록별 전용 기입표)
 - 블록 하나를 다시 쓸 때는 `detail2.OVERRIDE[('MM-DD','HH:MM')]`에 할 일 전체를 넣는 것이 가장 확실하다.
 
 ## 2. 점검 기준 (블록마다 전부)
@@ -20,7 +20,7 @@ python3 validate.py          # 블록 데이터 생성(오류 없으면 total wo
 | 4 | Figma 조작이 최신인가 | 단축키 · 메뉴 이름 · 버튼 위치 · 무료(Starter) 플랜 가능 여부를 Figma Learn 공식 문서로 확인. 확인 못 하면 “확인 필요”라고 적는다 |
 | 5 | 순서대로 하면 결과가 나오나 | 앞 단계 결과가 다음 단계에 필요한 순서인가, 빠진 단계 없나, 전날 만든 것을 이어 받나, 날짜 참조(“11/20에”)가 맞나 |
 | 6 | 무엇을 · 어디서 · 끝 기준 | 할 일 한 줄 → 순서표(순서 · 어디서 · 하는 일) → 용어표 → 확인. 끝났는지 아는 기준이 있나 |
-| 7 | 기입표가 맞나 | 할 일 속 “채울 표”가 앱 ‘결과물 기입표’로 들어가나(forms.py). 할 일과 상관없는 일반 기입표가 붙어 있지 않나 |
+| 7 | 기입표가 그 과제에 맞나 | 앱 ‘결과물 기입표’가 그 블록 과제에서 실제로 적을 것인가. 할 일 속 채울 표는 forms.py가 기입표로 옮긴다. 일반 표(‘제작 기록’ · ‘글 작성 기록’ · ‘강의 메모’ 등)가 붙어 있으면 forms2.FORMS에 그 과제 전용 표(칸 이름 · 예시 · 미리 적힌 줄)를 만든다. 매주 같은 형식이 필요한 것(주간 기록, AI 활용 기록)만 같은 표를 쓴다 |
 | 8 | 이름 규칙(실무) | 영어는 모두 소문자(button · state=default · text/primary · heading/large), 컬렉션만 Primitives · Semantic, 페이지 · 화면 Frame · Section · Flow는 한국어(‘화면-상태’), / = 폴더, - = 단어 잇기 |
 | 9 | 시간 배분 | 순서표의 분 합계가 블록 시간 안에 드나. 강의 길이가 블록보다 길면 주말 15:00–16:00 예비로 넘긴다고 적는다(강의는 줄이지 않는다) |
 | 10 | 읽기 쉬운가 | 필요 없는 문장 · 번역투 · 같은 블록 안 중복 삭제. 용어는 원래 이름 + [뜻]. 필요한 설명은 다른 날과 겹쳐도 그날 블록에 다시 쓴다 |
