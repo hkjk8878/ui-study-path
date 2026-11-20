@@ -614,7 +614,9 @@ QA_ROWS = ['파일 정리: 기본 이름(Frame 12 등) 0 · Detach 0 · 직접 �
            '접근성: 글자 대비 4.5:1, 누르는 영역 44×44, 색만으로 구분하지 않음',
            '문구: 말투 하나로 통일, 버튼은 하는 일로(‘확인’보다 ‘저장하기’), 오류는 원인+고치는 방법',
            '흐름·크기: Present로 모든 경로 끝까지, 막다른 버튼 0, 320·390·768에서 안 깨짐']
-QA_ROWS_W2 = ['파일 정리: 기본 이름(Frame 12 등) 0 · Detach 0 (직접 넣은 색·숫자는 변수를 배우는 3주차부터)'] + QA_ROWS[1:]
+QA_ROWS_OLD = list(QA_ROWS)
+QA_ROWS = [r.replace('버튼 Default·Pressed·Disabled', '버튼 state=default · pressed · disabled') for r in QA_ROWS]
+QA_ROWS_W2 = ['파일 정리: 기본 이름(Frame 12 등) 0 · Detach 0 (직접 넣은 색·숫자는 변수를 배우는 3주차부터)'] + QA_ROWS_OLD[1:]
 QA_T = T('디자인 QA 점검표', ['점검 항목', '결과(통과/실패)', '실패한 곳(화면 · 레이어 이름)', '고친 뒤 다시 확인'],
          ['상태: …', '실패', '추가-오류 화면이 없음', '추가-오류를 만들고 Present로 확인함'], fixed=QA_ROWS,
          tip='실패한 곳은 화면·레이어 이름까지 적어야 바로 찾아 고친다.')
