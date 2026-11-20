@@ -255,7 +255,7 @@ OVERRIDE = {
     '768px 화면에 왼쪽 목록, 오른쪽 상세를 나란히 놓는다. 화면 폭이 바뀌어도 목록은 280~360 사이를 지키고, 상세가 나머지를 채우게 만든다.',
     T(['순서', '어디서', '하는 일'],
       ['①', 'Figma ‘화면’ 페이지', 'F → 오른쪽 크기 칸에 768 × 1024 → Frame 이름 ‘목록-768’'],
-      ['②', '목록-768', 'Shift+A → 가로(Horizontal) Auto layout'],
+      ['②', '목록-768', '목록-768 선택 → Shift+A(이 Frame에 Auto layout 켜기) → 오른쪽 Auto layout 칸에서 방향을 Horizontal(→, 가로)로 → 안에 넣는 칸이 왼쪽에서 오른쪽으로 나란히 놓인다'],
       ['③', '목록-768 안', 'Frame 두 개를 넣고 이름을 list · detail로 바꾼다'],
       ['④', 'list', '390 목록 화면의 할 일 행 Instance를 Ctrl+C → list 안에 Ctrl+V'],
       ['⑤', 'list', 'W를 Fill → W 칸 ▾ → Add min width 280 · Add max width 360'],
