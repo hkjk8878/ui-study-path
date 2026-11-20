@@ -253,6 +253,10 @@ OVERRIDE = {
  ],
  ('11-20','08:30'): [
     '768px 화면에 왼쪽 목록, 오른쪽 상세를 나란히 놓는다. 화면 폭이 바뀌어도 목록은 280~360 사이를 지키고, 상세가 나머지를 채우게 만든다.',
+    '만들 구조 — Auto layout은 아래 Frame 3개에 각각 켠다(Frame마다 선택 → Shift+A → 오른쪽 Auto layout 칸에서 방향 고르기)\n' + T(['Frame', 'Auto layout 방향', 'W', 'H', '안에 들어가는 것'],
+      ['목록-768 (바깥)', 'Horizontal → 가로', 'Fixed 768', 'Fixed 1024', 'list · detail'],
+      ['list (왼쪽)', 'Vertical ↓ 세로', 'Fill + 최소 280 · 최대 360', 'Fill', '할 일 행 3~4개 (W Fill)'],
+      ['detail (오른쪽)', 'Vertical ↓ 세로', 'Fill', 'Fill', '제목 · 날짜 · 메모 · 완료 · 수정 · 삭제']),
     T(['순서', '어디서', '하는 일'],
       ['①', 'Figma ‘화면’ 페이지', 'F → 오른쪽 크기 칸에 768 × 1024 → Frame 이름 ‘목록-768’'],
       ['②', '목록-768', '목록-768 선택 → Shift+A(이 Frame에 Auto layout 켜기) → 오른쪽 Auto layout 칸에서 방향을 Horizontal(→, 가로)로 → 안에 넣는 칸이 왼쪽에서 오른쪽으로 나란히 놓인다. W · H가 Fixed(768 · 1024)인지 보고, Hug로 바뀌었으면 Fixed로 돌린다'],
