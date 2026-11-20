@@ -277,7 +277,7 @@ OVERRIDE = {
       ['detail', 'Vertical ↓ 세로 (그대로)', 'Fill', 'Fill', '제목 · 날짜 · 메모 · 완료 · 수정 · 삭제']),
     T(['순서', '어디서', '하는 일'],
       ['①', '목록-768', '목록-768 선택 → Ctrl+D(복제) → 복제된 Frame 이름을 목록-1280으로 → 오른쪽 W 칸에 1280 → 화면이 넓어지고 detail만 늘어난다'],
-      ['②', '목록-1280', '목록-1280 선택 → 오른쪽 패널 Layout guide 옆 + → 생긴 줄 왼쪽의 격자 아이콘 클릭 → 맨 위 종류를 Columns로 → Count 12 · Type Stretch · Margin 160 · Gutter 24 → 화면 양쪽 160을 뺀 가운데 960에 빨간 열 12개가 보인다'],
+      ['②', '목록-1280', '레이어 패널에서 목록-1280 클릭(Frame이 선택돼야 Layout guide 칸이 보인다) → 오른쪽 Design 패널을 아래로 내려 Layout guide 칸 → 제목 오른쪽 +(Add layout guide) → 화면에 작은 격자가 깔린다 → Layout guide 칸에 새로 생긴 줄 앞의 격자 모양 아이콘(Layout guide settings) 클릭 → 작은 설정 창이 뜬다 → 창 맨 위 종류 칸(처음엔 Grid)을 Columns로 → Count 12 → Type Stretch → Margin 160 → Gutter 24 → 창 바깥 클릭해 닫기 → 화면 양쪽 160을 뺀 가운데 960에 빨간 세로 열 12개가 보이면 성공'],
       ['③', '목록-1280 안', '왼쪽 레이어 패널에서 list 클릭 → Shift 누른 채 detail 클릭(둘 다 선택) → Shift+A → 둘을 감싼 새 Auto layout Frame이 생긴다 → 오른쪽 Auto layout 칸에서 방향이 Horizontal(→)인지 확인(아니면 →로) → 레이어 이름을 content로'],
       ['④', 'content', 'content 선택 → W를 Fill → W 칸 ▾ → Add max width 960 → H를 Fill'],
       ['⑤', '목록-1280', '목록-1280 선택 → 오른쪽 Auto layout 칸의 정렬 상자(점 9개)에서 위쪽 가운데 점 클릭 → content가 가운데로 와서 빨간 열 960 안에 맞으면 성공'],
