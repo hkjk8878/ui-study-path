@@ -62,6 +62,8 @@ DEFAULT = {
  'AI': '예시 그림 없음: 할 일 순서대로 진행한다. AI에 보낸 요청문(그대로 붙여 넣기)·요청·수정 횟수·걸린 시간은 ‘이 과제의 확인·수정 기록’에 적는다.',
 }
 
+WATCH = {('11-23','08:00'): '보기만 하는 설명 강의다(예제 파일 · 따라 할 단계 없음). 영상 속 Habitz 팀 예시를 보며 기입표 줄을 채운다.'}
+
 LECT_DOC = '예시 그림 없음: 영상이 없는 글 자료다. 문서 속 설명과 예시 그림·화면이 이 블록의 예시다. 코드 상자가 나오면 건너뛰고 설명 문장과 예시 화면만 본다.'
 
 AI_HTML = '예시 그림 없음. 실행 방법: AI가 준 코드를 메모장에 붙여 .html로 저장하고 더블클릭해 브라우저로 연다. 폭을 바꿔 볼 때는 크롬 F12 → Ctrl+Shift+M. AI에 보낸 요청문(그대로 붙여 넣기)·요청·수정 횟수·걸린 시간은 ‘이 과제의 확인·수정 기록’에 적는다.'
@@ -78,6 +80,7 @@ def apply(weeks):
                     assert not b.fig, k; b.fig=NEWFIG[k]; used.add(k)
                 elif k in REF: b.guide='그림 참고: '+REF[k]; used.add(k)
                 elif k in SELF: b.guide=SELF[k]; used.add(k)
+                elif k in WATCH: b.guide=WATCH[k]
                 elif b.kind=='훈련' and not b.fig: b.guide=SELF_TRAIN
                 elif k==('11-10','22:00'): b.guide=AI_1110
                 elif not b.fig and b.kind=='AI':

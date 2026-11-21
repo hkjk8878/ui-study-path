@@ -991,26 +991,36 @@ def breakpoints():
     s.text(32, 286, '모양은 예시다. 목록·상세의 최소·최대 폭을 정해 두면 너비만 바꿔도 손으로 위치를 다시 맞출 필요가 없다.', 10, 500, SUB)
     return s
 
-@fig('usage_rule', '예시 · 컴포넌트 사용 규칙 카드. 언제 쓰는지·쓰지 않는지·문구 규칙을 적고, 맞는 예(○)와 틀린 예(✕)를 나란히 붙인다')
+@fig('usage_rule', '예시 · 11/23 08:20에 만드는 button 규칙 카드(전부 이 블록 것). 버튼 모양은 11/19에 만든 button Instance, 빨간 테두리는 11/22 status/error 변수. 오른쪽 글씨는 레이어 이름 안내')
 def usage_rule():
-    s = S(680, 300)
-    s.rect(20, 10, 640, 280, WHITE, LINE, 10)
-    s.text(36, 36, 'Button · 사용 규칙', 14, 800, INK)
-    for i, (k, v) in enumerate([('언제 쓰나', '화면의 주요 행동(저장, 추가). 한 화면에 Primary는 1개.'),
-                                ('쓰지 않을 때', '다른 화면으로 이동만 할 때는 링크·목록 행을 쓴다.'),
-                                ('문구', '동사로 끝낸다(저장, 추가). “확인”만 쓰지 않는다.'),
-                                ('크기', '높이 48, 글자 16. 비활성일 때도 크기는 같다.')]):
-        y = 56 + i*24
-        s.text(36, y+12, k, 10.5, 700, INK); s.text(130, y+12, v, 10.5, 500, SUB)
-    for j, (ok, lab) in enumerate([(True, '○ 맞는 예'), (False, '✕ 틀린 예')]):
-        X = 36 + j*312
-        s.text(X, 172, lab, 11, 700, GREEN if ok else RED)
-        s.rect(X, 180, 296, 96, BG, LINE, 8)
-        if ok:
-            _btn(s, X+12, 200, 130, '저장', None); _btn(s, X+152, 200, 130, '취소', None, WHITE, BLUE, BLUE)
-        else:
-            _btn(s, X+12, 200, 130, '저장', None); _btn(s, X+152, 200, 130, '확인', None)
-        s.text(X+12, 266, 'Primary 1개 + Secondary 1개' if ok else 'Primary 2개 · 어떤 걸 누를지 모름', 9.5, 600, SUB)
+    s = S(680, 560)
+    G = '#3F7A31'
+    s.rect(20, 10, 400, 540, WHITE, LINE, 10)
+    s.text(44, 42, 'button 규칙', 15, 800, INK)
+    rows = [('언제 쓰나', '화면의 행동(저장 · 추가 · 삭제). primary는 한 화면에 1개'),
+            ('쓰지 않을 때', '다른 화면으로 이동만 할 때(→ 목록 행 · ←)'),
+            ('상태', 'default · hover · pressed · disabled(필수 칸이 빔)'),
+            ('문구', '하는 일 그대로 동사(저장 · 삭제). ‘확인’만 쓰지 않는다')]
+    for i, (k, v) in enumerate(rows):
+        y = 62 + i*26
+        s.text(44, y+14, k, 10.5, 700, INK); s.text(140, y+14, v, 10, 500, SUB)
+    s.rect(36, 58, 368, 108, 'none', BLUE, 4, 1, '4,3')
+    for j, (ok, lab, a1, a2, note) in enumerate([(True, '○ 맞는 예', '취소', '저장', 'primary는 하나'),
+                                                  (False, '✕ 틀린 예', '확인', '저장', 'primary가 둘이라 무엇을 누를지 모름')]):
+        Y = 182 + j*176
+        s.rect(44, Y, 352, 164, BG, RED if not ok else LINE, 8, 2 if not ok else 1)
+        s.text(60, Y+22, lab, 11, 700, GREEN if ok else RED)
+        if ok: _btn(s, 60, Y+32, 110, a1, None, WHITE, INK, LINE)
+        else:  _btn(s, 60, Y+32, 110, a1, None, G)
+        _btn(s, 60, Y+86, 110, a2, None, G)
+        s.text(60, Y+152, note, 10, 600, SUB)
+    s.rect(36, 174, 368, 356, 'none', BLUE, 4, 1, '4,3')
+    for y, t in [(46, '← 제목 글자 (heading/medium)'), (112, '← 규칙-표 = 행 4개 (세로)'), (128, '   행 = 칸 이름(W 96) + 내용(W Fill)'),
+                 (196, '← 예시 (세로)'), (214, '   맞는-예 = 표시 글자 · button 2개 · 설명'), (382, '← 틀린-예 (Stroke status/error)')]:
+        s.text(432, y, t, 10, 600, BLUE if t.startswith('←') else SUB)
+    s.text(432, 480, '카드 바깥: button 규칙', 10.5, 700, INK)
+    s.text(432, 498, 'Vertical · W Fixed 360 · H Hug', 10, 500, SUB)
+    s.text(432, 516, '컴포넌트 페이지 button 세트 오른쪽', 10, 500, SUB)
     return s
 
 @fig('easing', '예시 · 길이와 이징. 같은 300ms라도 처음이 빠른지 끝이 빠른지에 따라 느낌이 다르다. 들어오는 것은 감속(ease-out)이 기본')
