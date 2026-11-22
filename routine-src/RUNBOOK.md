@@ -65,9 +65,12 @@ python3 md_gen.py                                 # out_md/ → 프로젝트 문
 ## 사용자 Figma 파일 (하루v02) — 지시는 이 파일에 실제로 있는 것만 쓴다
 - 링크: https://www.figma.com/design/XiPq1RgXThHHkxW9p1NASr/ (fileKey XiPq1RgXThHHkxW9p1NASr)
 - 점검 때마다 Figma 연결로 읽는다: create_session → get_metadata(페이지 목록) → 페이지마다 get_metadata → 필요하면 get_variable_defs(화면 Frame id).
-- 2026-11-22 17:45 확인한 상태
+- 2026-11-22 19:50 확인한 상태 (17:45와 같음 — 11/22 ⑧ 목록 · 목록-삭제됨과 Prototype 연결 · Flow는 아직 없음)
   - 페이지: 점검(비어 있음) · 컴포넌트 · 화면 · 프로토타입(비어 있음)
-  - 컴포넌트 페이지: button(속성 Type · State · Shape, 값이 Primary · Secondary · Tertiary · danger 처럼 대문자 섞임, danger는 State=Disabled 하나), dialog, toast. checkbox · todo/row · input 원본은 이 파일에 없음(todo/row 인스턴스만 화면에 있음)
-  - 화면 페이지: 상세 · 상세-수정됨 · 수정-기본 · 수정-입력됨 · 삭제-확인창. ‘목록’ 화면 없음
-  - 변수(상세 화면에 쓰인 것): text/primary · border/strong · shadow/strong · spacing/2 · text/on-secondary · action/secondary-default · text/on-primary · action/disabled(빨강 #d00000, danger 버튼에 쓰임)
+  - 컴포넌트 페이지: button(속성 Type · State · Shape · Label, 값이 Primary · Secondary · Tertiary · danger 처럼 대문자 섞임, danger는 State=Disabled 하나), dialog, toast, 이름 없는 Frame 1(사각형 9개)과 참고 이미지 8장. checkbox · todo/row · input 원본은 이 파일에 없음
+  - todo/row: 다른 파일(라이브러리)의 부품. 화면의 Instance 속성 State(Off …) · Text · 날짜Text, 안에 checkbox Instance · title Frame(글자 2) · move Frame(reader-button 2). 부품 자체에 On click → Change to(다른 State) 연결이 있음
+  - 화면 페이지: 상세 · 상세-수정됨 · 수정-기본 · 수정-입력됨 · 삭제-확인창. 모두 header(‘←’ · heading/medium 글자) · content · footer(button 2) 구조, 수정 화면 content는 field Frame 2개. ‘목록’ · ‘목록-삭제됨’ 화면 없음. 화면 사이 Prototype 연결 · Flow 없음(버튼 hover만)
+  - 변수 컬렉션: Primitives(color/green · brown · netral · red, spacing/0-5~7, radius/sm~3xl, border/width) · Segmantic(철자 틀림 — 11/23 ⓪에서 Semantic으로 고침: bg/screen/screen · surface · inverse, border/strong, status/error, padding/control · card · screen, gap/inline · list · section, radius/control)
+  - 화면에 쓰인 변수 이름에는 이 파일 컬렉션에 없는 text/primary · action/* · text/on-* · shadow/strong도 보인다(다른 파일 변수일 수 있음)
+  - 글자 스타일 · 효과 스타일: 없음(heading/medium · body/regular는 레이어 이름) — 11/23 ⓪에서 만든다
 - 이 목록에 없는 것을 쓰게 하려면 ‘먼저 만든다’ 줄을 넣는다. 파일 상태가 바뀌면 이 목록을 고친다.

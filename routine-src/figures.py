@@ -1173,3 +1173,49 @@ def check_btn():
     s.text(32, 320, '③ 교체하는 법: 월요일 행 원본 안의 체크를 이 체크 세트의 인스턴스로 바꾼다(체크 선택 → 오른쪽 패널 위쪽 이름 옆 ▾ → 체크 세트 고르기).', 10, 600, INK)
     s.text(32, 338, '원본 한 곳만 바꾸면 6개 행이 모두 따라온다. 행에서 체크 상태는 오른쪽 패널의 State로 고른다.', 10, 500, SUB)
     return s
+
+# ───────────────────────── 11/24 완료 전환 (Smart animate)
+def _row(s, x, y, w, name, title, done=False, hl=False):
+    s.rect(x, y, w, 34, GREEN_L if hl else WHITE, BLUE if hl else LINE, 6, 1.4 if hl else 1)
+    s.rect(x+8, y+9, 16, 16, GREEN if done else WHITE, GREEN if done else MUTE, 4)
+    if done: s.path(f'M{x+11},{y+17} L{x+15},{y+21} L{x+21},{y+12}', WHITE, 2)
+    s.text(x+32, y+22, title, 10.5, 600, MUTE if done else INK)
+    if done: s.line(x+32, y+18, x+32+tw(title, 10.5), y+18, MUTE, 1.2)
+    s.text(x+w-6, y+22, name, 9, 700, BLUE, 'end')
+
+@fig('done_motion', '예시 · 11/24 08:40 완료 전환. 두 화면의 행 이름(행-1 · 행-2 · 행-3)이 같아야 Smart animate가 같은 행끼리 움직인다. 파란 글자는 레이어 이름(화면에는 안 보임)')
+def done_motion():
+    s = S(680, 330)
+    for i, (x, t) in enumerate([(40, '목록-미완료 (새로 만듦)'), (420, '목록-완료됨 (새로 만듦)')]):
+        s.phone(x, 20, 220, 250, '')
+        s.text(x+110, 290, t, 11, 700, INK, 'middle')
+        s.text(x+14, 52, '할 일', 12.5, 700, INK)
+    rows_a = [('행-1', '치킨 먹기', False, True), ('행-2', '우유 사기', False, False), ('행-3', '운동하기', False, False)]
+    rows_b = [('행-2', '우유 사기', False, False), ('행-3', '운동하기', False, False), ('행-1', '치킨 먹기', True, True)]
+    for i, r in enumerate(rows_a): _row(s, 52, 66 + i*42, 196, *r)
+    for i, r in enumerate(rows_b): _row(s, 432, 66 + i*42, 196, *r)
+    s.arrow(262, 83, 418, 168, BLUE, 1.8)
+    s.badge(282, 104, '행-1 On click → Navigate to', BLUE, BLUE_L, 9.5)
+    s.badge(282, 128, 'Smart animate · Ease out · 150ms', PURPLE, PURPLE_L, 9.5)
+    s.text(340, 205, '되돌아가기: Instant', 9.5, 600, SUB, 'middle')
+    s.text(40, 316, '바뀌는 것 3가지: ① 체크(State를 체크된 값으로) ② 제목 취소선 ③ 행-1이 맨 아래로. 같은 연결을 400ms로 한 번 더 녹화해 비교한다.', 10, 600, INK)
+    return s
+
+@fig('undo_motion', '예시 · 11/24 10:10 삭제 → 되돌리기. 목록-삭제직후는 toast가 화면 아래 바깥(Y 860)에 있어 안 보이고, 바로 목록-삭제됨으로 넘어가며 toast가 올라온다')
+def undo_motion():
+    s = S(680, 360)
+    xs = [20, 250, 480]
+    names = ['목록-삭제직후 (새로 만듦)', '목록-삭제됨 (11/22)', '목록 (11/22)']
+    for x, n in zip(xs, names):
+        s.phone(x, 20, 180, 250, ''); s.text(x+90, 292, n, 10.5, 700, INK, 'middle'); s.text(x+12, 50, '할 일', 12, 700, INK)
+    for k, x in enumerate(xs):
+        rows = [('행-2', '우유 사기'), ('행-3', '운동하기')] if k < 2 else [('행-1', '치킨 먹기'), ('행-2', '우유 사기'), ('행-3', '운동하기')]
+        for i, (n, t) in enumerate(rows): _row(s, x+10, 62 + i*40, 160, n, t, hl=(k == 2 and n == '행-1'))
+    # toast
+    s.rect(30, 274, 160, 30, BG, MUTE, 6, 1, '4,3'); s.text(110, 293, 'toast · Y 860 (밖)', 9, 600, SUB, 'middle')
+    s.rect(260, 222, 160, 32, WHITE, INK, 6); s.text(270, 242, '삭제했어요', 10, 600, INK); s.rect(352, 228, 60, 20, BG, LINE, 4); s.text(382, 242, '되돌리기', 8.5, 700, INK, 'middle')
+    s.arrow(202, 140, 248, 140, BLUE, 1.8); s.text(225, 128, 'After delay', 8.5, 700, BLUE, 'middle')
+    s.arrow(432, 238, 478, 120, BLUE, 1.8); s.text(455, 200, '되돌리기', 8.5, 700, BLUE, 'middle')
+    s.text(20, 316, '① 확인창 삭제 → 목록-삭제직후 (Instant)   ② After delay 1ms → 목록-삭제됨 · Smart animate · Ease out · 200ms = toast가 올라옴', 9.8, 600, INK)
+    s.text(20, 336, '③ 되돌리기 → 목록 · Smart animate · Ease in and out · 250ms = 행-1이 맨 위 자리로 돌아오고 toast는 사라짐', 9.8, 600, INK)
+    return s
