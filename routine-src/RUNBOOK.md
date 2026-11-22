@@ -47,7 +47,7 @@ python3 validate.py          # 블록 데이터 생성(오류 없으면 total wo
 ## 3. 고친 뒤 확인 · 배포
 ```
 python3 build.py                                  # PDF (google-chrome 필요)
-cp UIUX_24주_루틴_20261108.pdf ../assets/final-plan.pdf
+qpdf --object-streams=generate --compress-streams=y --recompress-flate --compression-level=9 UIUX_24주_루틴_20261108.pdf ../assets/final-plan.pdf   # 무손실 압축. Cloudflare 파일 1개 한도 25MiB를 넘으면 배포 실패
 git show HEAD:data/plan-final.json > /tmp/prev.json
 python3 to_app.py ..                              # 앱 데이터
 python3 verify_past.py /tmp/prev.json ../data/plan-final.json   # 오늘까지 기록 칸이 바뀌면 FAIL → 배포 금지
