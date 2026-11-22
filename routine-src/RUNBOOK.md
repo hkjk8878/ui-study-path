@@ -74,3 +74,8 @@ python3 md_gen.py                                 # out_md/ → 프로젝트 문
   - 화면에 쓰인 변수 이름에는 이 파일 컬렉션에 없는 text/primary · action/* · text/on-* · shadow/strong도 보인다(다른 파일 변수일 수 있음)
   - 글자 스타일 · 효과 스타일: 없음(heading/medium · body/regular는 레이어 이름) — 11/23 ⓪에서 만든다
 - 이 목록에 없는 것을 쓰게 하려면 ‘먼저 만든다’ 줄을 넣는다. 파일 상태가 바뀌면 이 목록을 고친다.
+
+## 이름은 실무 기준으로 (채용이 최종 목표)
+- 파일 속 이름과 루틴이 정해 준 이름 모두 실무 디자인 시스템 방식에 맞춘다: Material 3 · GitHub Primer · Atlassian Design System처럼 공개된 시스템이 쓰는 방식(영어 소문자, ‘/’로 묶음, 역할 이름 — action/primary · text/secondary · status/error · border/default, Variant 속성 state=default · hover · pressed · disabled, type=primary · secondary · tertiary · danger).
+- 실무와 다르면 고치게 한다: 파일 이름이 다르면 ‘이름 바로잡기’ 카드(현재 → 바꿀 이름 · 어디서 바꾸나 · 왜 실무에서는 이렇게 쓰나 한 줄), 루틴 지시의 이름이 다르면 루틴을 고친다.
+- 의미가 틀린 연결도 바로잡는다(예: 빨간 삭제 버튼 → action/disabled ✕ → status/error 또는 action/danger ✓).
