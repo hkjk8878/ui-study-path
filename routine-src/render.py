@@ -41,7 +41,7 @@ def block_html(b, weekend):
         if len(b.steps) == 1:
             steps = f'<p class="st">{EB(b.steps[0])}</p>'
         else:
-            steps = '<ol class="st">' + ''.join(f'<li>{EB(x)}</li>' for x in b.steps) + '</ol>'
+            steps = '<div class="st">' + ''.join(f'<div style="margin:0 0 8px">{EB(x)}</div>' for x in b.steps) + '</div>'
     if getattr(b, 'show_fixed', False):
         for f in TPL.fields(b.kind, b.out, b.title, getattr(b, 'when', '')):
             if f.get('fixed'):

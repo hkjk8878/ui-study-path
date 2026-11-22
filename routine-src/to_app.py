@@ -33,7 +33,7 @@ def sched(b, weekend, steps=None):
         rows = ''.join(f'<tr><td style="{TD}"><a target="_blank" rel="noopener noreferrer" href="{E(R[k][1])}">{E(R[k][0])}</a></td><td style="{TD}">{E(R[k][2])}</td></tr>' for k in b.res)
         out.append(f'<section class="sx sx-res"><h4>강의·자료</h4><table style="width:100%;table-layout:fixed;border-collapse:collapse;margin:10px 0"><thead><tr><th style="{TH}">자료 · 제목을 누르면 열림</th><th style="{TH};width:34%">길이·범위</th></tr></thead><tbody>{rows}</tbody></table></section>')
     if steps:
-        out.append('<section class="sx sx-steps"><h4>할 일</h4>' + ('<p>' + EB(steps[0]) + '</p>' if len(steps) == 1 else '<ol>' + ''.join(f'<li>{EB(s)}</li>' for s in steps) + '</ol>') + '</section>')
+        out.append('<section class="sx sx-steps"><h4>할 일</h4>' + ('<p>' + EB(steps[0]) + '</p>' if len(steps) == 1 else ''.join(f'<div class="step-block" style="margin:0 0 10px">{EB(s)}</div>' for s in steps)) + '</section>')
     if b.fig:
         fn, cap = FIG[b.fig]
         out.append(f'<figure class="study-example" aria-label="{E(cap)}"><figcaption><span class="example-kind">예시 그림</span>{E(cap)}</figcaption><div class="fig-scroll"><div class="fig-inner">{fn().svg().replace('style="display:block"','style="display:block;width:100%;height:auto;stroke:none;fill:#111827"',1)}</div></div></figure>')
