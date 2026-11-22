@@ -23,11 +23,15 @@ def split_arrows(s):
     if buf.strip(): out.append(buf.strip())
     return out
 
-def merge(parts, short=16):
-    """짧은 동작(‘Esc’, ‘Shift+A’)은 앞뒤와 한 줄로 묶어 줄 수를 줄인다. ‘성공’ 줄은 따로 둔다."""
+OPENERS = ('◇', '아이콘', '탭', '칸', '메뉴', '목록', '▾', '클릭', '끌기')
+KEYS = ('Esc', 'Enter', 'Delete', 'Shift+A', 'Ctrl+D', 'Ctrl+C', 'Ctrl+V', 'Ctrl+Alt+K', 'Ctrl+Alt+G')
+def merge(parts):
+    """줄 묶기(¶ 없는 옛 글용): 무엇을 여는 동작(◇ · 아이콘 · 탭 · 칸 …) 뒤의 고르는 값은 같은 줄,
+    단축키 하나만 있는 조각은 앞 줄에 붙인다. ‘이름 …’(이름 바꾸기)과 ‘성공’ 줄은 따로 둔다."""
     out = []
     for p in parts:
-        if out and '성공' not in p and '성공' not in out[-1] and (len(out[-1]) < short or len(p) < 8) and len(out[-1]) + len(p) < 46:
+        if out and '성공' not in p and not p.startswith('이름 ') and (
+                out[-1].rstrip().endswith(OPENERS) or p.strip() in KEYS):
             out[-1] += ' → ' + p
         else:
             out.append(p)
@@ -46,8 +50,12 @@ def step_cards(rows):
         title = c[1] if len(c) >= 3 else ''
         m = TIME.search(body); mins = ''
         if m: mins = m.group(1) + '분'; body = body[:m.start()]
-        acts = merge(split_arrows(body))
+        if '¶' in body:
+            acts = [a.strip() for a in body.split('¶') if a.strip()]
+        else:
+            acts = merge(split_arrows(body))
         li = ''
+        acts = [('레이어 이름을 ' + a[3:].strip() + '(으)로 바꾸기 (레이어 패널에서 이름 더블클릭)') if a.startswith('이름 ') and len(a) < 30 else a for a in acts]
         for a in acts:
             ok = '성공' in a
             st = 'color:#166534;font-weight:700' if ok else ''
@@ -57,7 +65,9 @@ def step_cards(rows):
         tt = f'<b style="font-size:1.02em">{E(title)}</b>' if title else ''
         h += ('<div style="border:1px solid #D1D5DB;border-radius:10px;padding:10px 12px;background:#fff">'
               f'<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><span style="display:inline-grid;place-items:center;min-width:26px;height:26px;border-radius:13px;background:#1F2937;color:#fff;font-weight:700">{E(num)}</span>{tt}{badge}</div>'
-              f'<ol style="margin:0;padding-left:1.4em;line-height:1.6">{li}</ol></div>')
+              f'<ol style="margin:0;padding-left:1.4em;line-height:1.6">{li}</ol>'
+              + ('<div style="margin-top:6px;font-size:.85em;color:#4B5563;background:#F3F4F6;border-radius:6px;padding:4px 8px">◇ = 숫자 칸(Gap · Padding · Corner radius 등) 오른쪽 끝에 마우스를 올리면 나타나는 변수 연결 아이콘(Apply variable). 누르면 변수 목록이 뜬다</div>' if '◇' in body else '')
+              + '</div>')
     return h + '</div>'
 
 def _base(name):
