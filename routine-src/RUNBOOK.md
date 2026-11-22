@@ -61,3 +61,13 @@ python3 md_gen.py                                 # out_md/ → 프로젝트 문
 - 오늘까지의 블록 기록 칸(recordSections) · 블록 id · 블록 순서 바꾸기
 - 실제 ‘하루’ 앱 코드 수정, 사용자 개인정보를 AI에 올리기
 - 확인하지 않은 단축키 · 메뉴를 확실한 것처럼 쓰기
+
+## 사용자 Figma 파일 (하루v02) — 지시는 이 파일에 실제로 있는 것만 쓴다
+- 링크: https://www.figma.com/design/XiPq1RgXThHHkxW9p1NASr/ (fileKey XiPq1RgXThHHkxW9p1NASr)
+- 점검 때마다 Figma 연결로 읽는다: create_session → get_metadata(페이지 목록) → 페이지마다 get_metadata → 필요하면 get_variable_defs(화면 Frame id).
+- 2026-11-22 17:45 확인한 상태
+  - 페이지: 점검(비어 있음) · 컴포넌트 · 화면 · 프로토타입(비어 있음)
+  - 컴포넌트 페이지: button(속성 Type · State · Shape, 값이 Primary · Secondary · Tertiary · danger 처럼 대문자 섞임, danger는 State=Disabled 하나), dialog, toast. checkbox · todo/row · input 원본은 이 파일에 없음(todo/row 인스턴스만 화면에 있음)
+  - 화면 페이지: 상세 · 상세-수정됨 · 수정-기본 · 수정-입력됨 · 삭제-확인창. ‘목록’ 화면 없음
+  - 변수(상세 화면에 쓰인 것): text/primary · border/strong · shadow/strong · spacing/2 · text/on-secondary · action/secondary-default · text/on-primary · action/disabled(빨강 #d00000, danger 버튼에 쓰임)
+- 이 목록에 없는 것을 쓰게 하려면 ‘먼저 만든다’ 줄을 넣는다. 파일 상태가 바뀌면 이 목록을 고친다.
