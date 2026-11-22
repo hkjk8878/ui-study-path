@@ -6,7 +6,7 @@ R = {
  'ds2a': ('Lesson 2 · Define your design system — Principles · Foundations', 'https://help.figma.com/hc/en-us/articles/14552740206743-Lesson-2-Define-your-design-system', '영상 3분 20초 + 19분 34초'),
  'ds2b': ('Lesson 2 · Define your design system — Documentation · Processes', 'https://help.figma.com/hc/en-us/articles/14552740206743-Lesson-2-Define-your-design-system', '영상 5분 50초 + 3분 30초'),
  'ds3': ('Lesson 3 · Build your design system', 'https://help.figma.com/hc/en-us/articles/14548865734679-Lesson-3-Build-your-design-system', '영상 26분 31초'),
- 'ds4': ('Lesson 4 · Document and manage your system', 'https://help.figma.com/hc/en-us/articles/14552804059927-Lesson-4-Document-and-manage-your-system', '영상 13분 38초'),
+ 'ds4': ('Lesson 4 · Document and manage your system', 'https://help.figma.com/hc/en-us/articles/14552804059927-Lesson-4-Document-and-manage-your-system', '영상 1개 · 13분 38초 · 보기만'),
  'tokens': ('Update 1 · Tokens, variables, and styles', 'https://help.figma.com/hc/en-us/articles/18490793776023-Update-1-Tokens-variables-and-styles', '영상 13분 12초'),
  # Components collection
  'c0': ('Components 0 · Overview', 'https://help.figma.com/hc/en-us/articles/39719619313047-Components-collection-Overview', '영상 46초'),
