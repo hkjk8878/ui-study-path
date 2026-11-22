@@ -46,6 +46,8 @@ def step_cards(rows):
     for r in rows[1:]:
         c = cells(r)
         if not c or not c[0]: continue
+        if len(c) > len(head):  # 칸 안 글에 ‘|’가 들어가 칸이 더 생긴 경우: 남는 칸을 하는 일에 다시 붙인다
+            c = c[:len(head) - 1] + [' · '.join(c[len(head) - 1:])]
         num, body = c[0], c[-1]
         title = c[1] if len(c) >= 3 else ''
         m = TIME.search(body); mins = ''
