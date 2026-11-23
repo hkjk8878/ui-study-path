@@ -11,6 +11,9 @@ import whyplan
 whyplan.apply(WEEKS)
 import clarify
 clarify.apply(WEEKS)
+import extra_plan
+extra_plan.add_res(R)
+extra_plan.apply(WEEKS)
 
 def m(s):
     h,mi=s.split(':'); return int(h)*60+int(mi)
@@ -37,6 +40,10 @@ for wi,w in enumerate(WEEKS):
         day=0; ai=0; prev=None
         for b in d.blocks:
             a,z=[m(x) for x in b.t.split('-')]
+            if getattr(b,'extra',False):
+                for k in b.res:
+                    if k not in R: errs.append(f'{d.date} unknown res {k}')
+                continue
             if b.kind=='AI':
                 if (a,z)!=(22*60,23*60): errs.append(f'{d.date} AI time {b.t}')
                 ai+=60; continue
