@@ -241,3 +241,128 @@ def settings_fig():
     inner = (f'<div style="border:1px dashed {BLUE};padding:4px;display:flex;gap:6px;align-items:center">{_lbl("header")}<b>←</b><b style="font-size:15px">설정</b></div>'
              f'<div style="display:flex;flex-direction:column;gap:6px">{r("알림")}{r("완료한 할 일 숨기기")}</div>')
     return win('캔버스 — 설정 화면 완성 모습 (빨간 칸 = 아직 없는 toggle)', f'<div style="padding:8px">{_card(inner, bg="#C49A6C", w=230)}</div>', '캔버스')
+
+# ═════════════ 11/24 · 11/25 그림 ═════════════
+PLACE.setdefault('Prototype 탭', ('#BE185D', '#FCE7F3'))
+
+def _phone(title, rows, w=150, extra='', fs=11):
+    """작은 휴대폰 화면: rows = [(체크, 글자, 줄긋기, 강조)]"""
+    r = ''
+    for chk, t, strike, hl in rows:
+        box = (f'<span style="display:inline-grid;place-items:center;width:14px;height:14px;border:2px solid #6DC458;border-radius:3px;'
+               f'background:{"#6DC458" if chk else "#fff"};color:#fff;font-size:10px">{"✓" if chk else ""}</span>')
+        st = 'text-decoration:line-through;color:#6B7280;' if strike else ''
+        r += (f'<div style="display:flex;gap:6px;align-items:center;padding:5px 6px;border:1.5px solid {"#0D99FF" if hl else "#645552"};'
+              f'border-radius:6px;background:#F3E5C2;margin-top:5px;white-space:nowrap">{box}<span style="{st}">{E(t)}</span></div>')
+    return (f'<div style="width:{w}px;border:1px solid #9CA3AF;border-radius:10px;background:#C49A6C;padding:6px;font-size:{fs}px;position:relative;overflow:hidden;min-height:150px">'
+            f'<div style="font-weight:700;color:#fff;font-size:10px">{E(title)}</div>{r}{extra}</div>')
+
+def _arrow(t):
+    return (f'<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;color:#BE185D;'
+            f'text-align:center;min-width:44px">→<br>{t}</div>')
+
+@mini('done_frames')
+def done_frames():
+    a = _phone('목록-미완료', [(0, '치킨 먹기', 0, 1), (0, '우유 사기', 0, 0), (0, '운동하기', 0, 0)], w=135)
+    b = _phone('목록-완료됨', [(0, '우유 사기', 0, 0), (0, '운동하기', 0, 0), (1, '치킨 먹기', 1, 1)], w=135)
+    body = f'<div style="display:flex;gap:4px;padding:8px;align-items:stretch">{a}{_arrow("item-1 누르면<br>Smart animate<br>Ease out<br>150ms")}{b}</div>'
+    return win('캔버스 — 다 만들면 (파란 테두리 = item-1)', body, '캔버스') + caption('두 화면 모두 행 레이어 이름이 item-1 · item-2 · item-3 → 같은 이름끼리 자리를 옮겨 움직인다')
+
+@mini('list_layers')
+def list_layers():
+    b = (row(ic('frame') + '목록 ▾')
+         + row(ic('frame') + 'header ▸', indent=1)
+         + row(ic('frame') + 'content ▾', indent=1)
+         + row(ic('inst') + 'item-1', '치킨 먹기', indent=2, hl=True)
+         + row(ic('inst') + 'item-2', '우유 사기', indent=2)
+         + row(ic('inst') + rename('todo/row', 'item-3'), '운동하기', indent=2, note='이렇게 남았으면 더블클릭'))
+    return win('레이어 패널 — ‘화면’ 페이지 목록', b, '레이어 패널')
+
+@mini('type_settings')
+def type_settings():
+    ty = (row('<b>Typography</b>')
+          + row('body/medium', '<span style="border:1.5px solid #0D99FF;border-radius:3px;padding:0 4px">⚙</span>', hl=True, note='Type settings'))
+    pop = (row('<b>Basics</b> · <span style="color:#9CA3AF">Details</span>')
+           + row('Decoration', '— &nbsp; U &nbsp; <span style="border:1.5px solid #0D99FF;border-radius:3px;padding:0 4px;text-decoration:line-through">S</span>', hl=True, note='Strikethrough'))
+    return (win('오른쪽 Design 패널 — 치킨 먹기 글자 선택 뒤', ty, '속성')
+            + win('뜨는 창 Type settings', pop, '속성'))
+
+@mini('move_item')
+def move_item():
+    b = (row(ic('frame') + 'content ▾')
+         + row(ic('inst') + 'item-2', '우유 사기', indent=1)
+         + row(ic('inst') + 'item-3', '운동하기', indent=1)
+         + f'<div style="height:0;border-top:2px solid #0D99FF;margin:0 8px 0 22px"></div>'
+         + row(ic('inst') + 'item-1', '치킨 먹기', indent=1, hl=True, note='여기로 끌어 놓기'))
+    return win('레이어 패널 — 목록-완료됨 content', b, '레이어 패널') + caption('파란 가로선이 item-3 아래에 보일 때 놓는다. content 밖으로 나가면 Ctrl+Z')
+
+@mini('proto_interaction')
+def proto_interaction():
+    def fld(k, v, hl=False):
+        return row(f'<span style="color:{SUB}">{E(k)}</span>', f'<b style="color:{NEW if hl else INK}">{E(v)}</b>', hl=hl)
+    b = (fld('Trigger', 'On click') + fld('Action', 'Navigate to') + fld('도착(Destination)', '목록-완료됨', True)
+         + fld('Animation', 'Smart animate', True) + fld('이징', 'Ease out') + fld('시간', '150ms', True))
+    return win('Prototype 탭 › Interactions 줄을 눌러 뜨는 창', b, 'Prototype 탭')
+
+@mini('after_delay')
+def after_delay():
+    def fld(k, v, hl=False):
+        return row(f'<span style="color:{SUB}">{E(k)}</span>', f'<b style="color:{NEW if hl else INK}">{E(v)}</b>', hl=hl)
+    b = (fld('Trigger', 'After delay · 1ms', True) + fld('Action', 'Navigate to') + fld('도착', '목록-삭제됨', True)
+         + fld('Animation', 'Smart animate · Ease out · 200ms', True))
+    return win('Prototype 탭 — 목록-삭제직후 Frame 선택 뒤 + 를 눌러 뜨는 창', b, 'Prototype 탭') + caption('Frame 자체에 거는 연결이라 안쪽 레이어는 아무것도 선택하지 않는다')
+
+@mini('delete_flow')
+def delete_flow():
+    toast = lambda y: (f'<div style="position:absolute;left:6px;right:6px;top:{y}px;background:#F3E5C2;border:1.5px solid #645552;'
+                       'border-radius:5px;padding:2px 4px;display:flex;gap:3px;justify-content:space-between;white-space:nowrap;font-size:7px;left:3px;right:3px"><span>삭제했어요</span><b>되돌리기</b></div>')
+    a = _phone('목록-삭제직후', [(0, '우유 사기', 0, 0), (0, '운동하기', 0, 0)], w=100,
+               extra=toast(170) + '<div style="position:absolute;left:6px;top:120px;font-size:8px;color:#fff">↓ toast는 화면 밖</div>', fs=9)
+    b = _phone('목록-삭제됨', [(0, '우유 사기', 0, 0), (0, '운동하기', 0, 0)], w=100, extra=toast(122), fs=9)
+    c = _phone('목록', [(0, '치킨 먹기', 0, 1), (0, '우유 사기', 0, 0), (0, '운동하기', 0, 0)], w=100, fs=9)
+    body = (f'<div style="display:flex;gap:2px;padding:8px;align-items:stretch;font-size:10px">{a}{_arrow("1ms 뒤<br>Smart<br>Ease out<br>200")}'
+            f'{b}{_arrow("되돌리기<br>Smart<br>Ease in<br>and out<br>250")}{c}</div>')
+    return win('캔버스 — 확인창 ‘삭제’ 다음에 이어지는 3화면', body, '캔버스') + caption('목록-삭제직후는 사용자가 거의 못 보는 화면: toast 출발 자리만 화면 아래 바깥으로 둔다')
+
+def _badge(n, bg, fg):
+    return (f'<span style="display:inline-grid;place-items:center;width:20px;height:20px;border-radius:10px;background:#{bg};'
+            f'color:#{fg};font-size:11px;font-weight:700;flex:none">{n}</span>')
+
+@mini('annotation_variants')
+def annotation_variants():
+    v = [('action', '6DC458', 'FFFFFF', '누르면 어디로 · 몇 ms'), ('condition', '645552', 'F3E5C2', '입력 조건 · 기본값'),
+         ('error', 'CF4843', 'FFFFFF', '오류 문구와 위치'), ('accessibility', '6B7280', 'FFFFFF', '라벨 · 누르는 크기')]
+    rows_ = ''.join(f'<div style="display:flex;gap:6px;align-items:flex-start;padding:5px 8px;border-bottom:1px solid #F3F4F6">'
+                    f'{_badge(i + 1, bg, fg)}<span style="flex:1">{E(d)}</span><span style="font-size:10px;color:{BLUE};font-weight:700">variant={k}</span></div>'
+                    for i, (k, bg, fg, d) in enumerate(v))
+    return win('캔버스 — annotation 세트 (variant 4개)', rows_, '캔버스') + caption('왼쪽 동그라미 = badge(안에 number 글자), 오른쪽 글 = description 글자')
+
+@mini('annotation_props')
+def annotation_props():
+    p = (row('<b>annotation</b> ◇', note='Instance 선택')
+         + row('variant', 'action ▾', hl=True)
+         + row('number', '1')
+         + row('description', '제목은 꼭 입력 · 최대 40자')
+         + row('show description', '● 켬'))
+    return win('오른쪽 Design 패널 — annotation Instance 속성', p, '속성') + caption('화면 위 번호 표시는 같은 부품에서 show description만 끈 것')
+
+@mini('spec_done')
+def spec_done():
+    marks = (f'<div style="position:absolute;right:4px;top:30px">{_badge(1, "645552", "F3E5C2")}</div>'
+             f'<div style="position:absolute;left:4px;top:30px">{_badge(8, "6B7280", "FFFFFF")}</div>'
+             f'<div style="position:absolute;right:4px;top:62px">{_badge(2, "645552", "F3E5C2")}</div>'
+             f'<div style="position:absolute;left:4px;bottom:28px">{_badge(6, "6DC458", "FFFFFF")}</div>'
+             f'<div style="position:absolute;right:4px;bottom:28px">{_badge(5, "6DC458", "FFFFFF")}</div>')
+    field = lambda t, y: f'<div style="position:absolute;left:26px;right:26px;top:{y}px;border:1.5px solid #645552;border-radius:5px;background:#fff;padding:2px 4px">{t}</div>'
+    phone = (f'<div style="width:120px;height:170px;border:1px solid #9CA3AF;border-radius:10px;background:#C49A6C;position:relative;font-size:9px;flex:none">'
+             f'<div style="padding:5px;color:#fff;font-weight:700">← 할 일 추가</div>{field("제목을 입력하세요", 30)}{field("09:00", 62)}'
+             f'<div style="position:absolute;left:26px;right:26px;bottom:8px;display:flex;gap:4px"><span style="flex:1;background:#6B7280;color:#fff;border-radius:4px;text-align:center">취소</span>'
+             f'<span style="flex:1;background:#6DC458;color:#fff;border-radius:4px;text-align:center">저장</span></div>{marks}</div>')
+    notes = ''.join(f'<div style="display:flex;gap:4px;align-items:flex-start;margin-bottom:3px">{_badge(n, bg, fg)}<span>{E(t)}</span></div>'
+                    for n, bg, fg, t in [(1, '645552', 'F3E5C2', '제목 필수 · 최대 40자'), (2, '645552', 'F3E5C2', '시간 기본값 없음'),
+                                         (3, '645552', 'F3E5C2', '저장 버튼 늘 누를 수 있음'), (4, 'CF4843', 'FFFFFF', '빈 제목 오류 문구'),
+                                         (5, '6DC458', 'FFFFFF', '저장 → 목록 맨 아래'), (6, '6DC458', 'FFFFFF', '취소 → 입력값 버림'),
+                                         (7, '645552', 'F3E5C2', '빈 목록 문구'), (8, '6B7280', 'FFFFFF', '라벨 · 버튼 48')])
+    body = (f'<div style="padding:8px"><div style="border:1px dashed {BLUE};border-radius:8px;background:#F3E5C2;padding:8px;display:flex;gap:10px;font-size:10px">'
+            f'{phone}<div style="flex:1;min-width:0">{_lbl("notes")}{notes}</div></div></div>')
+    return win('캔버스 — 명세-할 일 추가 완성 모습 (‘전달’ 페이지)', body, '캔버스') + caption('왼쪽 = 추가-기본 화면 + 번호 표시, 오른쪽 = notes(annotation 8개)')

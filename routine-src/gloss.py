@@ -55,7 +55,7 @@ def annotate(steps):
     for s0 in steps:
       lines = []
       for s in s0.split('\n'):
-        if s.strip().startswith(('|', '“')) or s.startswith('이름 짓기') or s.startswith('이름 상식'):
+        if s.strip().startswith(('|', '“', '그림:')) or s.startswith('이름 짓기') or s.startswith('이름 상식'):
             lines.append(s); continue
         def rep(m, s=s):
             t = m.group(1); par = m.group(2)

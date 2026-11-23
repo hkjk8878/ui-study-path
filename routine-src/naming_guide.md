@@ -149,6 +149,7 @@
 | 할 일 한 줄 | `list-item` | Material · SEED | todo/row |
 | 탭 하나 | `tab` | 8곳 대부분 | – |
 | 아이콘 | `icon/check` · `icon/arrow-left` | 공통 | – |
+| 개발 전달 번호 주석 (11/25 추가) | `annotation` | Figma 도움말 Annotations(번호 · 설명으로 개발 정보를 남기는 기능, 무료 플랜에 없어 부품으로 만든다) | – |
 
 - `/`는 Assets 폴더다. 2단계까지만.
 
@@ -166,6 +167,9 @@
 | `icon` | Instance swap | 아이콘 | 공통 | icon |
 | `checked` | Variant | `true` · `false` | HTML · Primer · Polaris · Atlassian(isChecked) | – |
 | `shape` | Variant | 파일에 있는 값 그대로 소문자 | 파일에만 있는 속성 | Shape |
+| `variant` (annotation) | Variant | `action` · `condition` · `error` · `accessibility` | 같은 부품 종류를 variant 값으로 나누는 방식(위 variant 줄과 같음). 값은 주석 내용 종류: 동작 · 조건 · 오류 · 접근성 (11/25 추가) | – |
+| `number` · `description` (annotation) | Text | 주석 번호 · 설명 문장 | 7장 label처럼 속성 이름 = 안쪽 글자 레이어 이름 (11/25 추가) | – |
+| `show description` (annotation) | Boolean | true · false (false면 번호 동그라미만 → 화면 위 표시) | show icon과 같은 ‘show ○○’ 방식 (11/25 추가) | – |
 
 | variant | 배경 | 테두리 | 글자 |
 |---|---|---|---|
@@ -188,6 +192,7 @@
 | 목록 안 여러 줄 | `item-1` · `item-2` · `item-3` (Smart animate는 같은 이름끼리 움직인다) | 그 밖 규칙 |
 | 확인창 안 | `title`(질문 문장) · `description`(설명 문장) · `button-group` | SEED alert-dialog · Atlassian modal · Material |
 | toast 안 | `message` · 버튼 | SEED snackbar message |
+| annotation 안 · 명세 (11/25 추가) | `badge`(번호 동그라미) 안 `number` 글자 · `description` 글자 / 주석 묶음 `notes` / 명세 Frame `명세-할 일 추가` | 7장 속성 이름과 같게 · 화면 Frame 한국어 ‘화면-상태’ |
 | 문서 카드 | `button-guide` · `rule-table` · `rule-row` · `examples` · `do` · `dont` · `changelog` | 그 밖 규칙 |
 | 그 밖 | 무엇인지 + 하이픈: `add-bar` · `date-text` · `settings-list` | Figma 도움말 예시 형식 |
 
