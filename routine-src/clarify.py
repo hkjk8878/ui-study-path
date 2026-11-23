@@ -313,14 +313,13 @@ STEP0 = {
 }
 
 import re as _re
-MOVED_1123 = ('먼저 할 것 — 11/23 08:20에서 옮김 (가이드 v2 이름 바로잡기에 시간을 써서 넘어온 일, 약 50분. 순서와 하는 법은 그 전날 밤 점검이 Figma 파일을 읽고 이 블록에 자세히 쓴다)\n'
+MOVED_1123 = ('먼저 할 것 — 11/23 08:20에서 옮김 (이름 바로잡기에 시간을 써서 넘어온 일, 약 40분. 순서와 하는 법은 그 전날 밤 점검이 Figma 파일을 읽고 이 블록에 자세히 쓴다)\n'
     '| 할 일 | 내용 |\n'
-    '| notification · dialog 규칙 카드 | 11/23 08:20의 button-guide를 복제해 notification-guide · dialog-guide를 만든다(11/23 ‘카드에 넣을 내용’ 표의 notification · dialog 줄) |\n'
-    '| Color Primitives에 color 그룹이 남았으면 정리 | 11/23 ⓒ에서 그룹을 끌어내지 못했으면: 변수마다 이름을 green/300처럼 다시 입력해 color 밖으로 옮기고 빈 color 그룹을 지운다 |\n'
-    '| Color 안 숫자 변수 정리 | padding/ · gap/ · radius/control을 쓰는 Frame을 Size 변수(space/ · radius/)로 다시 연결하고 지운다 |\n'
-    '| 다른 파일 변수 다시 연결 | text/primary · action/… · text/on-… · shadow/strong을 가이드 v2 Color 변수 · drop-shadow/100 효과 스타일로 |\n'
-    '| button-danger 분리 · subtle 만들기 | 삭제 버튼을 button-danger 컴포넌트로, 글자만 있는 ‘되돌리기’ 버튼을 variant=subtle로 |\n'
-    '| Color Primitives Scoping 끄기 | 부품에 직접 고르지 못하게 한다(가이드 v2 1장) |')
+    '| toast · dialog 규칙 카드 | 11/23 08:20의 button-guide를 복제해 toast-guide · dialog-guide를 만든다(11/23 ‘카드에 넣을 내용’ 표의 toast · dialog 줄) |\n'
+    '| Primitives에 color 그룹이 남았으면 정리 | 11/23 ⓒ에서 그룹을 끌어내지 못했으면: 변수마다 이름을 green/300처럼 다시 입력해 color 밖으로 옮기고 빈 color 그룹을 지운다 |\n'
+    '| Semantic 안 숫자 변수 정리 | padding/ · gap/ · radius/control을 쓰는 Frame을 Size 변수(space/ · radius/)로 다시 연결하고 지운다 |\n'
+    '| 다른 파일 변수 다시 연결 | text/primary · action/… · text/on-… · shadow/strong을 확정 이름 Semantic 변수(text/default/default · background/brand/default …) · shadow/100 효과 스타일로 |\n'
+    '| Primitives Scoping 끄기 | 부품에 직접 고르지 못하게 한다(이름 기준 확정판 1장) |')
 _NUM = '①②③④⑤⑥⑦⑧⑨'
 def _lines(s):
     # 긴 ①②③ 나열은 번호마다 줄을 바꿔 훑어보기 쉽게 한다(내용은 그대로)
@@ -389,14 +388,14 @@ NAME = {
     ('11-19','10:10'): ['이름 짓기 — 버튼 (컴포넌트 페이지)\n| 어디 | 입력할 이름 | 뜻 |\n| Main component ◆ | button | 버튼 세트 |\n| Variant 속성 1 | type = primary · secondary · tertiary | 종류: 주요 · 보조 · 가장 약함 |\n| Variant 속성 2 | state = default · hover · pressed · disabled | 상태: 기본 · 마우스 올림 · 누른 순간 · 못 누름 |\n| 컴포넌트 속성 | label · show icon · icon | 버튼 글자 · 아이콘 보이기 · 아이콘 교체 |\n| 안쪽 레이어 | label · icon | 글자 · 아이콘 |\n· 팁: 생김새 말고 역할로 — button/blue ✗ → type=primary ✓ (색을 바꾸면 이름이 거짓말이 된다)'],
     ('11-22','09:00'): ['이름 짓기 — 화면 · 흐름 · 새 부품\n| 어디 | 입력할 이름 | 뜻 |\n| 화면 Frame | 상세 · 수정-기본 · 수정-입력됨 · 상세-수정됨 · 삭제-확인창 · 목록-삭제됨 | 한국어 ‘화면-상태’ |\n| Flow | 할 일 수정 · 할 일 삭제 – 되돌리기 · 삭제 취소 | 한국어, 사용자가 하려는 일 |\n| Main component ◆ | dialog · toast | 확인창 · 잠깐 뜨는 알림 |\n| 화면 안의 칸 | header · content · footer | 위 · 가운데 · 아래 칸 |'],
     ('11-23','08:20'): ['이름 짓기 — 규칙을 붙이기 전에 이름 확인\n| 어디 | 이렇게 되어 있어야 함 |\n| Main component ◆ | button · input · checkbox · todo/row · toast · dialog |\n| 규칙 메모 Frame | 부품 이름 + 규칙 (예: button 규칙 · todo/row 규칙) |'],
-    ('11-25','08:20'): ['이름 짓기 — 주석 부품\n| 어디 | 입력할 이름 | 뜻 |\n| Main component ◆ | annotation | 주석 |\n| Variant | type = action · condition · error · accessibility | 동작 · 조건 · 오류 · 접근성 |\n| 컴포넌트 속성 | number · description | 번호 · 설명 |\n| 명세 화면 Frame | 명세-할 일 추가 | 한국어 |'],
+    ('11-25','08:20'): ['이름 짓기 — 주석 부품\n| 어디 | 입력할 이름 | 뜻 |\n| Main component ◆ | annotation | 주석 |\n| Variant | variant = action · condition · error · accessibility | 동작 · 조건 · 오류 · 접근성 |\n| 컴포넌트 속성 | number · description | 번호 · 설명 |\n| 명세 화면 Frame | 명세-할 일 추가 | 한국어 |'],
     ('12-18','08:00'): ['이름 짓기 — 와이어 화면\n| 어디 | 입력할 이름 |\n| Section | 와이어 A |\n| 화면 Frame | A-일정 변경 · A-전달 확인 (A-화면 이름) |\n· 부품은 3주차 컴포넌트를 그대로 쓰니 새로 지을 이름은 없다'],
-    ('12-21','08:00'): ['이름 짓기 — 새 파일 CASE01 (‘하루’와 같은 규칙)\n| 어디 | 입력할 이름 | 뜻 |\n| 페이지 | 표지 · 기초 · 컴포넌트 · 화면 · 프로토타입 · 전달 | 한국어 |\n| 변수 컬렉션 | Primitives · Semantic | 실제 값 · 역할 |\n| 변수 | gray/500 · text/primary · space/16 | |\n| Main component ◆ | button · input · list/row · badge · dialog | 버튼 · 입력창 · 목록 행 · 배지 · 확인창 |\n| badge Variant | status = sent · partly confirmed · all confirmed · canceled | 전달됨 · 일부 확인 · 모두 확인 · 취소 |\n· 팁: 폴더는 2단계까지(list/row ✓) · 여러 레이어 이름은 선택 후 Ctrl+R'],
+    ('12-21','08:00'): ['이름 짓기 — 새 파일 CASE01 (‘하루’와 같은 규칙)\n| 어디 | 입력할 이름 | 뜻 |\n| 페이지 | 표지 · 기초 · 컴포넌트 · 화면 · 프로토타입 · 전달 | 한국어 |\n| 변수 컬렉션 | Primitives · Semantic | 실제 값 · 역할 |\n| 변수 | gray/500 · text/default/default · space/400 | |\n| Main component ◆ | button · text-field · list-item · badge · dialog | 버튼 · 입력창 · 목록 행 · 배지 · 확인창 |\n| badge Variant | status = sent · partly confirmed · all confirmed · canceled | 전달됨 · 일부 확인 · 모두 확인 · 취소 |\n· 팁: 폴더는 2단계까지(icon/check ✓) · 여러 레이어 이름은 선택 후 Ctrl+R'],
     ('12-22','10:10'): ['이름 짓기 — A·B 프로토타입\n| 어디 | 입력할 이름 | 규칙 |\n| 화면 Frame | A-일정 변경-오류 · B-일정 변경-오류 | 안-화면-상태 |\n| Flow | A 일정 변경 · B 일정 변경 · A 취소 | 안 + 과업 |'],
-    ('12-28','09:00'): ['이름 짓기 — 키트 v1에서 확정\n| 종류 | 입력할 이름 |\n| 변수 | gray/500(색 값) · text/default/default(일반 글자색) · space/400(16px 간격) · radius/200(8px 모서리) |\n| 텍스트 스타일 | heading/large 24/32 Bold(화면 제목) · heading/medium 20/28 Bold(카드 제목) · body/medium 16/24 Regular(본문) · body/small 14/20 Regular(보조 글자) · label/medium 16/16 Bold(버튼 글자) |\n| 그림자 (Effect style) | drop-shadow/100(카드 · 버튼) · drop-shadow/200(확인창) |'],
+    ('12-28','09:00'): ['이름 짓기 — 키트 v1에서 확정\n| 종류 | 입력할 이름 |\n| 변수 | gray/500(색 값) · text/default/default(일반 글자색) · space/400(16px 간격) · radius/200(8px 모서리) |\n| 텍스트 스타일 | heading/large 24/32 Bold(화면 제목) · heading/medium 20/28 Bold(카드 제목) · body/medium 16/24 Regular(본문) · body/small 14/20 Regular(보조 글자) · label/medium 16/16 Bold(버튼 글자) |\n| 그림자 (Effect style) | shadow/100(카드 · 버튼) · drop-shadow/200(확인창) |'],
     ('01-03','09:00'): ['이름 짓기 — 전체 프로토타입\n| 어디 | 입력할 이름 | 규칙 |\n| Flow | 일정 변경 · 전달 확인 · 필수 누락 – 오류 · 전달 실패 · 취소 | 과업 이름 그대로 |\n| 화면 Frame | 일정 변경-필수 누락 | 화면-상태 |'],
-    ('02-11','08:00'): ['이름 짓기 — 새 파일 CASE02 (CASE01과 같은 규칙)\n| 어디 | 입력할 이름 | 뜻 |\n| 페이지 | 표지 · 기초 · 컴포넌트 · 화면 · 프로토타입 · 전달 | 한국어 |\n| 변수 컬렉션 / 변수 | Primitives · Semantic / gray/500 · text/primary | |\n| Main component ◆ | card/thumbnail · list/row · button/like · progress | 카드 · 목록 행 · 찜 버튼 · 진행 표시 |\n| 화면 Frame | A-홈 · B-홈 | 안-화면 |'],
-    ('02-15','09:00'): ['이름 짓기 — 키트 v1 부품\n| 어디 | 입력할 이름 | 뜻 |\n| Main component ◆ | card/thumbnail · list/row · progress · button/like | 카드 · 목록 행 · 진행 표시 · 찜 버튼 |\n| Variant | state = off · on / size = small · large | 찜 상태 / 카드 크기 |\n| 컴포넌트 속성 | title · show badge · thumbnail | 제목 · 배지 보이기 · 썸네일 |\n| 안쪽 레이어 | thumbnail · title · meta · progress-bar | 썸네일 · 제목 · 작은 정보 · 진행 막대 |\n· 팁: 같은 뜻은 CASE01과 같은 단어로(state=default · disabled)'],
+    ('02-11','08:00'): ['이름 짓기 — 새 파일 CASE02 (CASE01과 같은 규칙)\n| 어디 | 입력할 이름 | 뜻 |\n| 페이지 | 표지 · 기초 · 컴포넌트 · 화면 · 프로토타입 · 전달 | 한국어 |\n| 변수 컬렉션 / 변수 | Primitives · Semantic / gray/500 · text/default/default | |\n| Main component ◆ | card/thumbnail · list-item · button/like · progress | 카드 · 목록 행 · 찜 버튼 · 진행 표시 |\n| 화면 Frame | A-홈 · B-홈 | 안-화면 |'],
+    ('02-15','09:00'): ['이름 짓기 — 키트 v1 부품\n| 어디 | 입력할 이름 | 뜻 |\n| Main component ◆ | card/thumbnail · list-item · progress · button/like | 카드 · 목록 행 · 진행 표시 · 찜 버튼 |\n| Variant | state = off · on / size = small · large | 찜 상태 / 카드 크기 |\n| 컴포넌트 속성 | title · show badge · thumbnail | 제목 · 배지 보이기 · 썸네일 |\n| 안쪽 레이어 | thumbnail · title · meta · progress-bar | 썸네일 · 제목 · 작은 정보 · 진행 막대 |\n· 팁: 같은 뜻은 CASE01과 같은 단어로(state=default · disabled)'],
     ('02-21','09:00'): ['이름 짓기 — 전체 프로토타입\n| 어디 | 입력할 이름 | 규칙 |\n| Flow | 작품 찾기 · 찜하기 · 이어 보기 · 빈 목록 · 오류 | 과업 이름 그대로 |\n| 화면 Frame | 찜 목록-빈 상태 · 상세-오류 | 화면-상태 |'],
     ('04-07','08:00'): ['이름 짓기 — 제출용 프로토타입\n| 어디 | 입력할 이름 | 왜 |\n| Flow | 1 핵심 흐름 · 2 오류 복구 · 3 빈 상태 | 번호를 붙이면 보여 줄 순서대로 정렬돼 심사자가 길을 잃지 않는다 |'],
 }
@@ -458,7 +457,7 @@ AL_STEP = ('15:00 예비 시간 — Auto layout 겹치기 연습 60분 (이번 �
     '→ 아래 ‘결과물 기입표’의 「Auto layout 겹치기 확인」에 Frame마다 적는다\n'
     '왜: 화면은 작은 Frame을 안에서부터 차례로 감싸 만든다. Frame마다 방향·간격·Fill/Hug를 스스로 정할 수 있어야 폭이 바뀌어도 안 깨지는 화면을 만들고, 개발자에게도 같은 구조로 넘길 수 있다.')
 HARU_STEP_1122 = HARU_STEP.replace('15:00 예비 시간(밀린 일이 없으면): ‘하루’ 웹 점검 50분', '16:10–17:00 ‘하루’ 웹 점검 50분', 1)
-NAME_CHECK = '이름 점검(5분, 이번 주 Figma 작업이 있었으면)\n· Ctrl+F로 Frame · Group · Rectangle을 검색해 남은 기본 이름을 바꾼다\n· [영어, 첫 글자 대문자] ◆ Main component와 Variant가 맞는가 (Todo/Row · State=Default)\n· [한국어] 화면 Frame이 ‘화면-상태’인가 (추가-오류)\n· [영어 소문자] 그 밖의 영어 이름이 소문자인가 (header · more-button)'
+NAME_CHECK = '이름 점검(5분, 이번 주 Figma 작업이 있었으면)\n· Ctrl+F로 Frame · Group · Rectangle을 검색해 남은 기본 이름을 바꾼다\n· [영어 소문자] ◆ Main component · 속성 · 값이 이름 기준 확정판대로인가 (button · variant=primary · state=default)\n· [영어 소문자] 변수 · 글자 스타일이 확정판대로인가 (background/brand/default · space/400 · body/medium)\n· [한국어] 화면 Frame이 ‘화면-상태’인가 (추가-오류)\n· [영어 소문자] 그 밖의 레이어 이름이 소문자-하이픈인가 (header · more-button)'
 
 QA_LEAD = '아래 ‘디자인 QA 점검표’를 위에서부터 하나씩 해 보고 통과·실패를 적는다.\n왜: 실무에서 개발자가 가장 자주 되묻는 것이 빠진 상태와 이름 없는 값이다. 넘기기 전에 잡으면 다시 만드는 일이 준다.'
 TODAY_QA = [QA_LEAD, '이어서 ‘이번 주 항목’ 표도 같은 방법으로 한다.',

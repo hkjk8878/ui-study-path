@@ -1201,7 +1201,7 @@ def done_motion():
     s.text(40, 316, '바뀌는 것 3가지: ① 체크(State를 체크된 값으로) ② 제목 취소선 ③ item-1이 맨 아래로. 같은 연결을 400ms로 한 번 더 녹화해 비교한다.', 10, 600, INK)
     return s
 
-@fig('undo_motion', '예시 · 11/24 10:10 삭제 → 되돌리기. 목록-삭제직후는 notification이 화면 아래 바깥(Y 860)에 있어 안 보이고, 바로 목록-삭제됨으로 넘어가며 notification이 올라온다')
+@fig('undo_motion', '예시 · 11/24 10:10 삭제 → 되돌리기. 목록-삭제직후는 toast가 화면 아래 바깥(Y 860)에 있어 안 보이고, 바로 목록-삭제됨으로 넘어가며 toast가 올라온다')
 def undo_motion():
     s = S(680, 360)
     xs = [20, 250, 480]
@@ -1211,11 +1211,11 @@ def undo_motion():
     for k, x in enumerate(xs):
         rows = [('item-2', '우유 사기'), ('item-3', '운동하기')] if k < 2 else [('item-1', '치킨 먹기'), ('item-2', '우유 사기'), ('item-3', '운동하기')]
         for i, (n, t) in enumerate(rows): _row(s, x+10, 62 + i*40, 160, n, t, hl=(k == 2 and n == 'item-1'))
-    # notification
-    s.rect(30, 274, 160, 30, BG, MUTE, 6, 1, '4,3'); s.text(110, 293, 'notification · Y 860 (밖)', 9, 600, SUB, 'middle')
+    # toast
+    s.rect(30, 274, 160, 30, BG, MUTE, 6, 1, '4,3'); s.text(110, 293, 'toast · Y 860 (밖)', 9, 600, SUB, 'middle')
     s.rect(260, 222, 160, 32, WHITE, INK, 6); s.text(270, 242, '삭제했어요', 10, 600, INK); s.rect(352, 228, 60, 20, BG, LINE, 4); s.text(382, 242, '되돌리기', 8.5, 700, INK, 'middle')
     s.arrow(202, 140, 248, 140, BLUE, 1.8); s.text(225, 128, 'After delay', 8.5, 700, BLUE, 'middle')
     s.arrow(432, 238, 478, 120, BLUE, 1.8); s.text(455, 200, '되돌리기', 8.5, 700, BLUE, 'middle')
-    s.text(20, 316, '① 확인창 삭제 → 목록-삭제직후 (Instant)   ② After delay 1ms → 목록-삭제됨 · Smart animate · Ease out · 200ms = notification이 올라옴', 9.8, 600, INK)
-    s.text(20, 336, '③ 되돌리기 → 목록 · Smart animate · Ease in and out · 250ms = item-1이 맨 위 자리로 돌아오고 notification은 사라짐', 9.8, 600, INK)
+    s.text(20, 316, '① 확인창 삭제 → 목록-삭제직후 (Instant)   ② After delay 1ms → 목록-삭제됨 · Smart animate · Ease out · 200ms = toast가 올라옴', 9.8, 600, INK)
+    s.text(20, 336, '③ 되돌리기 → 목록 · Smart animate · Ease in and out · 250ms = item-1이 맨 위 자리로 돌아오고 toast는 사라짐', 9.8, 600, INK)
     return s

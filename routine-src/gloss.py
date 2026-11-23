@@ -32,7 +32,7 @@ G = [
  ('Share','공유'), ('Columns','열 수'), ('Gutter','열 사이 간격'), ('Margin','바깥 여백'), ('Scale','비율대로 늘리기'),
  ('label','글자'), ('icon','아이콘'), ('title','제목'), ('date','날짜'), ('list','목록'),
  ('todo/row','할 일/행'), ('todo/card','할 일/카드'), ('icon/check','아이콘/체크'), ('icon/more','아이콘/더보기'), ('icon/close','아이콘/닫기'),
- ('card/thumbnail','카드/썸네일'), ('list/row','목록/행'), ('button/like','버튼/찜'), ('button/reader','버튼/읽기'), ('button/blue','버튼/파랑'),
+ ('card/thumbnail','카드/썸네일'), ('list-item','목록/행'), ('button/like','버튼/찜'), ('button/reader','버튼/읽기'), ('button/blue','버튼/파랑'),
  ('annotation/spec','주석/명세'), ('annotation/note','주석/메모'), ('action/primary-hover','누르는 것/주요-마우스 올림'),
  ('border/subtle','테두리/옅게'), ('border/strong','테두리/진하게'), ('text/on-action','글자/누르는 것 위'),
  ('status/warning','상태/주의'), ('status/info','상태/안내'),

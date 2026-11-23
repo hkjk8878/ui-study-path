@@ -85,7 +85,7 @@ def name_map():
     grid = ('<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:8px">'
             + cell('①', '변수 창', '맨 왼쪽 세로 아이콘 줄 → Variables 아이콘', '컬렉션 이름 · 변수 이름', rename('spacing/2', 'space/200'))
             + cell('②', '글자 스타일', '캔버스 빈 곳 클릭 → 오른쪽 Text styles', '글자 스타일 이름 + 크기 · 굵기', rename('caption', 'body/small'))
-            + cell('③', '레이어 패널', '화면 왼쪽 Layers 목록', '레이어(칸 · 글자) 이름', rename('toast', 'notification'))
+            + cell('③', '레이어 패널', '화면 왼쪽 Layers 목록', '레이어(칸 · 글자) 이름', rename('actions', 'button-group'))
             + cell('④', '속성', '부품 세트 선택 → 오른쪽 Properties', '속성 이름 · 값 이름', rename('Type', 'variant'))
             + '</div>')
     fig = ('<div style="display:grid;grid-template-columns:70px 1fr 90px;gap:4px;padding:8px 8px 0;font-size:11px;text-align:center">'
@@ -100,8 +100,8 @@ def name_map():
 @mini('var_collections')
 def var_collections():
     left = (row('<b>Collections</b>')
-            + row(rename('Primitives', 'Color Primitives'), hl=True, note='더블클릭')
-            + row(rename('Segmantic', 'Color'), note='더블클릭')
+            + row('Primitives', '그대로')
+            + row(rename('Segmantic', 'Semantic'), hl=True, note='더블클릭')
             + row('Size', '그대로'))
     return win('① 변수 창 (Variables) — 왼쪽 컬렉션 목록', left, '변수 창')
 
@@ -113,10 +113,10 @@ def var_size():
          + row(rename('spacing/2', 'space/200'), '8')
          + row(rename('spacing/4', 'space/400'), '16')
          + row(rename('radius/md', 'radius/200'), '8')
-         + row(rename('border/width', 'stroke/border'), '2'))
+         + row(rename('border/width', 'border-width/default'), '2'))
     return win('① 변수 창 › Size 컬렉션 — 값을 보고 이름을 정한다', b, '변수 창') + caption('이름 숫자 = 값 ÷ 4 × 100 (8 → 200, 16 → 400). 값 칸은 건드리지 않는다')
 
-# ───────────── ⓒ Color Primitives 그룹
+# ───────────── ⓒ Primitives 그룹
 @mini('var_groups')
 def var_groups():
     groups = (row('<b>Groups</b>')
@@ -128,18 +128,18 @@ def var_groups():
             + row(rename('green/50', 'green/300'), sw('D2E077') + 'D2E077', hl=True)
             + row(rename('green/100', 'green/400'), sw('A4C263') + 'A4C263')
             + row(rename('green/200', 'green/500'), sw('6DC458') + '6DC458'))
-    return (win('① 변수 창 › Color Primitives — 왼쪽 Groups', groups, '변수 창')
-            + win('① 변수 창 › Color Primitives — 오른쪽 이름 칸', rows, '변수 창')
-            + caption('밝을수록 작은 숫자. 값(색)은 그대로라 Color 쪽 연결도 그대로 따라온다'))
+    return (win('① 변수 창 › Primitives — 왼쪽 Groups', groups, '변수 창')
+            + win('① 변수 창 › Primitives — 오른쪽 이름 칸', rows, '변수 창')
+            + caption('밝을수록 작은 숫자. 값(색)은 그대로라 Semantic 쪽 연결도 그대로 따라온다'))
 
-# ───────────── ⓓ Color 변수 이름 + 새로 만들기
+# ───────────── ⓓ Semantic 변수 이름 + 새로 만들기
 @mini('var_color')
 def var_color():
     b = (row('<b>Name</b>', '<b>Value</b>')
-         + row(rename('bg/screen/screen', 'background/default/tertiary'), sw('C49A6C'), hl=True, note='더블클릭')
+         + row(rename('bg/screen/screen', 'background/default/default'), sw('C49A6C'), hl=True, note='더블클릭')
          + row(rename('border/strong', 'border/default/default'), sw('645552'))
          + row(rename('status/error', 'border/danger/default'), sw('CF4843')))
-    return win('① 변수 창 › Color 컬렉션 — 이름만 바꾼다', b, '변수 창') + caption('값 칸(색 동그라미)은 누르지 않는다 → 가리키던 색이 그대로 남는다')
+    return win('① 변수 창 › Semantic 컬렉션 — 이름만 바꾼다', b, '변수 창') + caption('값 칸(색 동그라미)은 누르지 않는다 → 가리키던 색이 그대로 남는다')
 
 @mini('var_create')
 def var_create():
@@ -148,7 +148,7 @@ def var_create():
          + f'<div style="padding:6px 8px;color:{BLUE};font-weight:700">+ Create variable</div>')
     fill = (row('<b>Fill</b>')
             + row(sw('CF4843') + 'background/danger/default', '⁘', hl=True, note='점 4개 아이콘'))
-    return (win('① 변수 창 › Color — 맨 아래 + Create variable → Color', b, '변수 창')
+    return (win('① 변수 창 › Semantic — 맨 아래 + Create variable → Color', b, '변수 창')
             + win('④ 오른쪽 Design 패널 — 삭제 버튼(Type=danger) 선택 뒤 Fill 칸', fill, '속성'))
 
 # ───────────── ⓔ-1 글자 스타일
@@ -167,14 +167,14 @@ def text_style_edit():
             + win('② Edit style 창 — 이름과 값 4칸을 표대로', edit, '글자 스타일')
             + caption('이름만 바꾸면 크기는 예전 값이 남는다 → Size · Line height · Weight도 같은 창에서 맞춘다'))
 
-# ───────────── ⓔ-2 notification · dialog 안 레이어
+# ───────────── ⓔ-2 toast · dialog 안 레이어
 @mini('layer_dialog')
 def layer_dialog():
-    b = (row(ic('comp') + rename('toast', 'notification'), note='더블클릭')
+    b = (row(ic('comp') + 'toast', note='그대로')
          + row(ic('comp') + 'dialog ▾', hl=False)
          + row(ic('frame') + rename('actions', 'button-group'), indent=1)
-         + row(ic('text') + rename('할 일을 삭제할까요?', 'heading'), indent=1, hl=True, note='질문 문장')
-         + row(ic('text') + rename('‘치킨 먹기’가 사라져요.', 'body'), indent=1, note='설명 문장'))
+         + row(ic('text') + rename('할 일을 삭제할까요?', 'title'), indent=1, hl=True, note='질문 문장')
+         + row(ic('text') + rename('‘치킨 먹기’가 사라져요.', 'description'), indent=1, note='설명 문장'))
     return win('③ 레이어 패널 (화면 왼쪽 Layers)', b, '레이어 패널') + caption('T 줄 = 글자 레이어. Figma가 입력한 문장을 이름으로 붙여 둔 것 → 이름만 바꾸고 화면 글자는 그대로')
 
 # ───────────── ⓔ-3 화면 레이어
@@ -182,7 +182,7 @@ def layer_dialog():
 def layer_screens():
     b = (row(ic('frame') + '수정-기본 ▾')
          + row(ic('frame') + 'content ▾', indent=1)
-         + row(ic('inst') + rename('field', 'input-field'), indent=2, hl=True, note='4개 Ctrl+클릭 → Ctrl+R')
+         + row(ic('inst') + rename('field', 'text-field'), indent=2, hl=True, note='4개 Ctrl+클릭 → Ctrl+R')
          + row(ic('frame') + '목록 ▾')
          + row(ic('frame') + 'content ▾', indent=1)
          + row(ic('inst') + rename('행-1', 'item-1'), indent=2, note='더블클릭')
@@ -193,13 +193,13 @@ def layer_screens():
 @mini('props_rename')
 def props_rename():
     p = (row('<b>Properties</b>')
-         + row(rename('Type', 'variant'), 'primary · neutral · danger', hl=True, note='줄 클릭')
+         + row(rename('Type', 'variant'), 'primary · secondary · tertiary · danger', hl=True, note='줄 클릭')
          + row(rename('State', 'state'), 'default · hover …')
          + row(rename('Label', 'label'), 'T'))
     def fld(k, v):
         return (f'<div style="display:flex;gap:6px;align-items:center;padding:3px 8px"><span style="width:60px;color:{SUB}">{E(k)}</span>'
                 f'<span style="flex:1">{v}</span></div>')
-    pop = fld('Name', rename('Type', 'variant')) + fld('Values', rename('Primary', 'primary') + '<br>' + rename('Tertiary', 'neutral'))
+    pop = fld('Name', rename('Type', 'variant')) + fld('Values', rename('Primary', 'primary') + '<br>' + rename('Secondary', 'secondary') + '<br>' + rename('Tertiary', 'tertiary'))
     return (win('④ button 세트 선택 → 오른쪽 Design 패널 Properties', p, '속성')
             + win('④ 뜨는 창 — 이름과 값 이름', pop, '속성'))
 
