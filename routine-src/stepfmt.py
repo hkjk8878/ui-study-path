@@ -4,6 +4,7 @@
 # - 그 밖의 표 → 가로로 밀어 볼 수 있는 표 (칸이 좁아 글자가 한 자씩 꺾이지 않게)
 # - 'N단계 …' 줄 → 소제목
 import html, re
+from minis import MINI, chip, place_color
 E = html.escape
 TD = 'style="border:1px solid #D1D5DB;padding:6px 8px;vertical-align:top;text-align:left;min-width:7em;line-height:1.5"'
 TH = 'style="border:1px solid #D1D5DB;padding:6px 8px;background:#F3F4F6;text-align:left;font-weight:700;min-width:7em;white-space:nowrap"'
@@ -56,18 +57,43 @@ def step_cards(rows):
             acts = [a.strip() for a in body.split('¶') if a.strip()]
         else:
             acts = merge(split_arrows(body))
-        li = ''
         acts = [('레이어 이름을 ' + a[3:].strip() + '(으)로 바꾸기 (레이어 패널에서 이름 더블클릭)') if a.startswith('이름 ') and len(a) < 30 else a for a in acts]
+        chips, parts, n = '', '', 0
+        cur = []
+        def flush_list():
+            nonlocal parts, n, cur
+            if not cur: return
+            li = ''
+            for a in cur:
+                ok = '성공' in a
+                st = 'color:#166534;font-weight:700' if ok else ''
+                mark = '✓ ' if ok else ''
+                li += f'<li style="margin:3px 0;{st}">{mark}{E(a)}</li>'
+            parts += f'<ol start="{n - len(cur) + 1}" style="margin:0;padding-left:1.4em;line-height:1.6">{li}</ol>'
+            cur = []
         for a in acts:
-            ok = '성공' in a
-            st = 'color:#166534;font-weight:700' if ok else ''
-            mark = '✓ ' if ok else ''
-            li += f'<li style="margin:2px 0;{st}">{mark}{E(a)}</li>'
+            if a.startswith('어디:'):
+                fg, bg = place_color(a[3:].strip())
+                chips += chip('어디 · ' + a[3:].strip(), fg, bg) + ' '
+            elif a.startswith('바꾸는 것:'):
+                t = a[6:].strip()
+                fg, bg = place_color(t)
+                for k in ('변수 창', '레이어 패널', '글자 스타일', '속성'):
+                    if t.startswith(k + ' · '): t = t[len(k) + 3:]
+                chips += chip('바꾸는 것 · ' + t, '#fff', fg) + ' '
+            elif a.startswith('그림:') and a[3:].strip() in MINI:
+                flush_list(); parts += MINI[a[3:].strip()]()
+            elif a.startswith('왜:'):
+                flush_list(); parts += f'<div style="margin:4px 0;font-size:.88em;color:#4B5563;background:#F9FAFB;border-left:3px solid #D1D5DB;padding:3px 8px">왜 · {E(a[2:].strip())}</div>'
+            else:
+                n += 1; cur.append(a)
+        flush_list()
         badge = f'<span style="margin-left:auto;font-size:.85em;color:#6B7280;white-space:nowrap">{mins}</span>' if mins else ''
         tt = f'<b style="font-size:1.02em">{E(title)}</b>' if title else ''
         h += ('<div style="border:1px solid #D1D5DB;border-radius:10px;padding:10px 12px;background:#fff">'
-              f'<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><span style="display:inline-grid;place-items:center;min-width:26px;height:26px;border-radius:13px;background:#1F2937;color:#fff;font-weight:700">{E(num)}</span>{tt}{badge}</div>'
-              f'<ol style="margin:0;padding-left:1.4em;line-height:1.6">{li}</ol>'
+              f'<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><span style="display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 4px;border-radius:13px;background:#1F2937;color:#fff;font-weight:700">{E(num)}</span>{tt}{badge}</div>'
+              + (f'<div style="display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 6px">{chips}</div>' if chips else '')
+              + parts
               + ('<div style="margin-top:6px;font-size:.85em;color:#4B5563;background:#F3F4F6;border-radius:6px;padding:4px 8px">◇ = 숫자 칸(Gap · Padding · Corner radius 등) 오른쪽 끝에 마우스를 올리면 나타나는 변수 연결 아이콘(Apply variable). 누르면 변수 목록이 뜬다</div>' if '◇' in body else '')
               + '</div>')
     return h + '</div>'
@@ -164,6 +190,8 @@ def fmt(text):
             m = STAGE.match(line.strip())
             if m:
                 out.append(f'<div style="font-weight:800;font-size:1.05em;margin:12px 0 2px;padding-top:6px;border-top:2px solid #E5E7EB">{E(m.group(1))} <span style="font-weight:600">{E(m.group(2))}</span></div>')
+            elif line.strip().startswith('그림:') and line.strip()[3:].strip() in MINI:
+                out.append(MINI[line.strip()[3:].strip()]())
             elif line.strip().startswith('만들 구조'):
                 continue  # 구조 그림이 제목을 대신한다
             else:
