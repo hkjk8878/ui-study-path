@@ -991,7 +991,7 @@ def breakpoints():
     s.text(32, 286, '모양은 예시다. 목록·상세의 최소·최대 폭을 정해 두면 너비만 바꿔도 손으로 위치를 다시 맞출 필요가 없다.', 10, 500, SUB)
     return s
 
-@fig('usage_rule', '예시 · 11/23 08:20에 만드는 button 규칙 카드(전부 이 블록 것). 버튼 모양은 11/19에 만든 button Instance, 빨간 테두리는 11/22 status/error 변수. 오른쪽 글씨는 레이어 이름 안내')
+@fig('usage_rule', '예시 · 11/23 08:20에 만드는 button 규칙 카드(전부 이 블록 것). 버튼 모양은 11/19에 만든 button Instance, 빨간 테두리는 border/danger/default 변수(11/23 ⓓ에서 이름 바꿈). 오른쪽 글씨는 레이어 이름 안내')
 def usage_rule():
     s = S(680, 560)
     G = '#3F7A31'
@@ -1015,10 +1015,10 @@ def usage_rule():
         _btn(s, 60, Y+86, 110, a2, None, G)
         s.text(60, Y+152, note, 10, 600, SUB)
     s.rect(36, 174, 368, 356, 'none', BLUE, 4, 1, '4,3')
-    for y, t in [(46, '← 제목 글자 (heading/medium)'), (112, '← 규칙-표 = 행 4개 (세로)'), (128, '   행 = 칸 이름(W 96) + 내용(W Fill)'),
-                 (196, '← 예시 (세로)'), (214, '   맞는-예 = 표시 글자 · button 2개 · 설명'), (382, '← 틀린-예 (Stroke status/error)')]:
+    for y, t in [(46, '← 제목 글자 (subheading)'), (112, '← rule-table = rule-row 4개 (세로)'), (128, '   rule-row = 칸 이름(W 96) + 내용(W Fill)'),
+                 (196, '← examples (세로)'), (214, '   do = 표시 글자 · button 2개 · 설명'), (382, '← dont (Stroke border/danger/default)')]:
         s.text(432, y, t, 10, 600, BLUE if t.startswith('←') else SUB)
-    s.text(432, 480, '카드 바깥: button 규칙', 10.5, 700, INK)
+    s.text(432, 480, '카드 바깥: button-guide', 10.5, 700, INK)
     s.text(432, 498, 'Vertical · W Fixed 360 · H Hug', 10, 500, SUB)
     s.text(432, 516, '컴포넌트 페이지 button 세트 오른쪽', 10, 500, SUB)
     return s
@@ -1183,25 +1183,25 @@ def _row(s, x, y, w, name, title, done=False, hl=False):
     if done: s.line(x+32, y+18, x+32+tw(title, 10.5), y+18, MUTE, 1.2)
     s.text(x+w-6, y+22, name, 9, 700, BLUE, 'end')
 
-@fig('done_motion', '예시 · 11/24 08:40 완료 전환. 두 화면의 행 이름(행-1 · 행-2 · 행-3)이 같아야 Smart animate가 같은 행끼리 움직인다. 파란 글자는 레이어 이름(화면에는 안 보임)')
+@fig('done_motion', '예시 · 11/24 08:40 완료 전환. 두 화면의 행 이름(item-1 · item-2 · item-3)이 같아야 Smart animate가 같은 행끼리 움직인다. 파란 글자는 레이어 이름(화면에는 안 보임)')
 def done_motion():
     s = S(680, 330)
     for i, (x, t) in enumerate([(40, '목록-미완료 (새로 만듦)'), (420, '목록-완료됨 (새로 만듦)')]):
         s.phone(x, 20, 220, 250, '')
         s.text(x+110, 290, t, 11, 700, INK, 'middle')
         s.text(x+14, 52, '할 일', 12.5, 700, INK)
-    rows_a = [('행-1', '치킨 먹기', False, True), ('행-2', '우유 사기', False, False), ('행-3', '운동하기', False, False)]
-    rows_b = [('행-2', '우유 사기', False, False), ('행-3', '운동하기', False, False), ('행-1', '치킨 먹기', True, True)]
+    rows_a = [('item-1', '치킨 먹기', False, True), ('item-2', '우유 사기', False, False), ('item-3', '운동하기', False, False)]
+    rows_b = [('item-2', '우유 사기', False, False), ('item-3', '운동하기', False, False), ('item-1', '치킨 먹기', True, True)]
     for i, r in enumerate(rows_a): _row(s, 52, 66 + i*42, 196, *r)
     for i, r in enumerate(rows_b): _row(s, 432, 66 + i*42, 196, *r)
     s.arrow(262, 83, 418, 168, BLUE, 1.8)
-    s.badge(282, 104, '행-1 On click → Navigate to', BLUE, BLUE_L, 9.5)
+    s.badge(282, 104, 'item-1 On click → Navigate to', BLUE, BLUE_L, 9.5)
     s.badge(282, 128, 'Smart animate · Ease out · 150ms', PURPLE, PURPLE_L, 9.5)
     s.text(340, 205, '되돌아가기: Instant', 9.5, 600, SUB, 'middle')
-    s.text(40, 316, '바뀌는 것 3가지: ① 체크(State를 체크된 값으로) ② 제목 취소선 ③ 행-1이 맨 아래로. 같은 연결을 400ms로 한 번 더 녹화해 비교한다.', 10, 600, INK)
+    s.text(40, 316, '바뀌는 것 3가지: ① 체크(State를 체크된 값으로) ② 제목 취소선 ③ item-1이 맨 아래로. 같은 연결을 400ms로 한 번 더 녹화해 비교한다.', 10, 600, INK)
     return s
 
-@fig('undo_motion', '예시 · 11/24 10:10 삭제 → 되돌리기. 목록-삭제직후는 toast가 화면 아래 바깥(Y 860)에 있어 안 보이고, 바로 목록-삭제됨으로 넘어가며 toast가 올라온다')
+@fig('undo_motion', '예시 · 11/24 10:10 삭제 → 되돌리기. 목록-삭제직후는 notification이 화면 아래 바깥(Y 860)에 있어 안 보이고, 바로 목록-삭제됨으로 넘어가며 notification이 올라온다')
 def undo_motion():
     s = S(680, 360)
     xs = [20, 250, 480]
@@ -1209,13 +1209,13 @@ def undo_motion():
     for x, n in zip(xs, names):
         s.phone(x, 20, 180, 250, ''); s.text(x+90, 292, n, 10.5, 700, INK, 'middle'); s.text(x+12, 50, '할 일', 12, 700, INK)
     for k, x in enumerate(xs):
-        rows = [('행-2', '우유 사기'), ('행-3', '운동하기')] if k < 2 else [('행-1', '치킨 먹기'), ('행-2', '우유 사기'), ('행-3', '운동하기')]
-        for i, (n, t) in enumerate(rows): _row(s, x+10, 62 + i*40, 160, n, t, hl=(k == 2 and n == '행-1'))
-    # toast
-    s.rect(30, 274, 160, 30, BG, MUTE, 6, 1, '4,3'); s.text(110, 293, 'toast · Y 860 (밖)', 9, 600, SUB, 'middle')
+        rows = [('item-2', '우유 사기'), ('item-3', '운동하기')] if k < 2 else [('item-1', '치킨 먹기'), ('item-2', '우유 사기'), ('item-3', '운동하기')]
+        for i, (n, t) in enumerate(rows): _row(s, x+10, 62 + i*40, 160, n, t, hl=(k == 2 and n == 'item-1'))
+    # notification
+    s.rect(30, 274, 160, 30, BG, MUTE, 6, 1, '4,3'); s.text(110, 293, 'notification · Y 860 (밖)', 9, 600, SUB, 'middle')
     s.rect(260, 222, 160, 32, WHITE, INK, 6); s.text(270, 242, '삭제했어요', 10, 600, INK); s.rect(352, 228, 60, 20, BG, LINE, 4); s.text(382, 242, '되돌리기', 8.5, 700, INK, 'middle')
     s.arrow(202, 140, 248, 140, BLUE, 1.8); s.text(225, 128, 'After delay', 8.5, 700, BLUE, 'middle')
     s.arrow(432, 238, 478, 120, BLUE, 1.8); s.text(455, 200, '되돌리기', 8.5, 700, BLUE, 'middle')
-    s.text(20, 316, '① 확인창 삭제 → 목록-삭제직후 (Instant)   ② After delay 1ms → 목록-삭제됨 · Smart animate · Ease out · 200ms = toast가 올라옴', 9.8, 600, INK)
-    s.text(20, 336, '③ 되돌리기 → 목록 · Smart animate · Ease in and out · 250ms = 행-1이 맨 위 자리로 돌아오고 toast는 사라짐', 9.8, 600, INK)
+    s.text(20, 316, '① 확인창 삭제 → 목록-삭제직후 (Instant)   ② After delay 1ms → 목록-삭제됨 · Smart animate · Ease out · 200ms = notification이 올라옴', 9.8, 600, INK)
+    s.text(20, 336, '③ 되돌리기 → 목록 · Smart animate · Ease in and out · 250ms = item-1이 맨 위 자리로 돌아오고 notification은 사라짐', 9.8, 600, INK)
     return s

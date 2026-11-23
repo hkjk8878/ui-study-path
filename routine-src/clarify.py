@@ -313,6 +313,14 @@ STEP0 = {
 }
 
 import re as _re
+MOVED_1123 = ('먼저 할 것 — 11/23 08:20에서 옮김 (가이드 v2 이름 바로잡기에 시간을 써서 넘어온 일, 약 50분. 순서와 하는 법은 그 전날 밤 점검이 Figma 파일을 읽고 이 블록에 자세히 쓴다)\n'
+    '| 할 일 | 내용 |\n'
+    '| notification · dialog 규칙 카드 | 11/23 08:20의 button-guide를 복제해 notification-guide · dialog-guide를 만든다(11/23 ‘카드에 넣을 내용’ 표의 notification · dialog 줄) |\n'
+    '| Size에 남은 color 그룹 지우기 | 화면에 color/… 이 직접 연결된 곳을 Color 변수로 바꾼 뒤 지운다 |\n'
+    '| Color 안 숫자 변수 정리 | padding/ · gap/ · radius/control을 쓰는 Frame을 Size 변수(space/ · radius/)로 다시 연결하고 지운다 |\n'
+    '| 다른 파일 변수 다시 연결 | text/primary · action/… · text/on-… · shadow/strong을 가이드 v2 Color 변수 · drop-shadow/100 효과 스타일로 |\n'
+    '| button-danger 분리 · subtle 만들기 | 삭제 버튼을 button-danger 컴포넌트로, 글자만 있는 ‘되돌리기’ 버튼을 variant=subtle로 |\n'
+    '| Color Primitives Scoping 끄기 | 부품에 직접 고르지 못하게 한다(가이드 v2 1장) |')
 _NUM = '①②③④⑤⑥⑦⑧⑨'
 def _lines(s):
     # 긴 ①②③ 나열은 번호마다 줄을 바꿔 훑어보기 쉽게 한다(내용은 그대로)
@@ -532,7 +540,7 @@ def apply_extra(weeks):
                 if k == ('11-22','14:10'):
                     b.steps = tuple(b.steps) + (AL_STEP, HARU_STEP_1122); b.show_fixed = True
                 if k == ('11-28','13:00'):
-                    b.steps = ('11/22에 찾은 ‘하루’ 웹 문제 중 심각도 3·4부터 Figma 시안에서 고친다.',) + tuple(b.steps)
+                    b.steps = (MOVED_1123, '11/22에 찾은 ‘하루’ 웹 문제 중 심각도 3·4부터 Figma 시안에서 고친다. (먼저 할 것 때문에 넘치는 시간은 15:00–16:00 예비로)',) + tuple(b.steps)
                 if '주간 기록' in b.title:
                     b.steps = tuple(b.steps) + (NAME_CHECK,)
 

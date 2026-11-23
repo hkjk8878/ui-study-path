@@ -1,3 +1,4 @@
+import re
 import html
 from res import R
 E = html.escape
@@ -9,6 +10,16 @@ def L(k, text=None):
 KINDS = [('강의', '영상·문서를 보고 예제를 따라 만든다'), ('제작', 'Figma·HTML로 화면과 흐름을 만든다'), ('조사', '실제 사람을 만나 듣고 본다'),
          ('분석', '기록을 묶고 문제를 정의한다'), ('검증', '테스트·점검으로 확인하고 고친다'), ('AI', '화·목 저녁, AI로 만들고 직접 확인한다'),
          ('훈련', '토요일 오전 UI 완성도 훈련'), ('점검', '일요일 주간 점검·기록')]
+
+
+def naming_html():
+    import markdown
+    md = open('naming_guide.md').read()
+    md = re.sub(r'^# (.*)$', r'## \1', md, count=1, flags=re.M)
+    h = markdown.markdown(md, extensions=['tables'])
+    h = h.replace('<h2>', '<h2 class="fp-h">').replace('<h3>', '<h3 class="fp-h3">').replace('<table>', '<table class="ftab">').replace('<blockquote>', '<div class="note">').replace('</blockquote>', '</div>')
+    return h
+
 
 def FRONT(toc, figure):
     from render import KIND, WEEKS
@@ -58,193 +69,7 @@ def FRONT(toc, figure):
 <tr><td><b>Detach instance</b></td><td>Instance와 Main component의 연결을 끊는 메뉴. 쓰지 않는다</td></tr>
 <tr><td><b>Prototype 탭 · Flow · Present</b></td><td>화면 연결 패널 · Present에서 고르는 시작점 · 발표 모드(오른쪽 위 ▶)</td></tr>
 </tbody></table>
-<h2 class="fp-h">이름 짓기 가이드 (Figma 실무 기준)</h2>
-<h3 class="fp-h3">왜 이름이 중요한가</h3>
-<ul>
-<li><strong>개발자는 이름을 그대로 본다.</strong> 개발 전달 화면에 레이어·컴포넌트·변수 이름이 그대로 뜨고, 변수 이름은 코드 토큰(<code>--action-primary</code>)으로 바뀐다.</li>
-<li><strong>찾을 때 쓴다.</strong> Assets 검색, Ctrl+F, 레이어 패널 모두 이름으로 찾는다.</li>
-<li><strong>Figma 공식 안내:</strong> 지금 보이는 모양이 아니라 <em>무엇인지</em>로 짓는다. 정답 규칙은 없고, 팀이 먼저 정해 그대로 지킨다. 이 루틴과 ‘하루_연습’ 파일은 아래 규칙을 쓴다.</li>
-</ul>
-<h3 class="fp-h3">표기법 — 딱 3가지</h3>
-<table class="ftab">
-<thead>
-<tr>
-<th>표기</th>
-<th>모양</th>
-<th>어디에 쓰나</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>한국어</strong></td>
-<td><code>추가-오류</code></td>
-<td>페이지 · 화면 Frame · Flow · Section</td>
-</tr>
-<tr>
-<td><strong>영어 소문자</strong></td>
-<td><code>button</code> · <code>todo/row</code> · <code>state=default</code> · <code>header</code> · <code>more-button</code> · <code>text/primary</code></td>
-<td>그 밖의 영어 이름 전부 (컴포넌트 · Variant · 레이어 · 변수 · 스타일)</td>
-</tr>
-<tr>
-<td><strong>첫 글자 대문자</strong></td>
-<td><code>Primitives</code> · <code>Semantic</code></td>
-<td>변수 컬렉션 이름만</td>
-</tr>
-</tbody>
-</table>
-<div class="note">
-<p><strong>한 줄 기억</strong> · 큰 단위(페이지·화면·흐름)는 한국어 · 영어는 모두 소문자(컬렉션 이름만 예외) · / = 폴더(컴포넌트·변수·스타일), - = 두 단어 잇기</p>
-</div>
-<h3 class="fp-h3">대상별 정리</h3>
-<table class="ftab">
-<thead>
-<tr>
-<th>대상 (Figma에서 보이는 곳)</th>
-<th>예</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>페이지 (왼쪽 위 Pages)</td>
-<td>표지 · 기초 · 컴포넌트 · 화면 · 프로토타입 · 전달 · 주간 기록</td>
-</tr>
-<tr>
-<td>화면 Frame (맨 위 Frame)</td>
-<td>목록 · 추가-오류 · 일정 변경-완료</td>
-</tr>
-<tr>
-<td>화면 안의 칸</td>
-<td>header · content · footer (탭이 있으면 tab-bar)</td>
-</tr>
-<tr>
-<td>Main component (◆)</td>
-<td>button · input · checkbox · todo/row · icon/check</td>
-</tr>
-<tr>
-<td>Variant (오른쪽 패널)</td>
-<td>type=primary · secondary / state=default · hover · pressed · disabled (값이 true/false면 토글로 보인다)</td>
-</tr>
-<tr>
-<td>컴포넌트 속성</td>
-<td>label · show icon · icon</td>
-</tr>
-<tr>
-<td>목록 한 줄 안쪽 레이어</td>
-<td>leading · content(headline · supporting-text) · trailing(reorder)</td>
-</tr>
-<tr>
-<td>변수 컬렉션 / 변수</td>
-<td>Primitives · Semantic / green/600 · space/16 · text/primary · action/primary-hover</td>
-</tr>
-<tr>
-<td>스타일</td>
-<td>heading/large · body/regular · caption · shadow/small</td>
-</tr>
-<tr>
-<td>Instance (◇)</td>
-<td>이름은 바꾸지 않아도 된다. 바꿔도 원본 연결은 안전하다</td>
-</tr>
-</tbody>
-</table>
-<h3 class="fp-h3">이름 상식 (루틴 곳곳에 다시 나온다)</h3>
-<table class="ftab">
-<thead>
-<tr>
-<th>주제</th>
-<th>핵심</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>위계와 진하기</td>
-<td>중요도 순서는 primary · secondary · tertiary, 진하기는 subtle · default · strong. 그래서 테두리는 border/strong이지 border/primary가 아니다</td>
-</tr>
-<tr>
-<td>변수 층</td>
-<td>Primitive(실제 값) → Semantic(역할) → Component(한 부품 전용). 건너뛰지 않는다. ‘하루’는 2층</td>
-</tr>
-<tr>
-<td>on-</td>
-<td>text/on-action = 초록 버튼 위 글자. 배경과 짝으로 짓는다</td>
-</tr>
-<tr>
-<td>상태 색</td>
-<td>status/error · warning · success · info</td>
-</tr>
-<tr>
-<td>색 단계</td>
-<td>50~900, 클수록 진함, 500 기준, 중간 숫자는 비워 둔다</td>
-</tr>
-<tr>
-<td>간격</td>
-<td>space/4 … space/32 (4의 배수, 이름 = 값), radius/999 = 알약 모양</td>
-</tr>
-<tr>
-<td>글자 단계</td>
-<td>display &gt; headline &gt; title &gt; body &gt; label (Material 3). 굵기 regular 400 · medium 500 · semibold 600 · bold 700</td>
-</tr>
-<tr>
-<td>상태 순서</td>
-<td>default → hover → pressed → focused → disabled (+ selected · loading)</td>
-</tr>
-<tr>
-<td>버튼 위계</td>
-<td>primary는 화면마다 하나, 되돌리기 어려운 행동은 danger</td>
-</tr>
-<tr>
-<td>화면 너비</td>
-<td>mobile 390 · tablet 768 · desktop 1280 (바뀌는 지점 = breakpoint)</td>
-</tr>
-<tr>
-<td>움직임</td>
-<td>duration/fast · normal · slow, easing/enter(ease-out) · exit(ease-in)</td>
-</tr>
-</tbody>
-</table>
-<h3 class="fp-h3">실무 팁</h3>
-<ol>
-<li><strong>생김새 말고 역할로.</strong> <code>button/blue</code> ✗ → <code>button</code> + <code>type=primary</code> ✓ · <code>text/gray-900</code> ✗ → <code>text/primary</code> ✓. 색을 바꾸면 생김새 이름은 거짓말이 된다.</li>
-<li><strong>같은 뜻은 같은 단어 하나로.</strong> 상태 단어는 위 ‘상태 순서’ 목록에서만 고른다.</li>
-<li><strong>폴더는 2단계까지.</strong> <code>todo/row</code> ✓ · <code>app/todo/list/row</code> ✗.</li>
-<li><strong>아이콘만 예외로 모양 이름.</strong> icon/check · icon/more · icon/close.</li>
-<li><strong>한 번에 바꾸기.</strong> 여러 레이어 선택 → Ctrl+R(일괄 이름 바꾸기, 번호 붙이기도 된다).</li>
-<li><strong>레이어를 컴포넌트로 만들 때(Ctrl+Alt+K) 이름도 바꾼다.</strong> todo-card(레이어) → todo/card(컴포넌트).</li>
-</ol>
-<h3 class="fp-h3">자주 하는 실수 → 고치기</h3>
-<table class="ftab">
-<thead>
-<tr>
-<th>실수</th>
-<th>고친 이름</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Frame 12 · Rectangle 3이 남음</td>
-<td>Ctrl+F로 찾아 역할 이름으로</td>
-</tr>
-<tr>
-<td>한 세트 안에서 대소문자가 섞임 (Default · disabled)</td>
-<td>default · disabled</td>
-</tr>
-<tr>
-<td>레이어에 대문자·띄어쓰기 (More Button)</td>
-<td>more-button</td>
-</tr>
-<tr>
-<td>컴포넌트에 하이픈 (reader-button)</td>
-<td>button/reader</td>
-</tr>
-<tr>
-<td>테두리에 위계 이름 (border/primary)</td>
-<td>border/strong</td>
-</tr>
-<tr>
-<td>변수에 색 이름 (text/gray)</td>
-<td>text/secondary</td>
-</tr>
-</tbody>
-</table><div class="note"><b>Figma에서 넣는 곳</b> · 누르는 영역·높이: 프레임의 W·H를 Fixed로 · 여백: Auto layout의 Padding · 간격: Auto layout의 Gap · 글자 크기·줄 간격: 텍스트 선택 후 Typography의 Size·Line height(px로) · 대비: 두 색을 대비 계산기(예: WebAIM Contrast Checker)나 Figma 대비 플러그인에 넣어 숫자 확인</div>
+''' + naming_html() + '''<div class="note"><b>Figma에서 넣는 곳</b> · 누르는 영역·높이: 프레임의 W·H를 Fixed로 · 여백: Auto layout의 Padding · 간격: Auto layout의 Gap · 글자 크기·줄 간격: 텍스트 선택 후 Typography의 Size·Line height(px로) · 대비: 두 색을 대비 계산기(예: WebAIM Contrast Checker)나 Figma 대비 플러그인에 넣어 숫자 확인</div>
 </section>'''
     tags = ''.join(f'<div class="kd"><span class="tag" style="color:{KIND[k][0]};background:{KIND[k][1]}">{E(k)}</span><span>{E(v)}</span></div>' for k, v in KINDS)
     rules = f'''<section class="fp"><div class="fp-k">규칙</div><h1 class="fp-t">시간표와 진행 규칙</h1>
