@@ -65,7 +65,7 @@ python3 md_gen.py                                 # out_md/ → 프로젝트 문
 ## 사용자 Figma 파일 (하루v02) — 지시는 이 파일에 실제로 있는 것만 쓴다
 - 링크: https://www.figma.com/design/XiPq1RgXThHHkxW9p1NASr/ (fileKey XiPq1RgXThHHkxW9p1NASr)
 - 점검 때마다 Figma 연결로 읽는다: create_session → get_metadata(페이지 목록) → 페이지마다 get_metadata → 필요하면 get_variable_defs(화면 Frame id).
-- 11/23 08:20 ⓐ~ⓕ(가이드 v2 이름 바로잡기)를 했다면: 컬렉션 Size(옛 Primitives, space/ · radius/ · stroke/ + 아직 color 그룹) · Color(옛 Semantic) · Color Primitives(새로, white/1000 · gray · brown · green · red), Color 변수 background/default/tertiary · secondary · background/neutral/default · border/default/default · border/danger/default · background/danger/default, 글자 스타일 subheading · body/base, button 속성 variant(primary · neutral · danger) · state 소문자, 레이어 notification · button-group · input-field · item-1~3. 11/28 13:00에 남은 정리(Size의 color 그룹 · Color 안 padding/gap/radius 숫자 · 다른 파일 변수 다시 연결 · button-danger 분리 · subtle 만들기)
+- 11/23 08:20 ⓐ~ⓕ(가이드 v2 이름 바로잡기)를 했다면: 컬렉션 Color Primitives(옛 Primitives — 원래 색 14개만 있었음, 이름을 green/300~500 · brown/200~800 · white/1000 · gray/300 · gray/500 · red/500으로) · Color(옛 Segmantic) · Size(원래 따로 있었음, space/ · radius/ · stroke/로 이름만), Color 변수 이름 background/default/tertiary · secondary · background/neutral/default · border/default/default · border/danger/default + 새 background/danger/default(→ red/500), 글자 스타일 subheading · body/base, button 속성 variant(primary · neutral · danger) · state 소문자, 레이어 notification · button-group · input-field · item-1~3. 11/28 13:00에 남은 정리(Color Primitives에 color 그룹이 남았으면 정리 · Color 안 padding/gap/radius 숫자 · 다른 파일 변수 다시 연결 · button-danger 분리 · subtle 만들기)
 - 2026-11-22 19:50 확인한 상태(ⓐ~ⓕ 전) (17:45와 같음 — 11/22 ⑧ 목록 · 목록-삭제됨과 Prototype 연결 · Flow는 아직 없음)
   - 페이지: 점검(비어 있음) · 컴포넌트 · 화면 · 프로토타입(비어 있음)
   - 컴포넌트 페이지: button(속성 Type · State · Shape · Label, 값이 Primary · Secondary · Tertiary · danger 처럼 대문자 섞임, danger는 State=Disabled 하나), dialog, toast, 이름 없는 Frame 1(사각형 9개)과 참고 이미지 8장. checkbox · todo/row · input 원본은 이 파일에 없음
@@ -77,7 +77,7 @@ python3 md_gen.py                                 # out_md/ → 프로젝트 문
 - 이 목록에 없는 것을 쓰게 하려면 ‘먼저 만든다’ 줄을 넣는다. 파일 상태가 바뀌면 이 목록을 고친다.
 
 ## 이름은 naming_guide.md(가이드 v2) 기준으로 (채용이 최종 목표)
-- 유일한 기준: `routine-src/naming_guide.md` = 프로젝트 문서 `claude/Figma_이름짓기_가이드.md`(v2, 11/23 개정). 근거: Figma 공식 SDS(`figma/sds` tokens.json · styles.json · Button.figma.ts) → Figma 도움말 → Material 3. Atlassian · Primer도 같은 ‘속성/역할/변형’ 순서.
+- 유일한 기준: `routine-src/naming_guide.md` = 프로젝트 문서 `claude/Figma_이름짓기_가이드.md`(v2, 11/23 확정). 문서 맨 위 ‘기준 고정 규칙’을 지킨다: SDS에 있으면 SDS 그대로, 다른 예제·사용자 질문 때문에 기준을 바꾸지 않는다, 고치는 경우는 SDS와 다르게 적은 것을 찾았을 때 · SDS에 없는 것을 새로 정할 때뿐(근거 파일 이름과 함께). 근거: Figma 공식 SDS(`figma/sds` tokens.json · styles.json · Button.figma.ts) → Figma 도움말 → Material 3. Atlassian · Primer도 같은 ‘속성/역할/변형’ 순서.
 - 루틴 지시에 나오는 이름(변수 · 스타일 · 컴포넌트 · 속성 · 레이어)은 모두 가이드 v2 이름으로 쓴다. 가이드에 없는 것을 새로 만들게 할 때는 가이드 규칙(3장 속성/역할/변형, 4장 값÷4×100, 9장 레이어)으로 이름을 지어 블록에 적는다.
 - 파일 속 이름이 가이드와 다르면 그 이름을 처음 쓰는 블록 맨 앞에 ‘이름 바로잡기’ 카드(지금 → 새 이름 · 어디서 바꾸나 · 왜 한 줄)를 넣는다. 가이드 10장 표가 하루v02 바꾸기 목록이다.
 - 변수를 다른 컬렉션으로 옮기는 기능은 Figma에 없다(복사만 됨 → 다시 연결 필요). 그래서 옮기기 대신 이름 바꾸기 · 새로 만들기 · 다시 연결 순서로 쓴다.

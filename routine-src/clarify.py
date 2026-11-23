@@ -316,7 +316,7 @@ import re as _re
 MOVED_1123 = ('먼저 할 것 — 11/23 08:20에서 옮김 (가이드 v2 이름 바로잡기에 시간을 써서 넘어온 일, 약 50분. 순서와 하는 법은 그 전날 밤 점검이 Figma 파일을 읽고 이 블록에 자세히 쓴다)\n'
     '| 할 일 | 내용 |\n'
     '| notification · dialog 규칙 카드 | 11/23 08:20의 button-guide를 복제해 notification-guide · dialog-guide를 만든다(11/23 ‘카드에 넣을 내용’ 표의 notification · dialog 줄) |\n'
-    '| Size에 남은 color 그룹 지우기 | 화면에 color/… 이 직접 연결된 곳을 Color 변수로 바꾼 뒤 지운다 |\n'
+    '| Color Primitives에 color 그룹이 남았으면 정리 | 11/23 ⓒ에서 그룹을 끌어내지 못했으면: 변수마다 이름을 green/300처럼 다시 입력해 color 밖으로 옮기고 빈 color 그룹을 지운다 |\n'
     '| Color 안 숫자 변수 정리 | padding/ · gap/ · radius/control을 쓰는 Frame을 Size 변수(space/ · radius/)로 다시 연결하고 지운다 |\n'
     '| 다른 파일 변수 다시 연결 | text/primary · action/… · text/on-… · shadow/strong을 가이드 v2 Color 변수 · drop-shadow/100 효과 스타일로 |\n'
     '| button-danger 분리 · subtle 만들기 | 삭제 버튼을 button-danger 컴포넌트로, 글자만 있는 ‘되돌리기’ 버튼을 variant=subtle로 |\n'
