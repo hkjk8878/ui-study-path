@@ -461,7 +461,7 @@ OVERRIDE = {
  ],
  ('11-23','08:20'): [
     '먼저 하루v02 파일 이름을 ‘Figma 이름 짓기 가이드 v2’(Figma 공식 예제 SDS 기준)로 바꾼다(0단계). 그다음 ‘컴포넌트’ 페이지의 button과 화면에 쓰는 todo/row 옆에 사용 규칙 카드를 붙이고, Description과 변경 기록을 단다.',
-    '이미 있는 것(하루v02 파일, 11/22 확인): ‘컴포넌트’ 페이지 button 세트 · dialog · toast, ‘화면’ 페이지 상세 · 수정-기본 · 수정-입력됨 · 상세-수정됨 · 삭제-확인창 · 목록 · 목록-삭제됨, 컬렉션 Primitives(색 14개) · Segmantic · Size\n새로 만드는 것: 컬렉션 Color Primitives, 규칙 카드 2개(button-guide · todo-row-guide), 변경 기록 글 1개 (notification · dialog 카드는 11/28 13:00으로 옮김)',
+    '이미 있는 것(하루v02 파일, 11/22 확인): ‘컴포넌트’ 페이지 button 세트 · dialog · toast, ‘화면’ 페이지 상세 · 수정-기본 · 수정-입력됨 · 상세-수정됨 · 삭제-확인창 · 목록 · 목록-삭제됨, 컬렉션 Primitives(색 14개) · Segmantic · Size\n이름만 바꾸는 것: 컬렉션 Primitives → Color Primitives · Segmantic → Color (0단계)\n새로 만드는 것: 규칙 카드 2개(button-guide · todo-row-guide), 변경 기록 글 1개 (notification · dialog 카드는 11/28 13:00으로 옮김)',
     '왜 이름부터: 개발자는 Figma 이름을 그대로 코드 이름으로 쓴다. 가이드 v2는 Figma가 직접 공개한 SDS의 이름(background/brand/default · space/400 · variant=primary)을 따른다. Atlassian · GitHub Primer도 같은 ‘속성/역할/변형’ 순서다. 이름이 실무 방식이면 포트폴리오 · 면접에서 그대로 설명할 수 있다.',
     '0단계 이름 바로잡기 (40분) — 변수 · 스타일 · 레이어 이름을 바꾸면 연결된 곳은 그대로 따라온다. 새로 만든 변수만 다시 연결한다\n' + T(['순서', '만드는 것', '하는 일 (시간)'],
       ['ⓐ', '컬렉션 이름', '[‘컴포넌트’ 페이지] 맨 왼쪽 세로 아이콘 줄 Variables 아이콘 → 변수 창 ¶ 왼쪽 컬렉션 목록의 Primitives 이름 더블클릭 → Color Primitives → Enter (색 값만 들어 있는 컬렉션) ¶ Semantic(아직 Segmantic이면 그것) 이름 더블클릭 → Color → Enter ¶ Size는 그대로 둔다 ¶ 컬렉션 목록에 Color Primitives · Color · Size 3개가 보이면 성공 (2분)'],
