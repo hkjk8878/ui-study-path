@@ -49,7 +49,8 @@ for name,ns in parts:
     for n in ns: o+=week_md(W[n])
     if name.startswith('1_'):
         o=[open('overview.md').read().rstrip(),'','---','',open('naming_guide.md').read().replace('\n# ','\n## ',1),'']+o[4:]
-    open(f'{OUT}/UIUX_24주_루틴_20261117_{name}.md','w').write('\n'.join(o))
+    import re as _re
+    open(f'{OUT}/UIUX_24주_루틴_20261117_{name}.md','w').write(_re.sub(r'그림:[a-z_]+', '[화면 그림 — 앱 · PDF에서 보기]', '\n'.join(o)))
     allmd+=o[4:]
 open('UIUX_24주_루틴_20261109.md','w').write('\n'.join(allmd))
 print('ok')
