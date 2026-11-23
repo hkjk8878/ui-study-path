@@ -21,7 +21,7 @@ python3 validate.py          # 블록 데이터 생성(오류 없으면 total wo
 | 5 | 순서대로 하면 결과가 나오나 | 앞 단계 결과가 다음 단계에 필요한 순서인가, 빠진 단계 없나, 전날 만든 것을 이어 받나, 날짜 참조(“11/20에”)가 맞나 |
 | 6 | 무엇을 · 어디서 · 끝 기준 | 할 일 한 줄 → 순서표(순서 · 어디서 · 하는 일) → 용어표 → 확인. 끝났는지 아는 기준이 있나 |
 | 7 | 기입표가 그 과제에 맞나 | 앱 ‘결과물 기입표’가 그 블록 과제에서 실제로 적을 것인가. 할 일 속 채울 표는 forms.py가 기입표로 옮긴다. 일반 표(‘제작 기록’ · ‘글 작성 기록’ · ‘강의 메모’ 등)가 붙어 있으면 forms2.FORMS에 그 과제 전용 표(칸 이름 · 예시 · 미리 적힌 줄)를 만든다. 매주 같은 형식이 필요한 것(주간 기록, AI 활용 기록)만 같은 표를 쓴다 |
-| 8 | 이름 규칙(실무) | `naming_guide.md`(Figma 이름 짓기 가이드 v2, SDS 기준)대로인가: 컬렉션 Color Primitives · Color · Size, 색 `속성/역할/변형`(background/brand/default · text/brand/on-brand · border/danger/default), 크기 `space/100`=4px(값÷4×100) · radius/200 · stroke/border, 글자 스타일 heading · subheading · body/base · body/small, 컴포넌트 button · button-danger · input-field · notification · list-item · button-group, 속성 variant=primary · neutral · subtle / state=default…, 레이어 영어 소문자-하이픈, 페이지 · 화면 Frame · Section · Flow만 한국어 |
+| 8 | 이름 규칙(실무) | `naming_guide.md`(Figma 이름 짓기 가이드 v2, 국내 실무 → SDS 기준)대로인가: 컬렉션 Color Primitives · Color · Size, 색 `속성/역할/변형`(background/brand/default · text/brand/on-brand · border/danger/default), 크기 `space/100`=4px(값÷4×100) · radius/200 · stroke/border, 글자 스타일 heading/large · heading/medium · body/medium · body/small · label/medium(역할/크기, KRDS 방식), 컴포넌트 button · button-danger · input-field · notification · list-item · button-group, 속성 variant=primary · neutral · subtle / state=default…, 레이어 영어 소문자-하이픈, 페이지 · 화면 Frame · Section · Flow만 한국어. **이름 줄마다 값과 쓰는 곳을 같이 적었나**(글자 = 크기/줄 높이/굵기/쓰는 곳, 색 = hex/쓰는 곳, 크기 = px/쓰는 곳) |
 | 9 | 시간 배분 | 순서표의 분 합계가 블록 시간 안에 드나. 강의 길이가 블록보다 길면 주말 15:00–16:00 예비로 넘긴다고 적는다(강의는 줄이지 않는다) |
 | 10 | 읽기 쉬운가 | 필요 없는 문장 · 번역투 · 같은 블록 안 중복 삭제. 용어는 원래 이름 + [뜻]. 필요한 설명은 다른 날과 겹쳐도 그날 블록에 다시 쓴다 |
 | 11 | 학습 목표 | 목표 문장과 실제 할 일이 맞나 |
@@ -77,7 +77,7 @@ python3 md_gen.py                                 # out_md/ → 프로젝트 문
 - 이 목록에 없는 것을 쓰게 하려면 ‘먼저 만든다’ 줄을 넣는다. 파일 상태가 바뀌면 이 목록을 고친다.
 
 ## 이름은 naming_guide.md(가이드 v2) 기준으로 (채용이 최종 목표)
-- 유일한 기준: `routine-src/naming_guide.md` = 프로젝트 문서 `claude/Figma_이름짓기_가이드.md`(v2, 11/23 확정). 문서 맨 위 ‘기준 고정 규칙’을 지킨다: SDS에 있으면 SDS 그대로, 다른 예제·사용자 질문 때문에 기준을 바꾸지 않는다, 고치는 경우는 SDS와 다르게 적은 것을 찾았을 때 · SDS에 없는 것을 새로 정할 때뿐(근거 파일 이름과 함께). 근거: Figma 공식 SDS(`figma/sds` tokens.json · styles.json · Button.figma.ts) → Figma 도움말 → Material 3. Atlassian · Primer도 같은 ‘속성/역할/변형’ 순서.
+- 유일한 기준: `routine-src/naming_guide.md` = 프로젝트 문서 `claude/Figma_이름짓기_가이드.md`(v2, 11/23 확정). 문서 맨 위 ‘기준 고정 규칙’을 지킨다: 목표는 국내 채용. 기준 순서 ① 국내 실무 공개 디자인 시스템(정부 KRDS · 토스 TDS · 원티드 몽타주)의 공통 방식 → ② Figma 공식 SDS(`figma/sds` tokens.json · styles.json · Button.figma.ts) → ③ Figma 도움말 → ④ Material 3. 다른 예제·사용자 질문 때문에 기준을 바꾸지 않는다, 고치는 경우는 근거와 다르게 적은 것을 찾았을 때 · 아직 없는 것을 새로 정할 때뿐(근거 자료 이름과 함께). 이름을 적는 곳에는 값과 쓰는 곳을 반드시 같이 적는다.
 - 루틴 지시에 나오는 이름(변수 · 스타일 · 컴포넌트 · 속성 · 레이어)은 모두 가이드 v2 이름으로 쓴다. 가이드에 없는 것을 새로 만들게 할 때는 가이드 규칙(3장 속성/역할/변형, 4장 값÷4×100, 9장 레이어)으로 이름을 지어 블록에 적는다.
 - 파일 속 이름이 가이드와 다르면 그 이름을 처음 쓰는 블록 맨 앞에 ‘이름 바로잡기’ 카드(지금 → 새 이름 · 어디서 바꾸나 · 왜 한 줄)를 넣는다. 가이드 10장 표가 하루v02 바꾸기 목록이다.
 - 변수를 다른 컬렉션으로 옮기는 기능은 Figma에 없다(복사만 됨 → 다시 연결 필요). 그래서 옮기기 대신 이름 바꾸기 · 새로 만들기 · 다시 연결 순서로 쓴다.

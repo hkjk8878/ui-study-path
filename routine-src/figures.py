@@ -1015,7 +1015,7 @@ def usage_rule():
         _btn(s, 60, Y+86, 110, a2, None, G)
         s.text(60, Y+152, note, 10, 600, SUB)
     s.rect(36, 174, 368, 356, 'none', BLUE, 4, 1, '4,3')
-    for y, t in [(46, '← 제목 글자 (subheading)'), (112, '← rule-table = rule-row 4개 (세로)'), (128, '   rule-row = 칸 이름(W 96) + 내용(W Fill)'),
+    for y, t in [(46, '← 제목 글자 (heading/medium)'), (112, '← rule-table = rule-row 4개 (세로)'), (128, '   rule-row = 칸 이름(W 96) + 내용(W Fill)'),
                  (196, '← examples (세로)'), (214, '   do = 표시 글자 · button 2개 · 설명'), (382, '← dont (Stroke border/danger/default)')]:
         s.text(432, y, t, 10, 600, BLUE if t.startswith('←') else SUB)
     s.text(432, 480, '카드 바깥: button-guide', 10.5, 700, INK)

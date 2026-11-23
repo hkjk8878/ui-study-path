@@ -1,14 +1,17 @@
-# Figma 이름 짓기 가이드 v2 — 근거 기준판 (2026-11-23 확정)
+# Figma 이름 짓기 가이드 v2 — 근거 기준판 (2026-11-23 확정 · 글자 스타일 국내 기준 반영)
 
 > 이 문서가 ‘하루’ 파일(하루v02)과 루틴의 **유일한 이름 기준**이다. 앞선 대화·문서의 이름 규칙과 다르면 이 문서를 따른다.
-> 기준 순서: ① **Figma 공식 예제 디자인 시스템 SDS**(Simple Design System, Figma가 직접 공개한 파일과 코드) → ② **Figma 공식 도움말** → ③ **Material 3**(Google, 컴포넌트 토큰과 부품 구조 이름).
-> SDS 값은 공개 저장소 `figma/sds`의 `tokens.json`, `styles.json`, `button.css`, Code Connect 파일을 직접 열어 확인했다. ‘속성/역할/변형’ 순서는 Atlassian(`color.background.danger.bold.hovered`) · GitHub Primer(`bgColor-danger-emphasis`)도 같은 방식이다.
+> **목표: 국내 채용(신입·주니어 UI/UX) 포트폴리오에서 실무 방식으로 설명할 수 있는 이름.**
+> 기준 순서: ① **국내 실무 공개 디자인 시스템의 공통 방식**(정부 KRDS · 토스 TDS · 원티드 몽타주) → ② **Figma 공식 예제 디자인 시스템 SDS**(국내 공통 방식이 없는 것) → ③ **Figma 공식 도움말** → ④ **Material 3**.
+> 확인한 국내 사실: 글자 스타일은 세 곳 모두 **‘역할 + 단계(크기 또는 숫자)’, 굵기는 따로** 짓는다(KRDS `heading-large` · `body-medium` · `body-small`, 원티드 `title1` · `label1` · `caption1`, 토스 `t1`~`t7` + 굵기). 색은 KRDS도 **‘속성 → 역할’** 순서(`color-background-primary`)라 SDS `background/brand/default`와 같은 방식이다.
+> SDS 값은 공개 저장소 `figma/sds`의 `tokens.json`, `styles.json`, `button.css`, Code Connect 파일을 직접 열어 확인했다.
 >
 > **기준 고정 규칙**
-> 1. 이름은 **SDS에 있으면 SDS 그대로** 쓴다. SDS에 없을 때만 ② Figma 도움말 → ③ Material 3 순서로 찾는다.
-> 2. 다른 예제·글에서 다른 이름을 봐도 **이 문서를 바꾸지 않는다.** (Figma 예제끼리도 이름이 다르다 → 하나를 기준으로 정한 것이 이 문서다)
-> 3. 이 문서를 고치는 경우는 두 가지뿐이다: **SDS 실제 파일과 다르게 적은 것을 찾았을 때**, **SDS에 없는 것을 새로 정할 때.** 고칠 때는 근거 파일 이름을 같이 적는다.
-> 4. 예외는 대소문자 하나다 (0장 규칙 4).
+> 1. 국내 세 시스템에 **공통 방식이 있으면 그 방식**, 없으면 **SDS 그대로**, SDS에도 없으면 Figma 도움말 → Material 3 순서로 찾는다.
+> 2. 다른 예제·강의·글에서 다른 이름을 봐도 **이 문서를 바꾸지 않는다.** (예제끼리도 이름이 다르다 → 하나를 기준으로 정한 것이 이 문서다)
+> 3. 이 문서를 고치는 경우는 두 가지뿐이다: **근거 자료와 다르게 적은 것을 찾았을 때**, **아직 없는 것을 새로 정할 때.** 고칠 때는 근거 자료 이름을 같이 적는다.
+> 4. **이름을 적는 모든 곳(이 문서 · 루틴 블록)에는 값과 쓰는 곳을 함께 적는다.** 글자 스타일 = 크기 / 줄 높이 / 굵기 / 쓰는 곳, 색 = hex / 쓰는 곳, 크기 = px / 쓰는 곳.
+> 5. 예외는 대소문자 하나다 (0장 규칙 4).
 
 ---
 
@@ -161,18 +164,20 @@
 
 ## 6. 스타일
 
-### 텍스트 스타일 — SDS 이름 순서
-| 이름 | 크기 / 줄 높이 | 굵기 | SDS 이름 | 쓰는 곳 |
-|---|---|---|---|---|
-| `heading` | 24 / 32 | regular | Heading | 화면 큰 제목 |
-| `subheading` | 20 / 28 | regular | Subheading | 카드 제목 |
-| `body/base` | 16 / 24 | regular | Body Base | 본문, 할 일 제목 |
-| `body/strong` | 16 / 24 | bold | Body Strong | 강조 본문 |
-| `body/small` | 14 / 20 | regular | Body Small | 보조 글자 (09:00) |
-| `single-line/body-base` | 16 / 16 | regular | Single Line/Body Base | 버튼 · 탭 글자 (한 줄만 쓰는 곳) |
+### 텍스트 스타일 — 국내 공통 방식: `역할/크기` (KRDS와 같은 방식)
+| 이름 | 크기 / 줄 높이 | 굵기 | 쓰는 곳 (예) |
+|---|---|---|---|
+| `heading/large` | 24 / 32 | Bold | 메인 화면 맨 위 큰 제목 (‘오늘’, ‘11월’) |
+| `heading/medium` | 20 / 28 | Bold | 상세 · 수정 화면 header 제목, 카드 제목, 확인창 질문(‘할 일을 삭제할까요?’), 규칙 카드 제목 |
+| `body/medium` | 16 / 24 | Regular | 본문, 할 일 제목, 입력칸 글자, 규칙 카드 내용, 확인창 설명 |
+| `body/medium-bold` | 16 / 24 | Bold | 본문 안 강조 (필요할 때만 만든다) |
+| `body/small` | 14 / 20 | Regular | 보조 글자 (09:00, 날짜, 개수, 안내 · 오류 문구) |
+| `label/medium` | 16 / 16 | Bold | 버튼 · 탭 글자 (한 줄만 쓰는 곳) |
 
-- 보조 글자는 13 → **14**: SDS Body Small이 14이고, Galmuri14 픽셀 폰트의 기준 크기와도 같다. 줄 높이 20은 4의 배수.
-- 지금 이름 → 새 이름: `heading/large` → `heading`, `heading/medium` → `subheading`, `body/regular` → `body/base`, `caption` → `body/small`, `button` → `single-line/body-base`.
+- 역할 이름: `heading` 제목 · `body` 본문 · `label` 버튼 · 탭처럼 누르는 것의 글자 (KRDS · 원티드 공통). 크기 이름: `large` · `medium` · `small`.
+- 굵기는 이름 끝에 `-bold`로만 붙인다. 글꼴에 Bold가 없으면 Regular로 두고 이름은 그대로 쓴다.
+- 보조 글자 13 → **14**: 줄 높이 20이 4의 배수이고, KRDS도 13은 캡션(가장 작은 글자)에만 쓴다.
+- 지금 이름 → 새 이름: `heading/large` 그대로, `heading/medium` 그대로(11/22에 `subheading`으로 만들었으면 → `heading/medium`), `body/regular` · `body/base` → `body/medium`, `body/strong` → `body/medium-bold`, `caption` → `body/small`, `button` → `label/medium`.
 
 ### Effect 스타일 — SDS 이름
 | 이름 | 쓰는 곳 |
@@ -242,7 +247,7 @@ Figma 도움말: 구조상 뜻이 있는 레이어는 `card-thumbnail`, `user-av
 | 버튼 안 | `icon-start` · `label` · `icon-end` | SDS Button 속성 이름 |
 | 입력칸 안 | `label` · `input` · `description` · `error` | SDS Input Field 속성 이름 |
 | 할 일 한 줄 안 | `leading` · `content`(`headline` · `supporting-text`) · `trailing` | Material 3 List item 구조 |
-| 확인창 안 | `heading` · `body` · `button-group` | SDS Dialog 속성 `Heading` · `Body`, SDS Button Group 컴포넌트 |
+| 확인창 안 | `heading`(질문 문장) · `body`(설명 문장) · `button-group` | SDS Dialog 속성 `Heading` · `Body`, SDS Button Group 컴포넌트 (레이어 이름이다. 글자 스타일은 각각 heading/medium · body/medium) |
 | 알림(notification) 안 | `icon` · `title` · `body` | SDS Notification 속성 `Icon` · `Title` · `Body` |
 | 그 밖 | 무엇인지 + 하이픈: `add-bar` · `date-text` · `card-thumbnail` | Figma 도움말 예시 형식 |
 
@@ -268,12 +273,16 @@ Figma 도움말: 구조상 뜻이 있는 레이어는 `card-thumbnail`, `user-av
 | shadow/strong | Effect 스타일 drop-shadow/100 |
 | 컬렉션 Primitives(색만 있음) · Segmantic · Size | Color Primitives · Color · Size(그대로) |
 | spacing/… · radius/sm… (Primitives) | Size 컬렉션 space/… · radius/… |
+| 글자 스타일 subheading · body/regular · body/base · caption · button | heading/medium · body/medium · body/medium · body/small · label/medium |
 
 Figma에서 변수 이름을 바꾸면 **연결된 레이어는 그대로 따라온다** → 이름만 바꾸면 되고 다시 연결할 필요는 없다(삭제하는 변수만 다시 연결).
 
 ---
 
 ## 근거 자료
+- 정부 KRDS (대한민국 정부 디자인 시스템): https://www.krds.go.kr — 글자 heading-xlarge · heading-large · heading-medium · body-large · body-medium · body-small, 색 color-background-primary
+- 토스 TDS Mobile Paragraph: https://tossmini-docs.toss.im/tds-mobile/components/paragraph/ — typography t1~t7 · st1~st13, fontWeight regular · medium · semibold · bold 따로
+- 원티드 몽타주: https://designcompass.org/2026/03/11/montage-wanteds-new-design-system/ — display1 · title1 · label1 · caption1
 - Figma Simple Design System (Figma 공식): https://github.com/figma/sds — `scripts/tokens/tokens.json`, `scripts/tokens/styles.json`, `src/ui/primitives/Button/button.css`, `src/figma/primitives/*.figma.ts`
 - Figma 도움말 · Components collection: Tips for component management: https://help.figma.com/hc/en-us/articles/39747637290263
 - Figma 도움말 · Update 1: Tokens, variables, and styles: https://help.figma.com/hc/en-us/articles/18490793776023
