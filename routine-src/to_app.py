@@ -114,6 +114,8 @@ for w in WEEKS:
                 rs = rs or {}
                 extra = [f for f in rs.get('output', []) if f['key'] not in [x['key'] for x in out_fields(b.kind, b.out, b.title, getattr(b, 'when', ''))]]
                 rs['output'] = sforms + extra
+            if rs and d.date >= '2026-11-25' and not b.title.startswith('✓'):
+                import style_ko; style_ko.records(rs)
             if rs: blk['recordSections'] = rs
             at = attach(b)
             if at: blk['attachments'] = at
