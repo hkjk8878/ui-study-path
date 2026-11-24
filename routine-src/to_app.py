@@ -92,7 +92,7 @@ for w in WEEKS:
         for bi, b in enumerate(d.blocks):
             cat, lab = CAT[b.kind]
             instr, sforms = FORMS.convert(b, d.date, None)
-            blk = {'id': f'w{w.n:02d}d{di}b{bi}', 'label': b.title, 'time': b.t.replace('-', '–'), 'minutes': minutes(b, weekend),
+            blk = {'id': getattr(b, 'bid', None) or f'w{w.n:02d}d{di}b{bi}', 'label': b.title, 'time': b.t.replace('-', '–'), 'minutes': minutes(b, weekend),
                    'category': cat, 'categoryLabel': lab, 'instructions': instr, 'output': b.out,
                    'resourceKeys': list(b.res), 'scheduleHtml': sched(b, weekend, instr), 'acceptance': b.chk}
             rs = records(b)
