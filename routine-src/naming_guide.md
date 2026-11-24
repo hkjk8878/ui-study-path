@@ -132,10 +132,9 @@
 |---|---|---|
 | `shadow/100` | 버튼 · 카드 그림자 (X 0, Y 2, Blur 0, 색 brown/800) | Polaris shadow-100 · SDS drop-shadow/100 · SEED shadow s1 |
 | `shadow/200` | 확인창처럼 더 떠 있는 것 (필요할 때) | 같음 |
-| `shadow/button` | 픽셀 볼록 칸 — 카드 · 탭 · 날짜 칸 (Inner shadow 2개: X 0 · Y 2 · Blur 0 밝은 색 / X 0 · Y −3 · Blur 0 어두운 색) | Polaris shadow-button (11/24 추가 · 하루 픽셀 리디자인) |
-| `shadow/button-primary` | 픽셀 볼록 포인트 버튼 — 추가 · 고른 탭 · 오늘 (같은 구조, 포인트 색의 밝은 · 어두운 단계) | Polaris shadow-button-primary (11/24 추가) |
-| `shadow/inset-100` | 픽셀 움푹 칸 — 입력칸 · 체크칸 (Inner shadow 1개: X 2 · Y 2 · Blur 0 어두운 색) | Polaris shadow-inset-100 (11/24 추가) |
+| `shadow/inset-100` | 안으로 들어간 칸 — 입력칸 · 체크칸 (Inner shadow: X 2 · Y 2 · Blur 0) | inset = 안쪽 그림자를 부르는 공통 말: Polaris shadow-inset-100 · Primer boxShadow-inset · Wikimedia box-shadow-inset · W3C 디자인 토큰 표준(2024) inset 속성 (11/24 추가) |
 
+- 픽셀 입체감(위 밝은 줄 · 아래 어두운 줄)도 `shadow/100` 하나로 만든다: Inner shadow 2개(X 0 · Y 2 · Blur 0 흰색 50% / X 0 · Y −3 · Blur 0 검정 15%). 반투명이라 바탕색이 파랑이든 분홍이든 같은 스타일 하나로 쓴다. 특정 회사 이름(bevel · button-primary 등)은 쓰지 않는다 (11/24 정리).
 - 그림자 · 입체 줄 색은 Semantic 변수로 만들지 않는다(3장). Effect 창의 색 칸에서 **Primitives 색을 바로** 고른다.
 
 ---
