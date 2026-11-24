@@ -65,6 +65,9 @@ python3 md_gen.py                                 # out_md/ → 프로젝트 문
 - 11/24 0시: 인터뷰 · 관찰 · 파일럿은 녹음하지 않고 메모로 기록한다(사용자 결정). 녹음은 상대가 먼저 괜찮다고 할 때만. extra_plan.no_recording이 11/24 이후 블록 글을 바꾼다. 혼자 소리 내어 답해 보는 면접 연습 녹음은 그대로 둔다.
 - verify_past.py의 ‘블록 목록이 달라짐’은 이 조정 커밋에서만 의도된 차이다(오늘 이전 날짜 차이 없음 확인함).
 
+
+- 11/24 사용자 요청: Figma 설정 창(Interaction 창 · 변수 창 · Effect 창 등)을 쓰는 줄은 값만 이어 쓰지 말고 **칸 이름 → 값** 순서로 쓴다. 나쁜 예: ‘After delay · 1ms → Navigate to 목록-삭제됨’. 좋은 예: ‘Trigger 칸 ▾ → After delay ¶ Delay 칸 → 1 ¶ Action 칸 None ▾ → Navigate to ¶ Destination 칸 ▾ → 목록-삭제됨’. 처음 화면에 보이는 값(None · Instant · On click)도 같이 써서 어느 칸인지 찾게 한다.
+
 ## 4. 하지 말 것
 - 오늘까지의 블록 기록 칸(recordSections) · 블록 id · 블록 순서 바꾸기
 - 실제 ‘하루’ 앱 코드 수정, 사용자 개인정보를 AI에 올리기
