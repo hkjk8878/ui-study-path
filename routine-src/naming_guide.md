@@ -132,6 +132,11 @@
 |---|---|---|
 | `shadow/100` | 버튼 · 카드 그림자 (X 0, Y 2, Blur 0, 색 brown/800) | Polaris shadow-100 · SDS drop-shadow/100 · SEED shadow s1 |
 | `shadow/200` | 확인창처럼 더 떠 있는 것 (필요할 때) | 같음 |
+| `shadow/button` | 픽셀 볼록 칸 — 카드 · 탭 · 날짜 칸 (Inner shadow 2개: X 0 · Y 2 · Blur 0 밝은 색 / X 0 · Y −3 · Blur 0 어두운 색) | Polaris shadow-button (11/24 추가 · 하루 픽셀 리디자인) |
+| `shadow/button-primary` | 픽셀 볼록 포인트 버튼 — 추가 · 고른 탭 · 오늘 (같은 구조, 포인트 색의 밝은 · 어두운 단계) | Polaris shadow-button-primary (11/24 추가) |
+| `shadow/inset-100` | 픽셀 움푹 칸 — 입력칸 · 체크칸 (Inner shadow 1개: X 2 · Y 2 · Blur 0 어두운 색) | Polaris shadow-inset-100 (11/24 추가) |
+
+- 그림자 · 입체 줄 색은 Semantic 변수로 만들지 않는다(3장). Effect 창의 색 칸에서 **Primitives 색을 바로** 고른다.
 
 ---
 
