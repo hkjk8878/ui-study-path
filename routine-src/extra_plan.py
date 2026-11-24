@@ -239,20 +239,48 @@ def _extra(b):
     return b
 
 def apply(weeks):
-    # --- 이번 주 (11/24 09시 사용자: 밀린 11/19~11/23 실습은 이미 다 끝냄) ---
-    # 원래 순서로 되돌린다: 화 = 원래 11/24 모션, 수 = 원래 11/25 명세, 일 = 원래대로.
-    # 토 오후 '하루' 정리 · 최종 점검(13:00 · 14:10)만 '예비'로 바꾼다. 밀린 블록 다시 넣기 · '기능 연습' 다시 쓰기(rewrite_week)는 쓰지 않는다.
-    tue = _day(weeks, '2026-11-24'); wed = _day(weeks, '2026-11-25'); sat = _day(weeks, '2026-11-28')
-    for day, keys in ((tue, ('08:40', '10:10')), (wed, ('08:20',))):
-        for b in day.blocks:
-            if b.t[:5] in keys:
-                b.steps = (b.steps[0], NAME_NOTE) + tuple(b.steps[1:])
-    sat.blocks = [sat.blocks[0], reserve_block()]
-    sat.title = 'UI 완성도 훈련 3회 + 예비'
-    thu = _day(weeks, '2026-11-26')
-    for b in thu.blocks:
-        if b.t[:5] == '10:10':
-            b.steps = (b.steps[0], CONSENT) + tuple(b.steps[1:])
+    # --- 이번 주 재배치 ---
+    tue = _day(weeks, '2026-11-24'); wed = _day(weeks, '2026-11-25')
+    sat = _day(weeks, '2026-11-28'); sun = _day(weeks, '2026-11-29'); fri = _day(weeks, '2026-11-27')
+    old_tue = {b.t[:5]: b for b in tue.blocks}
+    old_wed = {b.t[:5]: b for b in wed.blocks}
+    # 화: 밀린 프로토타입 + 강의 2개 + 원래 AI
+    p = _clone(weeks, '2026-11-22', '09:00', '08:00-10:00')
+    p.steps = tuple(x.replace('11/24 모션 블록', '11/25 모션 블록') for x in p.steps)
+    l1 = _clone(weeks, '2026-11-23', '08:00', '10:10-10:30', note=False)
+    l2 = _clone(weeks, '2026-11-20', '08:00', '10:30-11:00', note=False)
+    ai = old_tue['22:00']
+    ai.steps = tuple(s.replace('수요일에 쓸', '토요일에 쓸').replace('수요일 명세', '토요일 명세') for s in ai.steps)
+    tue.blocks = [p, l1, l2, ai]
+    tue.title = '밀린 실습 · 상세·수정·삭제 프로토타입'
+    # 수: 원래 화요일 모션 3블록(시간 같음) + 저녁 강의 2개
+    mo = []
+    for t in ('08:00', '08:40', '10:10'):
+        b = old_tue[t]
+        b.steps = tuple(x.replace('11/22', '11/24') for x in b.steps)
+        b.steps = (b.steps[0], NAME_NOTE) + tuple(b.steps[1:]) if t != '08:00' else b.steps
+        b.note = ('원래 11/24 블록이다. 11/23 일정 조정으로 하루 미뤘다.' + (' ' + b.note if b.note else '')).strip()
+        mo.append(b)
+    e1 = _extra(_clone(weeks, '2026-11-19', '08:00', '22:00-22:15', note=False))
+    e2 = _extra(_clone(weeks, '2026-11-19', '08:15', '22:15-23:00', note=False))
+    wed.blocks = mo + [e1, e2]
+    wed.title = '상태를 알리는 모션 + 밤 강의 2개'
+    # 토: 오후 '하루' 정리 대신 개발 전달 명세(원래 11/25)
+    s0 = sat.blocks[0]
+    h = old_wed['08:00']; h.t = '13:00-13:20'
+    m = old_wed['08:20']; m.t = '13:20-15:00'
+    m.steps = (m.steps[0], NAME_NOTE) + tuple(m.steps[1:])
+    c = old_wed['10:10']; c.t = '15:10-16:00'; _extra(c)
+    for b in (h, m, c):
+        b.note = ('원래 11/25 블록이다. 11/23 일정 조정으로 토요일로 옮겼다.' + (' ' + b.note if b.note else '')).strip()
+    sat.blocks = [s0, h, m, c]
+    sat.title = 'UI 완성도 훈련 3회 + 개발 전달 명세'
+    # 일: 오후 끝에 밀린 반응형 2블록
+    r1 = _extra(_clone(weeks, '2026-11-20', '08:30', '15:10-16:40'))
+    r2 = _extra(_clone(weeks, '2026-11-20', '10:10', '16:40-17:30'))
+    sun.blocks = sun.blocks + [r1, r2]
+    sun.title = sun.title + ' + 밀린 반응형 768·1280'
+    rewrite_week(weeks)
     no_recording(weeks)
     # --- 저녁 · 주말 추가 블록 ---
     ev = evening_plan()
@@ -308,16 +336,6 @@ def no_recording(weeks):
                 b.out, b.chk, b.note = f(b.out), f(b.chk), f(b.note or '')
                 if had and b.t[:5] in ('08:00', '09:00') and any('동의 받기' in s for s in b.steps):
                     b.steps = (b.steps[0], MEMO_NOTE) + tuple(b.steps[1:])
-
-def reserve_block():
-    steps = ['예비 시간이다. 이번 주 블록 중 못 끝낸 것을 먼저 마친다. 다 끝냈으면 다음 주 UI 따라 만들기(당근 홈 목록)를 미리 한다.',
-             ST(['①', '못 끝낸 것', '어디: 앱 › 이번 주 날짜 ¶ 화~금 블록 중 기입표가 비어 있거나 성공 줄까지 못 간 것을 고른다 ¶ 그 블록을 처음부터가 아니라 멈춘 카드부터 이어 한다 (필요한 만큼)'],
-                ['②', '다 끝냈으면', '어디: 앱 › 11/30(월) 22:00 블록 ¶ UI 따라 만들기 2를 미리 한다 → 월요일 저녁은 쉬거나 3회를 한다 (남은 시간)']),
-             '정리\n' + T(['한 것', '남은 것'], ['', ''])]
-    b = B('13:00-15:00', '점검', '예비 · 이번 주 못 끝낸 것', [], steps, out='마친 블록 목록', chk='')
-    b.why = '‘하루’ 정리 · 최종 점검 블록을 뺀 자리다(11/23 결정). 밀린 것이 생기면 주말 예비 시간에서 마친다.'
-    b.when = '11-28 13:00*'
-    return b
 
 FILE_NOTE = '이번 주 실습은 모두 새 파일 ‘기능 연습’ 하나에서 한다. ‘하루’ 파일은 열지 않는다. 화면은 화요일에 이 블록이 직접 만들게 하므로, 적힌 것과 다른 것이 파일에 있을 일이 없다.'
 ST = lambda *rows: T(['순서', '만드는 것', '하는 일 (시간)'], *rows)
