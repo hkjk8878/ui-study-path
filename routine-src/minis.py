@@ -388,3 +388,41 @@ def copy_canvas():
     return (win('캔버스 — ①~④ 다 하면 (나란히)', s1, '캔버스')
             + win('캔버스 — ⑤ 겹쳐 보기 (내 화면 투명도 50%)', over, '캔버스')
             + caption('어긋난 만큼 두 겹으로 보인다. 여백 → 간격 → 글자 순서로 맞춘다'))
+
+# ───────────── 11/25 전체 흐름 한 장 — 다 만든 예시
+@mini('flow_example')
+def flow_example():
+    groups = [
+        ('Discover', '넓게 조사', '#1D4ED8', '#DBEAFE', [('조사', '인터뷰 메모 · 관찰 기록', '나와 팀 → 진짜 문제 찾기', '')]),
+        ('Define', '좁혀서 정하기', '#1D4ED8', '#DBEAFE', [('문제 정의', '문제 정의 1장 · 성공 기준', '팀 · 기획자 → 무엇을 풀지', '')]),
+        ('Develop', '넓게 만들어 보기', '#047857', '#D1FAE5', [
+            ('아이디어', '스케치 · 비교표', '팀 → 어느 안으로 갈지', ''),
+            ('설계(와이어)', '흐름도 · 와이어', '기획자 · 개발자 → 화면 순서', ''),
+            ('화면 완성', '디자인 시안 · 컴포넌트', '개발자 → 만들 화면', ''),
+            ('테스트', '테스트 결과 · 문제 목록', '팀 → 무엇을 고칠지', '')]),
+        ('Deliver', '좁혀서 완성', '#047857', '#D1FAE5', [
+            ('개발 전달', '명세 · 주석', '개발자 → 그대로 구현', ''),
+            ('출시·측정', '바뀐 점 공지 · 측정 결과', '사용자 · 팀 → 잘 됐는지', '')]),
+    ]
+    svg = ('<svg viewBox="0 0 340 70" width="340" height="70" style="display:block;margin:6px auto 2px">'
+           '<polygon points="10,35 90,5 170,35 90,65" fill="#DBEAFE" stroke="#1D4ED8"/>'
+           '<polygon points="170,35 250,5 330,35 250,65" fill="#D1FAE5" stroke="#047857"/>'
+           '<line x1="90" y1="5" x2="90" y2="65" stroke="#1D4ED8" stroke-dasharray="3 3"/>'
+           '<line x1="250" y1="5" x2="250" y2="65" stroke="#047857" stroke-dasharray="3 3"/>'
+           '<text x="50" y="39" font-size="11" text-anchor="middle" fill="#1D4ED8" font-weight="700">Discover</text>'
+           '<text x="130" y="39" font-size="11" text-anchor="middle" fill="#1D4ED8" font-weight="700">Define</text>'
+           '<text x="210" y="39" font-size="11" text-anchor="middle" fill="#047857" font-weight="700">Develop</text>'
+           '<text x="290" y="39" font-size="11" text-anchor="middle" fill="#047857" font-weight="700">Deliver</text></svg>'
+           f'<div style="display:flex;justify-content:space-between;font-size:11px;color:{SUB};padding:0 10px 6px">'
+           '<span>넓힘 → 좁힘</span><span>넓힘 → 좁힘</span></div>')
+    rows = ''
+    for g, gk, fg, bg, stages in groups:
+        rows += (f'<div style="margin:6px 8px 0;padding:3px 8px;border-radius:6px;background:{bg};color:{fg};font-weight:700;font-size:12px">'
+                 f'{E(g)} · {E(gk)}</div>')
+        for name, doc, who, date in stages:
+            rows += (f'<div style="display:flex;gap:6px;margin:4px 8px 0 16px;padding:5px 7px;border:1px solid {LINE};border-left:3px solid {fg};border-radius:6px">'
+                     f'<div style="flex:1"><b>{E(name)}</b><div style="font-size:12px;color:{INK}">📄 {E(doc)}</div>'
+                     f'<div style="font-size:12px;color:{SUB}">👀 {E(who)}</div></div>'
+                     f'<div style="font-size:11px;color:{SUB};white-space:nowrap">{E(date)}</div></div>')
+    return (win('예시 — 다 만든 흐름 한 장', svg + rows + '<div style="height:8px"></div>', '캔버스')
+            + caption('📄 그 단계에서 나오는 문서 · 👀 누가 읽고 무엇을 정하나 — 실무에서 흔한 예'))
