@@ -154,6 +154,7 @@
 | 탭 하나 | `tab` | 8곳 대부분 | – |
 | 아이콘 | `icon/check` · `icon/arrow-left` | 공통 | – |
 | 개발 전달 번호 주석 (11/25 추가) | `annotation` | Figma 도움말 Annotations(번호 · 설명으로 개발 정보를 남기는 기능, 무료 플랜에 없어 부품으로 만든다) | – |
+| 연습 파일 ‘UI 따라 만들기’ 부품 (11/25 추가) | 반복되는 줄은 `list-item`, 탭은 `tab`, 그 밖 `card` · `chip` · `bottom-bar` · `chat-bubble` · `keypad-button` · `price` | card · chip · bottom app bar: Material 3 컴포넌트 이름(규칙 2: 갈리면 Figma 도움말 → Material 3). chat-bubble · keypad-button · price: 8장 ‘그 밖 = 무엇인지 + 하이픈’ 규칙 | – |
 
 - `/`는 Assets 폴더다. 2단계까지만.
 

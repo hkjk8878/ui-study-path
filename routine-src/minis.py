@@ -366,3 +366,25 @@ def spec_done():
     body = (f'<div style="padding:8px"><div style="border:1px dashed {BLUE};border-radius:8px;background:#F3E5C2;padding:8px;display:flex;gap:10px;font-size:10px">'
             f'{phone}<div style="flex:1;min-width:0">{_lbl("notes")}{notes}</div></div></div>')
     return win('캔버스 — 명세-할 일 추가 완성 모습 (‘전달’ 페이지)', body, '캔버스') + caption('왼쪽 = 추가-기본 화면 + 번호 표시, 오른쪽 = notes(annotation 8개)')
+
+# ═════════════ 11/27~ UI 따라 만들기 그림 ═════════════
+def _shot(title, w=110, op=1.0, dashed=False, lock=False):
+    """회색 덩어리로 그린 화면 (원본 캡처 · 내 화면 공통). 특정 앱 모양이 아니라 위치만 보여 준다."""
+    bars = ''.join(f'<div style="height:{h}px;margin:{m}px 8px 0;border-radius:4px;background:{c}"></div>'
+                   for h, m, c in ((10, 8, '#9CA3AF'), (22, 6, '#4B5563'), (26, 8, '#D1D5DB'), (26, 6, '#D1D5DB'), (26, 6, '#D1D5DB')))
+    bd = '2px dashed #0D99FF' if dashed else '1px solid #9CA3AF'
+    lk = '<span style="float:right">🔒</span>' if lock else ''
+    return (f'<div style="width:{w}px;min-height:170px;border:{bd};border-radius:10px;background:#fff;opacity:{op};padding-bottom:8px">'
+            f'<div style="font-size:9px;color:#374151;padding:3px 6px;border-bottom:1px solid #E5E7EB">{E(title)}{lk}</div>{bars}</div>')
+
+@mini('copy_canvas')
+def copy_canvas():
+    a = _shot('원본 (캡처 · 390)', lock=True)
+    b = _shot('홈-기본 (Frame 390×844)', dashed=True)
+    s1 = f'<div style="display:flex;gap:10px;padding:8px;align-items:flex-start">{a}{_arrow("④ 오른쪽에<br>새로 만듦")}{b}</div>'
+    over = (f'<div style="position:relative;width:110px;height:200px;margin:8px auto">'
+            f'<div style="position:absolute;inset:0">{_shot("원본", lock=True)}</div>'
+            f'<div style="position:absolute;left:4px;top:3px">{_shot("홈-기본 50%", op=.5, dashed=True)}</div></div>')
+    return (win('캔버스 — ①~④ 다 하면 (나란히)', s1, '캔버스')
+            + win('캔버스 — ⑤ 겹쳐 보기 (내 화면 투명도 50%)', over, '캔버스')
+            + caption('어긋난 만큼 두 겹으로 보인다. 여백 → 간격 → 글자 순서로 맞춘다'))
