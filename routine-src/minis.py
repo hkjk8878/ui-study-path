@@ -425,3 +425,42 @@ def flow_example():
                      f'<div style="font-size:11px;color:{SUB};white-space:nowrap">{E(date)}</div></div>')
     return (win('예시 — 다 만든 흐름 한 장', svg + rows + '<div style="height:8px"></div>', '캔버스')
             + caption('📄 그 단계에서 나오는 문서 · 👀 누가 읽고 무엇을 정하나 — 실무에서 흔한 예'))
+
+# ───────────── 11/25 읽는 사람별 문서 3장 — 다 만든 예시
+def _board(name, who, body):
+    return (f'<div style="margin:6px 8px;border:1px solid #D1D5DB;border-radius:8px;background:#fff">'
+            f'<div style="display:flex;justify-content:space-between;padding:4px 8px;background:#F3F4F6;border-bottom:1px solid {LINE};font-size:12px">'
+            f'<b>{E(name)}</b><span style="color:{SUB}">읽는 사람: {E(who)}</span></div><div style="padding:6px 8px;font-size:12px">{body}</div></div>')
+def _kv(rows):
+    return ''.join(f'<div style="display:flex;gap:6px;padding:2px 0;border-bottom:1px dashed {LINE}"><span style="width:52px;color:{SUB}">{E(k)}</span><span style="flex:1">{v}</span></div>' for k, v in rows)
+def _btn(t, bg='#E5484D', fg='#fff'):
+    return f'<span style="display:inline-block;padding:3px 12px;border-radius:6px;background:{bg};color:{fg};font-weight:700;font-size:11px">{E(t)}</span>'
+
+@mini('doc3_example')
+def doc3_example():
+    f = _board('foundation · 기초 값', '디자이너 · 개발자', _kv([
+        ('색', f'{sw("E5484D")} 삭제 버튼 #E5484D · {sw("2B2B2B")} 알림 바탕 #2B2B2B'),
+        ('글자', '제목 20 Bold · 본문 14 Regular · 버튼 14 Bold'),
+        ('간격', '화면 여백 16 · 할 일 줄 사이 8 · 버튼 안쪽 12'),
+        ('모서리', '버튼 8 · 확인창 12 · 알림 12')]))
+    c = _board('components · button', '디자이너 / 개발자 칸을 나눔',
+        f'<div style="font-weight:700;margin-bottom:2px">디자이너 칸</div>'
+        + _kv([('언제', '되돌릴 수 없는 동작(삭제)에만 빨간 버튼'), ('안 쓸 때', '저장 · 확인 같은 보통 동작'),
+               ('○ / ✕', f'○ {_btn("삭제")} &nbsp; ✕ {_btn("확인")} ← 무엇을 하는지 모름')])
+        + f'<div style="font-weight:700;margin:6px 0 2px">개발자 칸</div>'
+        + _kv([('기본', '바탕 #E5484D · 글자 #FFFFFF · 높이 40'), ('누름', '내 파일에 없으면 ‘없음’'), ('비활성', '내 파일에 없으면 ‘없음’')]))
+    shot = lambda t: f'<div style="width:70px;height:96px;border:1px solid #9CA3AF;border-radius:6px;background:#F3F4F6;font-size:9px;color:{SUB};padding:3px">{E(t)}</div>'
+    p = _board('patterns · 삭제 흐름', '새 팀원 · 기획자',
+        f'<div style="display:flex;gap:6px;margin-bottom:4px">{shot("삭제-확인창 50%")}{shot("목록-삭제됨 50%")}</div>'
+        + _kv([('규칙 1', '삭제는 바로 지우지 않고 확인창을 띄운다'), ('규칙 2', '지운 뒤 알림은 화면 아래 · 4초'), ('규칙 3', '되돌리기 → 원래 자리로 돌아온다')]))
+    return (win('예시 — 다 만든 문서 3장 (흰 판 3개)', f + c + p + '<div style="height:4px"></div>', '캔버스')
+            + caption('숫자는 예시다. 내 화면에서 레이어를 클릭해 오른쪽 Design 패널에서 읽은 값으로 적는다'))
+
+@mini('discard_example')
+def discard_example():
+    d = (f'<div style="margin:10px auto;width:220px;border-radius:12px;background:#fff;border:1px solid #D1D5DB;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,.1)">'
+         f'<div style="font-weight:700;font-size:13px">수정한 내용을 버릴까요?</div>'
+         f'<div style="font-size:11px;color:{SUB};margin:2px 0 10px">버리면 되돌릴 수 없어요.</div>'
+         f'<div style="display:flex;gap:6px">{_btn("취소", "#E5E7EB", "#111")}{_btn("버리기")}</div></div>')
+    return (win('만들 것 — 수정 취소 확인창 (삭제 확인창과 같은 모양)', d, '캔버스')
+            + caption('색 · 글자 · 간격 · 모서리를 원래 화면이 아니라 문서 3장만 보고 고른다'))
