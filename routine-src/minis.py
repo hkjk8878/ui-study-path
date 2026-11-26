@@ -464,3 +464,64 @@ def discard_example():
          f'<div style="display:flex;gap:6px">{_btn("취소", "#E5E7EB", "#111")}{_btn("버리기")}</div></div>')
     return (win('만들 것 — 수정 취소 확인창 (삭제 확인창과 같은 모양)', d, '캔버스')
             + caption('색 · 글자 · 간격 · 모서리를 원래 화면이 아니라 문서 3장만 보고 고른다'))
+
+# ═════════════ 11/28 (11/26 밤 점검) ═════════════
+@mini('grid_settings')
+def grid_settings():
+    p = (row('<b>Layout guide</b>', '+')
+         + row('<span style="color:#E11D48">▦</span> Columns 4 (Stretch)', '👁', hl=True, note='앞 격자 아이콘 클릭')
+         + '<div style="margin:6px 8px 8px;border:1px solid #D1D5DB;border-radius:6px;overflow:hidden">'
+         + row('<b>Layout guide settings</b>')
+         + row('종류 칸', 'Grid ▾ → <b>Columns</b>', hl=True, note='①')
+         + row('Count', '<b>4</b>', note='②')
+         + row('Type', 'Stretch ▾ (그대로)', note='③')
+         + row('Margin', '<b>16</b> (⑤에서 잰 값)', note='④')
+         + row('Gutter', '<b>16</b>', note='④')
+         + '</div>')
+    return win('오른쪽 Design 패널 › Layout guide 칸 (Frame 선택했을 때)', p, '캔버스') + caption('Margin · Gutter 칸은 Type이 Stretch일 때만 보인다. 숨기기 · 보이기 Shift+G')
+
+@mini('type_compare')
+def type_compare():
+    def ph(title, lines, grid=False):
+        g = ''.join(f'<div style="position:absolute;top:18px;bottom:0;left:{8 + i*26}px;width:20px;background:rgba(225,29,72,.10)"></div>' for i in range(4)) if grid else ''
+        t = ''.join(f'<div style="font-size:{s}px;font-weight:{w};color:{c};margin:3px 8px 0;white-space:nowrap;position:relative">{E(x)}'
+                    f'<span style="font-size:8px;color:#BE185D;font-weight:700;margin-left:3px">{lv}</span></div>' for x, s, w, c, lv in lines)
+        return (f'<div style="width:112px;height:190px;border:1px solid #9CA3AF;border-radius:10px;background:#fff;position:relative;overflow:hidden;flex:none">'
+                f'<div style="font-size:9px;padding:3px 6px;border-bottom:1px solid #E5E7EB;color:{SUB}">{E(title)}</div>{g}'
+                f'<div style="height:52px;margin:6px 8px 0;border-radius:4px;background:#E5E7EB;position:relative"></div>{t}</div>')
+    a = ph('분석-원본 (그리드)', [('브랜드명', 9, 400, SUB, '1'), ('상품 이름 두 줄', 11, 700, INK, '2'), ('15%', 12, 700, '#E11D48', '3'), ('29,900원', 13, 700, INK, '4'),
+                              ('무료배송', 9, 700, '#2563EB', '5'), ('리뷰 1,204', 9, 400, SUB, '1')], grid=True)
+    b = ph('재구성-단계줄임', [('브랜드명', 9, 400, SUB, '1'), ('상품 이름 두 줄', 11, 700, INK, '2'), ('15%', 13, 700, '#E11D48', '3'), ('29,900원', 13, 700, INK, '3'),
+                               ('무료배송', 9, 400, '#2563EB', '1'), ('리뷰 1,204', 9, 400, SUB, '1')])
+    body = f'<div style="display:flex;gap:6px;padding:8px;align-items:center">{a}{_arrow("비슷한<br>두 단계를<br>하나로")}{b}</div>'
+    return (win('예시 — 글자 단계 5개 → 3개 (빨간 띠 = 4열 그리드)', body, '캔버스')
+            + caption('분홍 숫자 = 글자 단계. 그림은 예시 모양이다. 내 캡처에서 직접 센다'))
+
+@mini('fp_annotation')
+def fp_annotation():
+    lay = (row(ic('comp') + '<b>annotation</b>', '→ 가로 · Gap 8')
+           + row(ic('frame') + 'badge', '24×24 · 가운데', indent=1)
+           + row(ic('text') + 'number', '14 Bold · 흰색', indent=2)
+           + row(ic('text') + 'description', '14 · W 260', indent=1))
+    look = (f'<div style="display:flex;gap:8px;align-items:flex-start;padding:8px;border-top:1px solid {LINE}">'
+            f'{_badge(1, "3A7D44", "FFFFFF")}<span style="font-size:12px">[동작] 삭제 → 확인창이 가운데 뜨고 뒤는 어두워진다</span></div>')
+    return win('레이어 패널 — annotation 구조와 모양', lay + look, '레이어 패널')
+
+@mini('fp_spec_done')
+def fp_spec_done():
+    def scr(title, inner, marks):
+        m = ''.join(f'<div style="position:absolute;{pos}">{_badge(n, "3A7D44", "FFFFFF")}</div>' for n, pos in marks)
+        return (f'<div style="width:78px;height:130px;border:1px solid #9CA3AF;border-radius:8px;background:#fff;position:relative;font-size:8px;flex:none">'
+                f'<div style="padding:3px 4px;color:{SUB}">{E(title)}</div>{inner}{m}</div>')
+    btn = lambda t, c, y: f'<div style="position:absolute;left:6px;right:6px;top:{y}px;background:{c};color:#fff;border-radius:3px;text-align:center;padding:2px 0">{E(t)}</div>'
+    a = scr('상세', btn('삭제', '#E5484D', 104), [(1, 'right:-6px;top:96px'), (7, 'left:-6px;top:96px')])
+    b = scr('삭제-확인창', btn('취소', '#9CA3AF', 104).replace('right:6px', 'right:42px') + btn('삭제', '#E5484D', 104).replace('left:6px', 'left:42px'),
+            [(2, 'left:-6px;top:84px'), (3, 'right:-6px;top:84px'), (8, 'right:-6px;top:112px')])
+    c = scr('목록-삭제됨', '<div style="position:absolute;left:4px;right:4px;top:100px;background:#2B2B2B;color:#fff;border-radius:3px;padding:2px 3px">삭제했어요 <b style="color:#7BD88F">되돌리기</b></div>',
+            [(4, 'left:-6px;top:96px'), (5, 'right:-6px;top:96px'), (6, 'left:-6px;top:60px')])
+    notes = ''.join(f'<div style="display:flex;gap:3px;align-items:center;margin-bottom:2px">{_badge(n, "3A7D44", "FFFFFF")}<span>{E(t)}</span></div>'
+                    for n, t in [(1, '삭제 → 확인창'), (2, '취소 · 바깥 → 닫힘'), (3, '삭제 → 알림 250ms'), (4, '4초 뒤 사라짐'),
+                                 (5, '되돌리기 → 원래 자리'), (6, '마지막 1개 → 빈 문구'), (7, '높이 48 · 글자 16'), (8, '빨강 + 글자')])
+    body = (f'<div style="padding:8px;display:flex;flex-wrap:wrap;gap:8px;font-size:9px">{a}{b}{c}'
+            f'<div style="flex:1;min-width:110px">{_lbl("notes")}{notes}</div></div>')
+    return win('캔버스 — 전달 페이지 다 만든 모습', body, '캔버스') + caption('화면 위 번호 = notes의 같은 번호. 설명 글은 notes에만 쓴다')
