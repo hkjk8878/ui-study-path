@@ -1,26 +1,33 @@
 """앱 JS에 '결과물 기입표'(table 기록 종류)를 추가한다. 이미 적용돼 있으면 그대로 둔다. 저장 구조는 그대로(taskRecords[블록][필드])."""
-MARK = '/* FILL-TABLE v2 */'
+MARK = '/* FILL-TABLE v3 */'
 
 FN = r'''function renderFillTable(field, values, date, taskId) {
-  const cols = field.columns || [];
+  const base = field.columns || [];
   const prefix = field.key + '.';
-  let used = 0;
+  let used = 0, ncol = base.length;
   for (const k of Object.keys(values)) {
     if (!k.startsWith(prefix) || !values[k]) continue;
-    const r = parseInt(k.slice(prefix.length), 10);
+    const rest = k.slice(prefix.length);
+    if (rest.startsWith('h.')) { ncol = Math.max(ncol, parseInt(rest.slice(2), 10) + 1); continue; }
+    const [r, c] = rest.split('.').map(x => parseInt(x, 10));
     if (r >= 0) used = Math.max(used, r + 1);
+    if (c >= 0) ncol = Math.max(ncol, c + 1);
   }
   const fixed = field.fixed || null;
-  const n = fixed ? fixed.length : Math.max(field.rows || 5, used + 1);
-  const cell = (r, c) => `<td><textarea rows="1" aria-label="${esc(cols[c] + ' ' + (r + 1) + '행')}" data-task-record="${esc(taskId)}" data-record-date="${esc(date)}" data-record-field="${esc(prefix + r + '.' + c)}">${esc(values[prefix + r + '.' + c] ?? '')}</textarea></td>`;
-  const row = r => `<tr><th scope="row" class="ft-num">${r + 1}</th>${cols.map((_, c) => fixed && c === 0 ? `<td class="ft-fixed">${esc(fixed[r])}</td>` : cell(r, c)).join('')}</tr>`;
-  return `<div class="fill-table-wrap" data-ft-cols="${cols.length}">
-    <div class="ft-head"><strong>${esc(field.label)}</strong>${field.tip ? `<p class="ft-tip">${esc(field.tip)}</p>` : ''}${cols.length >= 4 ? '<p class="ft-scroll-hint">열이 화면보다 넓으면 표를 옆으로 밀어 보세요 →</p>' : ''}</div>
-    <div class="ft-scroll"><table class="fill-table" style="min-width:${Math.max(480, cols.length * 128 + 48)}px">
-    <thead><tr><th scope="col" class="ft-num">#</th>${cols.map(c => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead>
-    <tbody><tr class="ft-example"><th scope="row" class="ft-num">예시</th>${(field.example || []).map(v => `<td>${esc(v)}</td>`).join('')}</tr>
+  const n = fixed ? Math.max(fixed.length, used) : Math.max(field.rows || 5, used + 1);
+  const cols = Array.from({length: ncol}, (_, c) => c);
+  const cell = (r, c) => `<td><textarea rows="1" aria-label="${esc((base[c] || '추가 열') + ' ' + (r + 1) + '행')}" data-task-record="${esc(taskId)}" data-record-date="${esc(date)}" data-record-field="${esc(prefix + r + '.' + c)}">${esc(values[prefix + r + '.' + c] ?? '')}</textarea></td>`;
+  const head = c => c < base.length ? `<th scope="col">${esc(base[c])}</th>`
+    : `<th scope="col" class="ft-extra-head"><textarea rows="1" placeholder="열 이름" aria-label="추가 열 이름" data-task-record="${esc(taskId)}" data-record-date="${esc(date)}" data-record-field="${esc(prefix + 'h.' + c)}">${esc(values[prefix + 'h.' + c] ?? '')}</textarea></th>`;
+  const row = r => `<tr><th scope="row" class="ft-num">${r + 1}</th>${cols.map(c => fixed && c === 0 && r < fixed.length ? `<td class="ft-fixed">${esc(fixed[r])}</td>` : cell(r, c)).join('')}</tr>`;
+  const ex = field.example || [];
+  return `<div class="fill-table-wrap" data-ft-cols="${ncol}" data-ft-prefix="${esc(prefix)}" data-ft-task="${esc(taskId)}" data-ft-date="${esc(date)}">
+    <div class="ft-head"><strong>${esc(field.label)}</strong>${field.tip ? `<p class="ft-tip">${esc(field.tip)}</p>` : ''}${ncol >= 4 ? '<p class="ft-scroll-hint">열이 화면보다 넓으면 표를 옆으로 밀어 보세요 →</p>' : ''}</div>
+    <div class="ft-scroll"><table class="fill-table" style="min-width:${Math.max(480, ncol * 128 + 48)}px">
+    <thead><tr><th scope="col" class="ft-num">#</th>${cols.map(head).join('')}</tr></thead>
+    <tbody>${ex.some(v => v) ? `<tr class="ft-example"><th scope="row" class="ft-num">예시</th>${cols.map(c => `<td>${esc(ex[c] ?? '')}</td>`).join('')}</tr>` : ''}
     ${Array.from({length: n}, (_, r) => row(r)).join('')}</tbody></table></div>
-    ${fixed ? '' : '<button type="button" class="ft-add" data-ft-add>+ 줄 추가</button>'}</div>`;
+    <div class="ft-actions"><button type="button" class="ft-add" data-ft-add>+ 줄 추가</button><button type="button" class="ft-add" data-ft-addcol>+ 열 추가</button></div></div>`;
 }
 '''
 
@@ -39,18 +46,47 @@ document.addEventListener('click', e => {
   const next = last.cloneNode(true);
   const r = body.querySelectorAll('tr:not(.ft-example)').length;
   next.querySelector('th').textContent = r + 1;
+  next.querySelectorAll('td.ft-fixed').forEach(td => {
+    const wrap = btn.closest('.fill-table-wrap');
+    td.className = '';
+    td.innerHTML = `<textarea rows="1" data-task-record="${wrap.dataset.ftTask}" data-record-date="${wrap.dataset.ftDate}" data-record-field="${wrap.dataset.ftPrefix}${r}.0"></textarea>`;
+  });
   next.querySelectorAll('textarea').forEach(t => {
     t.value = ''; t.style.height = ''; delete t.dataset.grown;
     t.dataset.recordField = t.dataset.recordField.replace(/\.\d+\.(\d+)$/, '.' + r + '.$1');
-    t.setAttribute('aria-label', t.getAttribute('aria-label').replace(/\d+행$/, (r + 1) + '행'));
+    t.setAttribute('aria-label', (t.getAttribute('aria-label') || '').replace(/\d+행$/, (r + 1) + '행'));
   });
   body.appendChild(next);
   next.querySelector('textarea')?.focus();
+});
+document.addEventListener('click', e => {
+  const btn = e.target.closest?.('[data-ft-addcol]');
+  if (!btn) return;
+  const wrap = btn.closest('.fill-table-wrap');
+  const c = parseInt(wrap.dataset.ftCols, 10);
+  wrap.dataset.ftCols = c + 1;
+  const ta = (field, label) => `<textarea rows="1" aria-label="${label}" data-task-record="${wrap.dataset.ftTask}" data-record-date="${wrap.dataset.ftDate}" data-record-field="${wrap.dataset.ftPrefix}${field}"></textarea>`;
+  const th = document.createElement('th'); th.scope = 'col'; th.className = 'ft-extra-head';
+  th.innerHTML = ta('h.' + c, '추가 열 이름'); th.querySelector('textarea').placeholder = '열 이름';
+  wrap.querySelector('thead tr').appendChild(th);
+  wrap.querySelectorAll('tbody tr').forEach(tr => {
+    const td = document.createElement('td');
+    if (!tr.classList.contains('ft-example')) {
+      const r = parseInt(tr.querySelector('th').textContent, 10) - 1;
+      td.innerHTML = ta(r + '.' + c, '추가 열 ' + (r + 1) + '행');
+    }
+    tr.appendChild(td);
+  });
+  const table = wrap.querySelector('table');
+  table.style.minWidth = Math.max(480, (c + 1) * 128 + 48) + 'px';
+  th.querySelector('textarea').focus();
 });
 '''
 
 def patch(js):
     if MARK in js: return js
+    if '/* FILL-TABLE v2 */' in js:
+        return upgrade_v2(js)
     if '/* FILL-TABLE v1 */' in js:
         js = strip_v1(js)
     a = 'function renderTaskRecord(fields, values, date, taskId) {\n'
@@ -66,7 +102,17 @@ def patch(js):
     + (sections.general ? `<details class="task-record"><summary>이 과제의 확인·수정 기록</summary>${renderSection(sections.general)}</details>` : '');''')
     return js + TAIL
 
-def strip_v1(js):
+def upgrade_v2(js):
+    """v2 → v3: 함수와 줄 추가 처리만 바꿔 끼운다(뒤에 붙은 다른 패치는 그대로 둔다)."""
+    a = js.index('function renderFillTable('); b = js.index('function renderTaskRecord(')
+    js = js[:a] + FN + js[b:]
+    i = js.index("document.addEventListener('click', e => {\n  const btn = e.target.closest?.('[data-ft-add]');")
+    k = js.index("\n});\n", i) + len("\n});\n")
+    new = TAIL[TAIL.index("document.addEventListener('click', e => {"):]
+    js = js[:i] + new + js[k:]
+    return js.replace('/* FILL-TABLE v2 */', MARK, 1)
+
+def strip_v1(js, ver='v1'):
     """v1 패치를 걷어내고 원래 코드로 되돌린다(v2를 다시 넣기 위해)."""
     a = js.index('function renderFillTable('); b = js.index('function renderTaskRecord(')
     js = js[:a] + js[b:]
@@ -74,7 +120,7 @@ def strip_v1(js):
     js = js.replace('return fillTables + `<div class="task-record stack-sm">${checkTable}', 'return `<div class="task-record stack-sm">${checkTable}')
     i = js.index('if (sections.general || sections.output) return content'); k = js.index("</details>` : '');", i) + len("</details>` : '');")
     js = js[:i] + 'if (sections.general) return content + `<details class="task-record"><summary>이 과제의 확인·수정 기록</summary>${renderSection(sections.general)}</details>`;' + js[k:]
-    js = js[:js.index('\n/* FILL-TABLE v1 */')]
+    js = js[:js.index(f'\n/* FILL-TABLE {ver} */')]
     return js
 
 # ---- 하루·주간 기록 양식: 실무·채용에 쓰이는 항목으로 (기존 저장 키 유지, 새 키 추가) ----
