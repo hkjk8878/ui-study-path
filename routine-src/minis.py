@@ -380,11 +380,11 @@ def _shot(title, w=110, op=1.0, dashed=False, lock=False):
 @mini('copy_canvas')
 def copy_canvas():
     a = _shot('원본 (캡처 · 390)', lock=True)
-    b = _shot('홈-기본 (Frame 390×844)', dashed=True)
+    b = _shot('내 화면 ○○-기본 (Frame 390×844)', dashed=True)
     s1 = f'<div style="display:flex;gap:10px;padding:8px;align-items:flex-start">{a}{_arrow("④ 오른쪽에<br>새로 만듦")}{b}</div>'
     over = (f'<div style="position:relative;width:110px;height:200px;margin:8px auto">'
             f'<div style="position:absolute;inset:0">{_shot("원본", lock=True)}</div>'
-            f'<div style="position:absolute;left:4px;top:3px">{_shot("홈-기본 50%", op=.5, dashed=True)}</div></div>')
+            f'<div style="position:absolute;left:4px;top:3px">{_shot("내 화면 50%", op=.5, dashed=True)}</div></div>')
     return (win('캔버스 — ①~④ 다 하면 (나란히)', s1, '캔버스')
             + win('캔버스 — ⑤ 겹쳐 보기 (내 화면 투명도 50%)', over, '캔버스')
             + caption('어긋난 만큼 두 겹으로 보인다. 여백 → 간격 → 글자 순서로 맞춘다'))
@@ -525,3 +525,54 @@ def fp_spec_done():
     body = (f'<div style="padding:8px;display:flex;flex-wrap:wrap;gap:8px;font-size:9px">{a}{b}{c}'
             f'<div style="flex:1;min-width:110px">{_lbl("notes")}{notes}</div></div>')
     return win('캔버스 — 전달 페이지 다 만든 모습', body, '캔버스') + caption('화면 위 번호 = notes의 같은 번호. 설명 글은 notes에만 쓴다')
+
+
+# ───────────── 11/30 08:00 관찰 메모 — 잘 된 예시 (언제 지켜보고 언제 묻나)
+@mini('observe_example')
+def observe_example():
+    rows = [('08:50', '지켜봄', '중심업무를 열고 시험 범위를 글자로 적음', '', ''),
+            ('08:52', '지켜봄', '시험 앱을 열었다가 바로 닫음', '“이건 이따가…”', '? 왜 닫았나 → 나중에'),
+            ('08:53', '지켜봄', '학생이 와서 질문 → 2분 응대', '', ''),
+            ('08:56', '물어봄', '저장을 누르고 손이 멈춤(끝난 때)', '', '“아까 앱을 닫으셨는데 그때 무슨 생각이셨어요?”'),
+            ('08:58', '마무리', '내가 본 순서를 말하고 맞는지 확인', '“네, 보통 그래요”', '')]
+    head = ('<div style="display:grid;grid-template-columns:38px 44px 1fr;gap:4px;padding:4px 8px;'
+            f'background:#F3F4F6;font-size:11px;font-weight:700;color:{SUB}"><span>시각</span><span>할 일</span><span>본 행동 · 한 말 · 후속 질문</span></div>')
+    body = ''
+    for t, k, act, say, q in rows:
+        col = {'지켜봄': ('#374151', '#F3F4F6'), '물어봄': ('#B45309', '#FEF3C7'), '마무리': ('#047857', '#D1FAE5')}[k]
+        body += (f'<div style="display:grid;grid-template-columns:38px 44px 1fr;gap:4px;padding:4px 8px;border-top:1px solid {LINE};font-size:12px">'
+                 f'<span style="color:{SUB}">{t}</span><span>{chip(k, *col)}</span><span>{E(act)}'
+                 + (f'<div style="color:#1D4ED8">{E(say)}</div>' if say else '')
+                 + (f'<div style="color:#B45309">{E(q)}</div>' if q else '') + '</span></div>')
+    return (win('예시 — 선생님이 시험 정보 올리는 10분 관찰 메모', head + body, '앱 기입표')
+            + caption('궁금한 것은 ‘?’로 적어 두고, 일이 끝나 손이 멈출 때 묻는다. 예시 내용은 지어낸 것이다'))
+
+# ───────────── 11/30 08:40 기준선 측정표 — 다 만든 모습 (탭 3개)
+@mini('baseline_sheet')
+def baseline_sheet():
+    def tabs(on):
+        return ('<div style="display:flex;gap:4px;padding:4px 8px;background:#F3F4F6;border-top:1px solid #E5E7EB;font-size:11px">'
+                + ''.join(f'<span style="padding:1px 6px;border-radius:4px;{"background:#fff;font-weight:700;color:#047857" if t == on else "color:#6B7280"}">{E(t)}</span>'
+                          for t in ('정의', '내 일(매일)', '관찰(12/3)')) + '</div>')
+    def grid(cols, rows):
+        h = ''.join(f'<span style="font-weight:700;color:{SUB}">{E(c)}</span>' for c in cols)
+        r = ''.join(''.join(f'<span>{E(v)}</span>' for v in row) for row in rows)
+        return (f'<div style="display:grid;grid-template-columns:repeat({len(cols)},1fr);gap:3px 4px;padding:6px 8px;font-size:10px;line-height:1.3">{h}{r}</div>')
+    a = grid(['날짜', '시험 수', '답안지 없이', '1개 시간 (있음 · 없음)', '단계 수', '늦게'],
+             [['11/27', '○', '○', '○분 · ○분', '○', '○'], ['', '', '', '', '', '']])
+    b = grid(['시각', '한 일(단계)', '도구', '바뀜', '멈춤 · 물음'],
+             [['○:○', '중심업무 열기', '중심업무', '', ''], ['○:○', '시험 앱 열기', '시험 앱', '○', ''], ['합계', '단계 ○', '', '○번', '']])
+    return (win('스프레드시트 — 내 일(매일) 탭', a + tabs('내 일(매일)'), '앱 기입표')
+            + win('스프레드시트 — 관찰(12/3) 탭', b + tabs('관찰(12/3)'), '앱 기입표')
+            + caption('○ 칸은 내가 잰 숫자를 넣는 자리다. 그림은 칸 일부만 줄여 그렸다 — 칸 이름은 카드 ② · ④대로. 정의 탭에는 1로 세는 기준이 들어간다'))
+
+# ───────────── 11/30 22:00 키패드 레이어 구조
+@mini('keypad_layers')
+def keypad_layers():
+    lay = (row(ic('frame') + '<b>keypad</b>', '↓ 세로 · Gap 0')
+           + row(ic('frame') + 'keypad-row', '→ 가로 · Gap 0', indent=1)
+           + row(ic('inst') + 'keypad-button ×3', 'W Fill', indent=2)
+           + row(ic('frame') + 'keypad-row (×3 더)', 'Ctrl+D로 복제', indent=1))
+    pad = ''.join(f'<span style="display:grid;place-items:center;height:22px">{E(k)}</span>' for k in '1 2 3 4 5 6 7 8 9 · 0 ←'.split())
+    look = (f'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:8px 30px;border-top:1px solid {LINE};font-size:13px;font-weight:700">{pad}</div>')
+    return win('레이어 패널 — 키패드 다 만든 구조와 모양', lay + look, '레이어 패널')
