@@ -57,7 +57,7 @@ def convert(b, date, base_fields):
                     ex = filled[0] if filled else [''] * len(head)
                     f = {'key': f'st{len(forms)+1}', 'label': label, 'kind': 'table', 'columns': head,
                          'example': ex, 'rows': 5, 'tip': ''}
-                    if len(blank) >= 2:
+                    if len(blank) >= 2 and all(r[0] for r in rows):
                         f['fixed'] = [r[0] for r in rows]
                         f['rows'] = len(rows)
                     forms.append(f)
